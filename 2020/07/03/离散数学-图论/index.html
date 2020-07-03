@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="baidu-site-verification" content="L6Lm9d5Crl"/>
+  
+  
+  
+  
+  <title>离散数学-图论 | 凉介&#39;s personal blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="图论基本概念 无序对和无序积：集合A&amp;B&#x3D;{(a,b)|a$\in$A,b$\in$B},(a,b)&#x3D;(b,a)  &#x3D;&#x3D;图&#x3D;&#x3D;：一个序偶&lt;V,E&gt;,V是结点集，E：边集，E中每个元素都有V中的结点对与之对应称之边。  图的表示：集合表示，图形表示，邻接矩阵  若两个结点vi,vj是边e的端点，则称vi,vj互为&#x3D;&#x3D;邻接点&#x3D;&#x3D;，具有公共节点的两条边称为&#x3D;&#x3D;邻接边&#x3D;&#x3D;，两个端点相同">
+<meta property="og:type" content="article">
+<meta property="og:title" content="离散数学-图论">
+<meta property="og:url" content="http://yoursite.com/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E5%9B%BE%E8%AE%BA/index.html">
+<meta property="og:site_name" content="凉介&#39;s personal blog">
+<meta property="og:description" content="图论基本概念 无序对和无序积：集合A&amp;B&#x3D;{(a,b)|a$\in$A,b$\in$B},(a,b)&#x3D;(b,a)  &#x3D;&#x3D;图&#x3D;&#x3D;：一个序偶&lt;V,E&gt;,V是结点集，E：边集，E中每个元素都有V中的结点对与之对应称之边。  图的表示：集合表示，图形表示，邻接矩阵  若两个结点vi,vj是边e的端点，则称vi,vj互为&#x3D;&#x3D;邻接点&#x3D;&#x3D;，具有公共节点的两条边称为&#x3D;&#x3D;邻接边&#x3D;&#x3D;，两个端点相同">
+<meta property="og:locale" content="zh">
+<meta property="og:image" content="https://i.loli.net/2020/06/22/CzAlu6wTIroxnSD.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/22/CzAlu6wTIroxnSD.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/23/83qnPvL62QyEUfa.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/23/FgAQK2DyIzn8dfu.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/23/JKQ7lF4ctfkCwnr.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/23/wfOSAXE86QI9rJZ.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/23/uZ3elfrsG17jHmQ.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/23/WdClIwkMOncHbXP.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/23/p96iBOetNf3A2Yl.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/23/ZB59qHrGuIlVTxi.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/23/jOy5zhLN7FqZPQA.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/23/DMGY6lpdKBWz7yJ.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/23/Rc4EI7lSovD1YxK.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/23/gGidljaxwfXsIKV.png">
+<meta property="article:published_time" content="2020-07-03T08:25:04.629Z">
+<meta property="article:modified_time" content="2020-06-24T10:09:10.329Z">
+<meta property="article:author" content="Jian Shengnan">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2020/06/22/CzAlu6wTIroxnSD.png">
+  
+    <link rel="alternative" href="/atom.xml" title="凉介&#39;s personal blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/like.png">
+  
+  
+  
+<link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: true
+      }
+  </script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/1.png" class="js-avatar">
+            
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Jian Shengnan</a></h1>
+        </hgroup>
+        
+        
+            <form>
+                <input type="text" class="st-default-search-input search" id="local-search-input" placeholder="搜索一下" autocomplete="off">
+            </form>
+            <div id="local-search-result"></div>
+        
+        
+            <script type="text/javascript">
+                (function() {
+                    'use strict';
+                    function getMatchData(keyword, data) {
+                        var matchData = [];
+                        for(var i =0;i<data.length;i++){
+                            if(data[i].title.toLowerCase().indexOf(keyword)>=0) 
+                                matchData.push(data[i])
+                        }
+                        return matchData;
+                    }
+                    var $input = $('#local-search-input');
+                    var $resultContent = $('#local-search-result');
+                    $input.keyup(function(){
+                        $.ajax({
+                            url: '/search.json',
+                            dataType: "json",
+                            success: function( json ) {
+                                var str='<ul class=\"search-result-list\">';                
+                                var keyword = $input.val().trim().toLowerCase();
+                                $resultContent.innerHTML = "";
+                                if ($input.val().trim().length <= 0) {
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                }
+                                var results = getMatchData(keyword, json);
+                                if(results.length === 0){
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                } 
+                                for(var i =0; i<results.length; i++){
+                                    str += "<li><a href='"+ results[i].url +"' class='search-result-title'>"+ results[i].title +"</a></li>";
+                                }
+                                str += "</ul>";
+                                $resultContent.empty();
+                                $resultContent.append(str);
+                                $('#switch-area').hide();
+                            }
+                        });
+                    });
+                })();
+            </script>
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a  href="/archives/">所有文章</a></li>
+                        
+                            <li><a  href="/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/">玩转开发工具</a></li>
+                        
+                            <li><a  href="/categories/digital">玩转数码</a></li>
+                        
+                            <li><a  href="/categories/algorithm">算法学习</a></li>
+                        
+                            <li><a  href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl github"  target="_blank" href="https://github.com/wasd-debug" title="github">github</a>
+                            
+                                <a class="fl weibo"  target="_blank" href="https://www.weibo.com/7456794217/profile?topnav=1&wvr=6&is_all=1" title="weibo">weibo</a>
+                            
+                                <a class="fl rss"  target="_blank" href="/atom.xml" title="rss">rss</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        
+                    </div>
+                </section>
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="https://blog.csdn.net/weixin_46698891">csdn</a>
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="https://segmentfault.com/blog/maocg_web">segmentfault</a>
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="https://www.jianshu.com/u/1640e500283a">简书</a>
+                    
+                    </div>
+                </section>
+                
+                
+            </div>
+        </div>
+    </header>
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Jian Shengnan</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/1.png" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Jian Shengnan</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/">玩转开发工具</a></li>
+                
+                    <li><a href="/categories/digital">玩转数码</a></li>
+                
+                    <li><a href="/categories/algorithm">算法学习</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="github" target="_blank" href="https://github.com/wasd-debug" title="github">github</a>
+                    
+                        <a class="weibo" target="_blank" href="https://www.weibo.com/7456794217/profile?topnav=1&wvr=6&is_all=1" title="weibo">weibo</a>
+                    
+                        <a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+                    
+                </div>
+            </nav>
+        </header>
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-离散数学-图论" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E5%9B%BE%E8%AE%BA/" class="article-date">
+      <time datetime="2020-07-03T08:25:04.629Z" itemprop="datePublished">2020-07-03</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      离散数学-图论
+    </h1>
+  
+
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="图论"><a href="#图论" class="headerlink" title="图论"></a>图论</h1><h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><ol>
+<li><p>无序对和无序积：集合A&amp;B={(a,b)|a$\in$A,b$\in$B},(a,b)=(b,a)</p>
+</li>
+<li><p>==图==：一个序偶&lt;V,E&gt;,V是结点集，E：边集，E中每个元素都有V中的结点对与之对应称之边。</p>
+</li>
+<li><p>图的表示：集合表示，图形表示，邻接矩阵</p>
+</li>
+<li><p>若两个结点vi,vj是边e的端点，则称vi,vj互为==邻接点==，具有公共节点的两条边称为==邻接边==，两个端点相同的边称为==环==或者==自回路==。图中不与任何点相邻接的结点叫==孤立节点==</p>
+</li>
+<li><p>仅含一个结点的零图叫做平凡图。</p>
+</li>
+<li><p>图的分类：无向图，有向图，混合图，多重图（有平行边），线图（非多重图），简单图（无环线图），赋值图，如G=&lt;V,E,g&gt;，g是从E到非负实数集合的函数</p>
+</li>
+<li><p>若V1$\subseteq$V,E1$\subseteq$E,则G1为G的==子图==，记为G1$\subseteq$G</p>
+</li>
+<li><p>若$V1=V,E1\subseteq E$,G1是G的==生成子图==</p>
+</li>
+<li><p>设$V2\subseteq V$且$V2\neq \empty$以V2为结点集，以两个端点均在V2中的边的全体边集的G的子图称为V2的==导出子图==</p>
+</li>
+<li><p>==完全图==：无向简单图：所有节点之间都有边相连，记为Kn</p>
+<p>​               有向简单图：任意两个结点都有两条方向相反的有向边相连。</p>
+<p>其矩阵除对角线上的元素为0，其余元素为1</p>
+</li>
+<li><p>==补图==：G为简单图&lt;V,E&gt;，G‘为完全图&lt;V1,E1&gt;。G1=&lt;V,E1-E&gt;为G的补图，记为$\overline{G}$（从完全图中删除G中的边）两个结点在$\overline{G}$中相邻$\leftrightarrow$在G中不相邻</p>
+</li>
+<li><p>==度数==：图G=&lt;V,E&gt;中以结点v$\in$V为端点的次数之和称为结点v的度数，记为deg(v),环记两次，有向图中以v为始点的次数称为v的出度，记为deg$^{+}$(v)以结点v为终点的次数称为v的入度，记为deg$^{-}$(v).deg(v)=入度加出度。deg(v)=1称为悬挂结点，以悬挂结点的边称为悬挂边。</p>
+<ul>
+<li>用邻接矩阵计算度数：若G是无向图：deg(vi)=$\sum_{k=1}^{n}a_{ik}+a_{}ii,或者=\sum_{k=1}^{n}a_{ki}+a_{ii}$。有向图：deg+(vi)=$\sum_{k-1}^{n}a_{ik}$；deg-(vi)=$\sum_{k=1}^n{a_{ki}}$</li>
+</ul>
+</li>
+<li><p>==握手定理==：度数总和=2|E|。</p>
+<p>推论：度数为奇数的结点个数为偶数。</p>
+<p>有向图出度之和=入度之和=边数</p>
+</li>
+<li><p>==图的同构==：设两个图G=&lt;V,E&gt;,G’=&lt;V,E’&gt;,若存在V$\rightarrow$V’，使得对于任意e=(vi,vj)$\in$E，当且仅当e’=(g(vi),g(vj))$\in$E’，并且e和e’重数相同，称G与G’同构。</p>
+</li>
+<li><p>同构的必要条件：结点数目相等，边数相等，度数相同的节点数相同</p>
+</li>
+<li><p>==路==：给定图G=&lt;V,E&gt;，设v0,…vn$\in$V，e1,e2,…,en$\in$E，其中ei是关联结点vi-1和vi的边，交替序列voe1v1e2…envn称为连接v0到vn的路。若路中的所有边全不相同，则称此路为一条迹。若路中所有节点不同，则称此路为通路。</p>
+<ul>
+<li>v0和vn分别为该路的起点和终点，统称为==路的端点==。</li>
+<li>路中边的条数称为==路的长度==。</li>
+<li>若v0=vn,称为==回路==。</li>
+</ul>
+</li>
+<li><p>在一个具有n个结点的图中，如果从结点vj到结点vk存在一条路，则从结点vj到结点vk必存在一条不多于n-1条边的路</p>
+<ul>
+<li>在无向图中G中，如果从结点vj到结点vk存在一条路，则必存在一条从vj到vk而长度小于n的通路</li>
+</ul>
+</li>
+<li><p>无向图的连通性</p>
+<ul>
+<li>设G=&lt;V,E&gt;是一个图，对vi,vj$\in$V,从vi 到vj如、exist是一条路则称结点vi和vj 是连通的</li>
+<li>设G=&lt;V,E&gt;是一个无向图，若G中任意两个结点之间都是连通的，则称该无向图G是一个无向连通图，否则，则称G是一个非连通图（分离图）</li>
+<li>设G=&lt;V,E&gt;是一个无向图，该无向图G中的每个连通的划分块称为G的一个连通分支，用W(G)表示G中的连通分支数。无向图是连通图当且仅当W(G)=1</li>
+</ul>
+</li>
+<li><p>删除结点和边</p>
+<ul>
+<li>删除结点：在图中删除结点v是把v以及、并为大哥v关联的边都删除</li>
+<li>删除边：仅删除该边</li>
+</ul>
+</li>
+<li><p>割点：设无向图G=&lt;V,E&gt;是连通的，若有结点集V1是V的真子集，使得图G删除了V1的所有结点后，所得的子图是不连通的，而删除了V1的任意子集后，所得的子图还是连通图则称集合V1是图G的点割集。若某一个结点就构成点割集，则称该结点是割点。</p>
+<ul>
+<li>一个连通图删除它的一个点割集后，将分成两个或者多于两个连通分支</li>
+<li>若G不是完全图，定义k(G)=min{V1|V1是G的点割集}为G的点连通度。连通度是为了产生一个不连通图需要删除点的最少个数。</li>
+</ul>
+</li>
+<li><p>割边：设无向图G=&lt;V,E&gt;是连通的，若有边集E1是E的真子集，使得图G删除了E1 的所有边后，所得的子图是不连通的，而删除了E1的任意真子集后，所得子图仍是连通图。则称集合E1是图G的边割集。若某一边构成边割集，则称该边是割边（桥）。</p>
+<ul>
+<li>G的割边也就是G的一条边e使得W(G-r)&gt;W(G)。、并为大哥点连通度相似，定义非平凡图G的连通度为：$\lambda(G)=min{E1|E1是G的边割集}$,边连通度$\lambda(G)$是为了产生一个不连通图需要删去边的最少数目。</li>
+</ul>
+<p>若存在割点，则存在割边</p>
+</li>
+<li><p>有向图的连通性：设G=&lt;V,E&gt;是一个有向图。对vi.vj$\in$V,从vi到vj如、exist是一条路，则称结点vi到vj是==可达的==。</p>
+<ul>
+<li>设G=&lt;V,E&gt;是一个有向图，若略去G中所有有向边的方向后得到的无向图是一个无向连通图，则称该有向图G是一个==弱连通图==。</li>
+<li>设G=&lt;V,E&gt;是一个有向图，若G中任意两个结点之间至少单方向是可达的，则称该有向图G是一个==单侧有向图==。（经过一条经过所有结点至少一次的通路）</li>
+<li>设G=&lt;V,E&gt;是一个有向图，若G中任意两个结点之间都是相互可达的，则称该有向图是一个==强连通图==。</li>
+</ul>
+</li>
+<li><p>一个有向图G是强连通图当且仅当G中有一个回路，至少包含每一个结点一次</p>
+<p><img src="https://i.loli.net/2020/06/22/CzAlu6wTIroxnSD.png" alt=""></p>
+<p><img src="https://i.loli.net/2020/06/22/CzAlu6wTIroxnSD.png" alt=""></p>
+</li>
+</ol>
+<h2 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h2><h3 id="邻接矩阵"><a href="#邻接矩阵" class="headerlink" title="邻接矩阵"></a>邻接矩阵</h3><p>设G=&lt;V,E&gt;是一个简单图，，则n阶方阵A(G)=(aij)$_{n\times n}$称为G的邻接矩阵。其中：</p>
+<p><img src="https://i.loli.net/2020/06/23/83qnPvL62QyEUfa.png" alt=""></p>
+<p>令C=A$^{m}$，此时cij表示从vi到vj长度为m的路的数目。</p>
+<h3 id="可达性矩阵"><a href="#可达性矩阵" class="headerlink" title="可达性矩阵"></a>可达性矩阵</h3><p>设G=&lt;V,E&gt;是一个简单图，V={v1,v2,v3,…,vn}，$Bn=(bij)_{n\times n}=A+A^{2}+A^{3}+…A^{n}$，则bij表明了从结点vi到vj长度为1至n的所有路数目之和。如bn=0,则表明从结点vi到vj是不可达的。如bij$\neq$0,则表明从结点vi到vj至少有长度为m(1&lt;=m&lt;=n)的通路.</p>
+<p>定义：设G=&lt;V,E&gt;是一个简单图，V={v1,…vn}，定义一个n阶方阵P=(pij)$_[n\times n]$其中：</p>
+<p><img src="https://i.loli.net/2020/06/23/FgAQK2DyIzn8dfu.png" alt=""></p>
+<p>利用布尔矩阵运算直接求可达性矩阵：</p>
+<p>P=$A\lor A^{(2)}\lor A^{(3)}\lor …\lor A^{n}$</p>
+<p>$A^{m}=A\land A\land A…\land A$</p>
+<h3 id="完全关联矩阵"><a href="#完全关联矩阵" class="headerlink" title="完全关联矩阵"></a>完全关联矩阵</h3><p>定义：给定无向图C，令v1,v2,…,vp和e1,e2,…,eq分别记为G的结点和边，则矩阵M(G)=(mij)，其中：<img src="https://i.loli.net/2020/06/23/JKQ7lF4ctfkCwnr.png" alt=""></p>
+<p>如：</p>
+<p><img src="https://i.loli.net/2020/06/23/wfOSAXE86QI9rJZ.png" alt=""></p>
+<p>定义：给定简单有向图G=&lt;V,E&gt;，V={v1.v2,…,vp},E={e1,e2,…,eq},p*q阶矩阵M(G)=（mij），其中：<img src="https://i.loli.net/2020/06/23/uZ3elfrsG17jHmQ.png" alt=""></p>
+<p>如：<img src="https://i.loli.net/2020/06/23/WdClIwkMOncHbXP.png" alt=""></p>
+<h3 id="矩阵与图连通性的关系："><a href="#矩阵与图连通性的关系：" class="headerlink" title="矩阵与图连通性的关系："></a>矩阵与图连通性的关系：</h3><ul>
+<li><p>无向简单图G是连通图当且仅当它的可达性矩阵P所有元素均为1</p>
+</li>
+<li><p>有向简单图G是强连通图当且仅当它的可达性矩阵P的所有元素均为1</p>
+</li>
+<li><p>有向简单图G是单侧连通图当且仅当它的可达性矩阵P及其转置矩阵经布尔求（并）和运算后所得矩阵中除对角线以外其余元素均为1</p>
+</li>
+<li><p>有向简单图G是弱连通图当且仅当它的邻接矩阵A及其转置矩阵经布尔求和(并)运算后作为新的邻接矩阵而求出的可达性矩阵中所有元素均为1</p>
+</li>
+</ul>
+<h2 id="特殊图"><a href="#特殊图" class="headerlink" title="特殊图"></a>特殊图</h2><h3 id="无向欧拉图"><a href="#无向欧拉图" class="headerlink" title="无向欧拉图"></a>无向欧拉图</h3><h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><p>给定G是一个无孤立节点的无向图，若存在一条路（回路），经过图中每边一次且仅一次，则此路（回路）为该图的一条欧拉路（回路）。具有欧拉回路的图叫做欧拉图。</p>
+<h4 id="判定定理"><a href="#判定定理" class="headerlink" title="判定定理"></a>判定定理</h4><p>无向图G=&lt;V,E&gt;具有一条欧拉路当且仅当G是连通的，且仅有0个或者两个奇度数结点。</p>
+<p>无向图G=&lt;V,E&gt;是欧拉图当且仅当G是连通的且G的所有结点的度数都是偶数</p>
+<h3 id="有向欧拉图"><a href="#有向欧拉图" class="headerlink" title="有向欧拉图"></a>有向欧拉图</h3><h4 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h4><p>给定G是一个无孤立节点的有向图，若存在一条单向路（回路）经过图中每边一次且仅一次，则称此单向路（回路）为该图的一条单向欧拉路（回路）。具有单向欧拉回路的图叫做欧拉图。</p>
+<h4 id="定理"><a href="#定理" class="headerlink" title="定理"></a>定理</h4><p>有向图G=&lt;V,E&gt;具有一条单向欧拉路当且仅当G是连通的，且除了两个结点以外，其余结点的入度等于出度，而这两个例外的结点中，一个结点的入度比出度大一，另一个结点的出度比入度大1</p>
+<p>有向图G=&lt;V,E&gt;是欧拉图当且仅当G是连通的，且所有结点的入度等于出度</p>
+<h3 id="哈密尔顿图"><a href="#哈密尔顿图" class="headerlink" title="哈密尔顿图"></a>哈密尔顿图</h3><h4 id="定义-2"><a href="#定义-2" class="headerlink" title="定义"></a>定义</h4><p>给定G是一个无孤立节点的无向图，若存在一条路（回路），经过图中每个结点一次且仅一次，则此路（回路）为该图的一条哈密尔顿路（回路）。具有哈密尔顿回龙路的图称为哈密尔顿图。</p>
+<h4 id="必要条件"><a href="#必要条件" class="headerlink" title="必要条件"></a>必要条件</h4><p>若图G=&lt;V,E&gt;具有哈密尔顿回路，则对于结点集V（度数高）的每一个非空子集S均有W(G-S)$\leq$|S|成立，其中W(G-S)是G-S的连通分支数。</p>
+<h4 id="充分条件"><a href="#充分条件" class="headerlink" title="充分条件"></a>充分条件</h4><p>设G具有n个结点的简单图，如果G中每一对不相邻结点的度数之和大于等于n-1,则在G中存在一条哈密尔顿路。</p>
+<p>设图G是具有n个结点的简单图，如果G中每一对结点的度数大于等于n，则在G中存在一条哈密尔顿回路。</p>
+<p>设G是n结点简单无向图，n&gt;=3，任意结点v,deg(v)&gt;=n/2,则是哈密而顿图</p>
+<p>闭包：给定图G=&lt;V,E&gt;有n个结点，若将图G中的度数之和至少是n的非邻接结点连接起来得G‘，对图G’重复上述步骤，直到不再有这样的结点为止，所得的图称为原图G的闭包。记作C(G).</p>
+<p>当且仅当一个简单图的闭包是哈密尔顿图时，这个简单图是哈密尔顿图</p>
+<p><img src="https://i.loli.net/2020/06/23/p96iBOetNf3A2Yl.png" alt=""></p>
+<h3 id="平面图"><a href="#平面图" class="headerlink" title="平面图"></a>平面图</h3><h4 id="定义-3"><a href="#定义-3" class="headerlink" title="定义"></a>定义</h4><p>设G是一个无向图，若经过某种改画，能把G中所有结点和边都画在一个平面上，使得任何两边除公共结点之外没有其他交叉点，则称G为平面图，若G无论如何改画，它们的边之间总有交叉现象出现，则G是非平面图。结点数小于等于4的都是平面图。</p>
+<p>由边所包围的区域称为G的一个面，包围这个面所构成的回路称为这个面的边界，面的边界长度叫做次数。</p>
+<p>结点数&lt;4都是平面图</p>
+<p>一个有限平面图面的次数之和等于其边数的两倍。</p>
+<h4 id="欧拉公式"><a href="#欧拉公式" class="headerlink" title="欧拉公式"></a>欧拉公式</h4><p>定理：设G=&lt;V,E&gt;是一个连通的平面图</p>
+<ul>
+<li>若它有v个结点，e条边，r个面，则有：v-e+r=2</li>
+<li>若G中无环，且每一个面至少由三条边围成，则有：e&lt;=3v-6</li>
+<li>若G中无环，且每一个面至少由k条边围成，则有：(k-2)e&lt;=kv-2k</li>
+</ul>
+<h4 id="库拉托夫斯基图"><a href="#库拉托夫斯基图" class="headerlink" title="库拉托夫斯基图"></a>库拉托夫斯基图</h4><p>插入和删除一个新的度数为2的结点，使一条边分成两条边，或者对于关联于一个度数为2的结点的两条边，去掉这个结点，是两条边变成一条边，这些都不印象图的平面性。</p>
+<p><img src="https://i.loli.net/2020/06/23/ZB59qHrGuIlVTxi.png" alt=""></p>
+<p>定义：给定两个图G1和G2，若它们是同构的，或通过反复插入或去除度数为2 的结点后，使得G1和G2同构，则称该图是在2度结点内同构（同胚）</p>
+<p>定理：一个图是平面图，当且仅当它不包含与k33或K5在2度结点内同构的子图。K33和K5常称为库拉托夫斯基图</p>
+<p><img src="https://i.loli.net/2020/06/23/jOy5zhLN7FqZPQA.png" alt=""></p>
+<h4 id="对偶图"><a href="#对偶图" class="headerlink" title="对偶图"></a>对偶图</h4><p>定义：给定平面图G=&lt;V,E&gt;，它有面F1,F2,…,Fn，若有图G<em>=&lt;V</em>,E*&gt;满足下述条件：</p>
+<ul>
+<li>对于图G的任一个面Fi，内部有且仅有一个结点vi<em>$\in$V\</em></li>
+<li>对于图G的面Fi,Fj的公共边ek,存在且仅存在一条边ek<em>$\in$E\</em>,使ek*=(vi*,bj*),且ek*和ek相交。</li>
+<li>当且仅当ek只是一个面Fi的边界时，vi<em>存在一个环ek\</em>和ek相交，则图G*是图G的对偶图。</li>
+</ul>
+<p>从这个定义看出，G<em>是G的对偶图，则G也是G\</em>的对偶图。一个连通平面图的对偶图也必是平面图。</p>
+<p>如果图G的对偶图G*同构于G，则称G是自对偶的。</p>
+<p>定理：G为偶图的充要条件为所有回路长度均为偶数</p>
+<h4 id="着色"><a href="#着色" class="headerlink" title="着色"></a>着色</h4><p>图G的正常着色（或简称为着色）是指对它的每一个结点指定一种颜色，使得没有两个相邻的结点有同一种颜色。如果图G在着色时有n种颜色，称G为n-色的。对于图G着色时，需最少的颜色数称为着色数，记为x(G).</p>
+<p>韦尔奇鲍威尔法：</p>
+<ol>
+<li>将图G的结点按照度数的递减顺序进行排列。</li>
+<li>用第一种颜色对第一点进行着色，并且按排列次序，对于前面着色点不邻接的每一点着相同色</li>
+<li>用第二种颜色对尚未着色的点进行重复步骤2，用第三种颜色继续这种做法，直到所有的点全部上色</li>
+</ol>
+<p>对于n个结点的完全图Kn,有x(Kn)=n</p>
+<p>设G是至少有三个结点的连通平面图，则G中必有一个结点u，使得deg(u)&lt;=5</p>
+<p>任意平面图G至多是5-色的</p>
+<h2 id="树"><a href="#树" class="headerlink" title="树"></a>树</h2><h3 id="无向树"><a href="#无向树" class="headerlink" title="无向树"></a>无向树</h3><p>设T是一个连通且无回路的无向图，则称T为无向树，简称树。树的度数为1的结点称为树叶，度数大于1的结点称为分枝点（内点）。</p>
+<p>不含任何回路的简单无向图为森林</p>
+<p>森林中的每一个连通的分支都是一棵树</p>
+<h5 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h5><p>定理：设G=&lt;V,E&gt;是一个简单无向图，则以下关于图的定义都是等价的：</p>
+<ul>
+<li>G是连通的且不含回路的</li>
+<li>G中无回路，且m=n-1，其中，m是边数，n是结点数</li>
+<li>G是连通的，且m=n-1</li>
+<li>G无回路，但在G中的任何二结点之间增加一条新边，就得到唯一的一条回路</li>
+<li>G是连通的，但删除G中任意一条边后，就不连通</li>
+<li>G中每一对结点之间有唯一的一条路</li>
+</ul>
+<p>任意非平凡的数T至少有两片树叶</p>
+<h5 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h5><p>树是边数最多的无向图</p>
+<p>树是边数最少的连通图</p>
+<p>m&lt;n-1，G不连通</p>
+<p>m&gt;n-1,必有回路</p>
+<h5 id="生成树"><a href="#生成树" class="headerlink" title="生成树"></a>生成树</h5><ol>
+<li><p>定义：设G=&lt;V,E&gt;是一个连通的无向图，若G的某个生成子图是一棵树，则称该树为G的生成树，记为T$<em>{G}$。生成树T$</em>{G}$中的边称为树枝；在G中而不在$T_{G}$中的边称位弦，$T_{G}$的所有弦的集合称为生成树的补</p>
+</li>
+<li><p>定理：</p>
+</li>
+</ol>
+<ul>
+<li>任意一个连通图G至少存在一颗生成树。一个无向连通图G，如果G是一棵树则它的生成树是唯一的，即是G本身；如果不是，那么它的生成树就不是唯一的</li>
+<li>一条回路和任意一棵生成树的补至少有一条公共边。</li>
+<li>一个边割集和任何生成树至少有一条公共边</li>
+</ul>
+<ol start="3">
+<li><p>求生成树的方法</p>
+<ol>
+<li>破圈法：每次去掉回路中的一条边，其去掉的边的总数是m-(n-1)</li>
+<li>避圈法：每次选取G中的一条边，该边不能与已经选取的边构成回路，此时选取的边的总数是n-1</li>
+</ol>
+</li>
+<li><p>最小生成树：假设图G具有n个结点的连通图，对应于G的每一条边e，指定一个正数C(e)，把C(e)称作边e权，G的生成树也具有一个树权，它是T的所有边权的和。在带全的图G的所有生成树中，树权最小的那颗生成树称作最小生成树</p>
+</li>
+<li><p>克鲁斯科尔算法：</p>
+<p>设图G有n个结点</p>
+<ol>
+<li>选择权最小的边e1，置边数i=1</li>
+<li>i=n-1结束否则转3</li>
+<li>设定已选定e1,…ei在G中选取不同于ei的边e$_{i+1}$，使无回路且满足此条件的权最小的边</li>
+<li>i=i+1，转2</li>
+</ol>
+</li>
+</ol>
+<h3 id="有向树"><a href="#有向树" class="headerlink" title="有向树"></a>有向树</h3><p>设G=&lt;V,E&gt;是一个简单有向图，若略去图G中所有边的方向后，得到的无向图是一棵树，则称这个有向图是一棵有向树</p>
+<h4 id="根树"><a href="#根树" class="headerlink" title="根树"></a>根树</h4><ol>
+<li><p>一棵非平凡的有向树，如果恰好有一个结点的入度为0，其余所有结点的入度均为1，则称此有向树为根树。入度为0的结点称为树根，出度为0的结点称为树叶，出度不为0的结点称为内点，又将内点同树根统称为分枝点</p>
+</li>
+<li><p>根树包括一个或多个结点，这些节点的某一个称为根，其他所有结点被分成有限个子根树</p>
+</li>
+<li><p>在根树T中，任意一个结点v及其所有后代导出的子图T1称为T的以v为树根的子树</p>
+</li>
+<li><p>在根树中，任意一个结点v的层次即是从根到该结点的单向通路的长度，而同级的结点具有相同的通路长度</p>
+</li>
+<li><p>在根树中，若vi到vj可达，则称vi是vj的祖先，vj是vi的后代。若&lt;vi,vj&gt;是根树的有向边，则称vi是vj的父亲，vj是vi的儿子；如果两个结点是同一结点的儿子结点，则称这两个结点是兄弟</p>
+</li>
+</ol>
+<h4 id="k叉树"><a href="#k叉树" class="headerlink" title="k叉树"></a>k叉树</h4><ol>
+<li><p>若在根树T=&lt;V,E&gt;=(n,m)中，对任意结点vi$\in$V,都满足</p>
+<ul>
+<li>deg+(vi)&lt;k，则称此根树是k叉树</li>
+<li>deg+(vi)=k或deg+(vi)=0，则此根树为完全k叉树</li>
+<li>在完全k叉树中若所有树叶层次相同，称为正则k叉树</li>
+<li>在上述1,2,3中，当k=2时，此时分别称它们为二叉树，完全二叉树，正则二叉树</li>
+</ul>
+</li>
+<li><p>在二叉树中，每个结点v至多有两个儿子，分别称为左儿子结点和右儿子结点，二叉树的每个结点v至多有两棵子树，分别称为v的左子树和右子树</p>
+</li>
+<li><p>在完全k叉树中，若树叶数为t，分枝点树为j，则(k-1) j =t-1</p>
+</li>
+<li><p>将k叉树转换为二叉树的步骤：</p>
+<p>从根节点逐级开始，按从左到右的顺序进行：</p>
+<ul>
+<li>除了最左边的分枝点外，删除所有从每一个结点长出的分支，在同一层级中，兄弟结点用从左到右的有向边连接</li>
+<li>若一个结点是某一节点的最左边的儿子结点，则在二叉树中作为某一个结点的左儿子。</li>
+<li>若一个结点与前一个结点是兄弟结点，则在二叉树中作为前一个结点的右儿子。</li>
+</ul>
+</li>
+</ol>
+<p><img src="https://i.loli.net/2020/06/23/DMGY6lpdKBWz7yJ.png" alt=""></p>
+<p><img src="https://i.loli.net/2020/06/23/Rc4EI7lSovD1YxK.png" alt=""></p>
+<ol start="5">
+<li>森林转换成二叉树：<ul>
+<li>先把森林中的每一个树转换成一棵二叉树</li>
+<li>除第一棵二叉树外，依次将剩下的每颗二叉树作为左边二叉树的根的右子树，直到所有的二叉树都练成一棵二叉树为止</li>
+</ul>
+</li>
+</ol>
+<h4 id="最优树"><a href="#最优树" class="headerlink" title="最优树"></a>最优树</h4><ol>
+<li><p>在根树中，一个结点的通路长度，就是从树根到此结点的通路的边数。分枝点的通路长度称作内部通路长度，树叶的通路长度称作外部通路长度</p>
+</li>
+<li><p>给定一组权w1,w2,…,wt,不妨设w1&lt;=w2&lt;=…&lt;=wt。设有一棵二叉树，共有t片树叶，分别带权w1,w2,…,wt，该二叉树称作带权二叉树</p>
+</li>
+<li><p>在带权二叉树中，若带权为wi的树叶其通路长度为L(wi)，把$w(T)=\sum_{i=1}^{t}w_{i}L(w_{i})$称为该带权二叉树的权，在所有带这些权的二叉树中，使w（T）最小的那棵树，称作最优二叉树</p>
+</li>
+<li><p>设T为带权的最优二叉树，(w1&lt;=w2&lt;=…wt)</p>
+<ul>
+<li>带权为w1,w2的树叶是兄弟</li>
+<li>以树叶w1,w2为儿子的分枝点，其通路长度最长</li>
+</ul>
+</li>
+<li><p>设T带权的最优树，若将带权w1,w2的树叶为儿子的分枝点改为带权w1+w2的树叶，得到一棵树T‘，则T’也是最优树(w1&lt;=w2&lt;=…&lt;=wt)</p>
+</li>
+</ol>
+<p><img src="https://i.loli.net/2020/06/23/gGidljaxwfXsIKV.png" alt=""></p>
+<h4 id="前缀码"><a href="#前缀码" class="headerlink" title="前缀码"></a>前缀码</h4><p>给定一个序列集合，若没有一个序列是另一个序列的前缀，该序列集合称位前缀码</p>
+<p>定理：任何一棵二叉树的树叶可对应一个前缀码</p>
+<p>任何一个前缀码都对应一棵二叉树</p>
+<p>用二元树产生二元前缀码：</p>
+<p>给一个二元树，t片叶，v是分枝点</p>
+<p>若v有两个儿子，左0，右1.若只有一个，也可标0，也可标1</p>
+<p>设w为T的一片叶，从根到w上各边标号组成的符号放在w处。</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a  href="/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E5%9B%BE%E8%AE%BA/">离散数学-图论</a></p>
+        <p><span>文章作者:</span><a  href="/" title="访问 Jian Shengnan 的个人博客">Jian Shengnan</a></p>
+        <p><span>发布时间:</span>2020年07月03日 - 16时25分</p>
+        <p><span>最后更新:</span>2020年06月24日 - 18时09分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E5%9B%BE%E8%AE%BA/" title="离散数学-图论">http://yoursite.com/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E5%9B%BE%E8%AE%BA/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E5%9B%BE%E8%AE%BA/　　作者: Jian Shengnan" title=""></span>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+    <a  href="/2020/07/03/%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          电子技术基础复习总结
+        
+      </div>
+    </a>
+  
+  
+    <a  href="/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E6%95%B0%E7%90%86%E9%80%BB%E8%BE%91/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">离散数学-数理逻辑</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#图论"><span class="toc-number">1.</span> <span class="toc-text">图论</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#基本概念"><span class="toc-number">1.1.</span> <span class="toc-text">基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#矩阵"><span class="toc-number">1.2.</span> <span class="toc-text">矩阵</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#邻接矩阵"><span class="toc-number">1.2.1.</span> <span class="toc-text">邻接矩阵</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#可达性矩阵"><span class="toc-number">1.2.2.</span> <span class="toc-text">可达性矩阵</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#完全关联矩阵"><span class="toc-number">1.2.3.</span> <span class="toc-text">完全关联矩阵</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#矩阵与图连通性的关系："><span class="toc-number">1.2.4.</span> <span class="toc-text">矩阵与图连通性的关系：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#特殊图"><span class="toc-number">1.3.</span> <span class="toc-text">特殊图</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#无向欧拉图"><span class="toc-number">1.3.1.</span> <span class="toc-text">无向欧拉图</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#定义"><span class="toc-number">1.3.1.1.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#判定定理"><span class="toc-number">1.3.1.2.</span> <span class="toc-text">判定定理</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#有向欧拉图"><span class="toc-number">1.3.2.</span> <span class="toc-text">有向欧拉图</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#定义-1"><span class="toc-number">1.3.2.1.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#定理"><span class="toc-number">1.3.2.2.</span> <span class="toc-text">定理</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#哈密尔顿图"><span class="toc-number">1.3.3.</span> <span class="toc-text">哈密尔顿图</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#定义-2"><span class="toc-number">1.3.3.1.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#必要条件"><span class="toc-number">1.3.3.2.</span> <span class="toc-text">必要条件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#充分条件"><span class="toc-number">1.3.3.3.</span> <span class="toc-text">充分条件</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#平面图"><span class="toc-number">1.3.4.</span> <span class="toc-text">平面图</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#定义-3"><span class="toc-number">1.3.4.1.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#欧拉公式"><span class="toc-number">1.3.4.2.</span> <span class="toc-text">欧拉公式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#库拉托夫斯基图"><span class="toc-number">1.3.4.3.</span> <span class="toc-text">库拉托夫斯基图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#对偶图"><span class="toc-number">1.3.4.4.</span> <span class="toc-text">对偶图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#着色"><span class="toc-number">1.3.4.5.</span> <span class="toc-text">着色</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#树"><span class="toc-number">1.4.</span> <span class="toc-text">树</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#无向树"><span class="toc-number">1.4.1.</span> <span class="toc-text">无向树</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#性质"><span class="toc-number">1.4.1.0.1.</span> <span class="toc-text">性质</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#特点"><span class="toc-number">1.4.1.0.2.</span> <span class="toc-text">特点</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#生成树"><span class="toc-number">1.4.1.0.3.</span> <span class="toc-text">生成树</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#有向树"><span class="toc-number">1.4.2.</span> <span class="toc-text">有向树</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#根树"><span class="toc-number">1.4.2.1.</span> <span class="toc-text">根树</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#k叉树"><span class="toc-number">1.4.2.2.</span> <span class="toc-text">k叉树</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#最优树"><span class="toc-number">1.4.2.3.</span> <span class="toc-text">最优树</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#前缀码"><span class="toc-number">1.4.2.4.</span> <span class="toc-text">前缀码</span></a></li></ol></li></ol></li></ol></li></ol>
+</div>
+<style>
+    .left-col .switch-btn {
+        display: none;
+    }
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+            $(".switch-btn, .switch-area").fadeOut(300);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+            $(".switch-btn, .switch-area").fadeIn(500);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+        $(".switch-btn, .switch-area").show();
+    }
+</script>
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+        <section class="changyan" id="comments">
+  <!--<div id="uyan_frame"></div>-->
+  <div id="SOHUCS"></div>
+  <script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js"></script>
+  <script type="text/javascript">
+    window.changyan.api.config({
+      appid: 'xxxx',
+      conf: 'xxxxxxxxx'
+    });
+  </script>
+</section>
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a  href="/2020/07/03/%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93/" title="上一篇: 电子技术基础复习总结">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a  href="/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E6%95%B0%E7%90%86%E9%80%BB%E8%BE%91/" title="下一篇: 离散数学-数理逻辑">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E3%80%8A%E7%A5%9D%E7%A6%8F%E3%80%8B/">《祝福》</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E3%80%8A%E4%B8%AD%E5%9B%BD%E7%96%AB%E8%8B%97%E7%99%BE%E5%B9%B4%E7%BA%AA%E5%AE%9E%E3%80%8B%E8%AF%BB%E4%B9%A6%E6%8A%A5%E5%91%8A/">《中国疫苗百年纪实》读书报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E3%80%8A%E9%95%BF%E6%98%8E%E7%81%AF%E3%80%8B/">《长明灯》</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E3%80%8A%E5%9C%A8%E9%85%92%E6%A5%BC%E4%B8%8A%E3%80%8B/">《在酒楼上》</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E3%80%8A%E4%BC%A4%E9%80%9D%E3%80%8B/">《伤逝》</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E3%80%8A%E7%8B%82%E4%BA%BA%E6%97%A5%E8%AE%B0%E3%80%8B/">《狂人日记》</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E3%80%8A%E5%AD%A4%E7%8B%AC%E8%80%85%E3%80%8B/">《孤独者》</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E3%80%8A%E9%AB%98%E8%80%81%E5%A4%AB%E5%AD%90%E3%80%8B/">《高老夫子》</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E3%80%8A%E8%82%A5%E7%9A%82%E3%80%8B/">《肥皂》</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E3%80%8A%E7%AB%AF%E5%8D%88%E8%8A%82%E3%80%8B/">《端午节》</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E3%80%8A%E7%99%BD%E5%85%89%E3%80%8B/">《白光》</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E3%80%8A%E9%98%BFQ%E6%AD%A3%E4%BC%A0%E3%80%8B/">《阿Q正传》</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%91%A8%E5%8D%97%C2%B7%E8%9E%BD%E6%96%AF/">国风·周南·螽斯</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%91%A8%E5%8D%97%C2%B7%E6%A1%83%E5%A4%AD/">国风·周南·桃夭</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%91%A8%E5%8D%97%C2%B7%E6%B1%9D%E5%9D%9F/">国风·周南·汝坟</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%91%A8%E5%8D%97%C2%B7%E5%85%8D%E7%BD%9D/">国风·周南·免罝</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%91%A8%E5%8D%97%C2%B7%E9%BA%9F%E4%B9%8B%E8%B6%BE/">国风·周南·麟之趾</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%91%A8%E5%8D%97%C2%B7%E5%8D%B7%E8%80%B3/">国风·周南·卷耳</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%91%A8%E5%8D%97%C2%B7%E6%A8%9B%E6%9C%A8/">国风·周南·樛木</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%91%A8%E5%8D%97%C2%B7%E6%B1%89%E5%B9%BF/">国风·周南·汉广</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%91%A8%E5%8D%97%C2%B7%E8%91%9B%E8%A6%83/">国风·周南·葛覃</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%91%A8%E5%8D%97%C2%B7%E8%8A%A3%E8%8B%A2/">国风·周南·芣苢</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%8F%AC%E5%8D%97%C2%B7%E6%AE%B7%E5%85%B6%E9%9B%B7/">国风·召南·殷其雷</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%8F%AC%E5%8D%97%C2%B7%E9%87%8E%E6%9C%89%E6%AD%BB%E9%BA%95/">国风·召南·野有死麕</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%8F%AC%E5%8D%97%C2%B7%E5%B0%8F%E6%98%9F/">国风·召南·小星</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%8F%AC%E5%8D%97%C2%B7%E9%B9%8A%E5%B7%A2/">国风·召南·鹊巢</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%8F%AC%E5%8D%97%C2%B7%E6%B1%9F%E6%9C%89%E6%B1%9C/">国风·召南·江有汜</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%8F%AC%E5%8D%97%C2%B7%E4%BD%95%E5%BD%BC%E8%A5%9B%E7%9F%A3/">国风·召南·何彼襛矣</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%8F%AC%E5%8D%97%C2%B7%E8%A1%8C%E9%9C%B2/">国风·召南·行露</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%8F%AC%E5%8D%97%C2%B7%E7%BE%94%E7%BE%8A/">国风·召南·羔羊</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%8F%AC%E5%8D%97%C2%B7%E7%94%98%E6%A3%A0/">国风·召南·甘棠</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%8F%AC%E5%8D%97%C2%B7%E8%8D%89%E8%99%AB/">国风·召南·草虫</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%8F%AC%E5%8D%97%C2%B7%E9%87%87%E8%98%A9/">国风·召南·采蘩</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%8F%AC%E5%8D%97%C2%B7%E9%87%87%EE%86%9A/">国风·召南·采</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%8F%AC%E5%8D%97%C2%B7%E6%91%BD%E6%9C%89%E6%A2%85/">国风·召南·摽有梅</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E4%B8%AD%E5%9B%BD%E4%BA%BA%E9%A9%AF%E5%8C%96%E4%BA%86%E5%AE%B6%E7%8C%AA/">中国人驯化了家猪</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E6%97%A9%E6%9C%9F%E9%85%BF%E9%85%92%E5%B7%A5%E8%89%BA%E5%87%BA%E7%8E%B0/">早期酿酒工艺出现</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E6%97%A9%E6%9C%9F%E7%BC%96%E7%BB%87%E7%89%A9%E5%87%BA%E7%8E%B0/">早期编织物出现</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E7%8E%89%E8%9F%BE%E5%B2%A9%E5%87%BA%E7%8E%B0%E4%BA%BA%E5%B7%A5%E6%A0%BD%E5%9F%B9%E7%A8%BB/">玉蟾岩出现人工栽培稻</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E6%96%B0%E6%9C%88%E5%9C%B0%E5%B8%A6%E5%87%BA%E7%8E%B0%E5%8E%9F%E5%A7%8B%E5%86%9C%E4%B8%9A/">新月地带出现原始农业</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E9%99%B6%E7%AD%B9%E7%9A%84%E5%87%BA%E7%8E%B0/">陶筹的出现</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E4%BA%BA%E7%B1%BB%E9%A9%AF%E5%8C%96%E7%89%9B%E3%80%81%E7%BE%8A/">人类驯化牛、羊</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E4%BA%BA%E7%B1%BB%E6%8F%90%E5%8F%96%E9%87%91%E5%92%8C%E9%93%B6/">人类提取金和银</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E4%BA%BA%E7%B1%BB%E4%BD%BF%E7%94%A8%E5%BC%93%E7%AE%AD/">人类使用弓箭</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E4%BA%BA%E7%B1%BB%E5%88%A9%E7%94%A8%E5%B0%8F%E7%AB%B9%E7%AD%8F%E8%B7%A8%E6%B5%B7%E8%88%AA%E8%A1%8C/">人类利用小竹筏跨海航行</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E4%BA%BA%E7%B1%BB%E5%BC%80%E5%A7%8B%E9%A9%AF%E5%8C%96%E7%8B%97/">人类开始驯化狗</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E4%BA%BA%E7%B1%BB%E5%BC%80%E5%A7%8B%E7%83%A7%E5%88%B6%E9%99%B6%E5%99%A8/">人类开始烧制陶器</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E4%BA%BA%E7%B1%BB%E7%BB%98%E5%88%B6%E5%A3%81%E7%94%BB/">人类绘制壁画</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E4%BA%BA%E7%B1%BB%E5%8F%91%E7%8E%B0%E5%8D%95%E8%B4%A8%E9%93%9C/">人类发现单质铜</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E4%BA%BA%E7%B1%BB%E5%8F%91%E6%98%8E%E5%8E%9F%E5%A7%8B%E7%BB%87%E6%9C%BA/">人类发明原始织机</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E4%BA%BA%E7%B1%BB%E5%8F%91%E6%98%8E%E4%BD%BF%E7%94%A8%E7%8A%81/">人类发明使用犁</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E6%B2%B3%E5%A7%86%E6%B8%A1%E5%87%BA%E7%8E%B0%E8%BE%83%E5%8F%91%E8%BE%BE%E7%9A%84%E5%8F%B2%E5%89%8D%E7%A8%BB%E4%BD%9C%E5%86%9C%E4%B8%9A/">河姆渡出现较发达的史前稻作农业</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E6%B2%B3%E5%8C%97%E7%A3%81%E5%B1%B1%E5%9C%B0%E5%8C%BA%E4%BD%BF%E7%94%A8%E7%BA%BA%E8%BD%AE/">河北磁山地区使用纺轮</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%93%A5%E8%B4%9D%E5%85%8B%E5%8A%9B%E7%9F%B3%E9%98%B5%E5%BB%BA%E6%88%90/">哥贝克力石阵建成</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/">文件操作</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/">图书管理系统实验报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E5%AE%9E%E9%AA%8C%EF%BC%9A%E8%AE%A1%E7%AE%97%E7%9C%9F%E5%80%BC/">离散数学实验：计算真值</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E5%AE%9E%E9%AA%8C%EF%BC%9A%E5%85%B3%E7%B3%BB%E6%80%A7%E8%B4%A8%E5%88%A4%E6%96%AD/">离散数学实验：关系性质判断</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E5%AE%9E%E9%AA%8C%EF%BC%9A%E5%85%B3%E7%B3%BB%E9%97%AD%E5%8C%85%E7%9A%84%E8%AE%A1%E7%AE%97(C%E8%AF%AD%E8%A8%80)/">离散数学实验：关系闭包的计算(C语言)</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/Vscode%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%A4%A7%E5%85%A8/">Vscode快捷键大全</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93/">电子技术基础复习总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E5%9B%BE%E8%AE%BA/">离散数学-图论</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E6%95%B0%E7%90%86%E9%80%BB%E8%BE%91/">离散数学-数理逻辑</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E7%AC%AC%E5%90%88%E8%AE%BA/">离散数学-第合论</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E4%BB%A3%E6%95%B0%E7%B3%BB%E7%BB%9F/">离散数学-代数系统</a></li></ul>
+    
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+    <script>
+        $(".post-list").addClass("toc-article");
+        // $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#toc, .switch-btn, .switch-area").toggle();
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+                $(".switch-btn, .switch-area").fadeToggle(300);
+            }
+        })
+    </script>
+
+
+
+
+    <script>
+        
+    </script>
+
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2020 Jian Shengnan
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo &nbsp;&nbsp;</a><a href="https://github.com/maochunguang" target="_blank">Blog</a> by tommy
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >极客到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+    <span id="busuanzi_container_page_pv">
+        本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+</footer>
+
+    </div>
+    
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 5;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'xxxxx', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?xxxxxx";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+</body>
+</html>

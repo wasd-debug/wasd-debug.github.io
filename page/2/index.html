@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="baidu-site-verification" content="L6Lm9d5Crl"/>
+  
+  
+  
+  
+  <title>凉介&#39;s personal blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="凉介&#39;s personal blog">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+<meta property="og:site_name" content="凉介&#39;s personal blog">
+<meta property="og:locale" content="zh">
+<meta property="article:author" content="Jian Shengnan">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternative" href="/atom.xml" title="凉介&#39;s personal blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/like.png">
+  
+  
+  
+<link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+    
+    
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          fancybox: true,
+          animate: true,
+          isHome: true,
+          isPost: false,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: true
+      }
+  </script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/1.png" class="js-avatar">
+            
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Jian Shengnan</a></h1>
+        </hgroup>
+        
+        
+            <form>
+                <input type="text" class="st-default-search-input search" id="local-search-input" placeholder="搜索一下" autocomplete="off">
+            </form>
+            <div id="local-search-result"></div>
+        
+        
+            <script type="text/javascript">
+                (function() {
+                    'use strict';
+                    function getMatchData(keyword, data) {
+                        var matchData = [];
+                        for(var i =0;i<data.length;i++){
+                            if(data[i].title.toLowerCase().indexOf(keyword)>=0) 
+                                matchData.push(data[i])
+                        }
+                        return matchData;
+                    }
+                    var $input = $('#local-search-input');
+                    var $resultContent = $('#local-search-result');
+                    $input.keyup(function(){
+                        $.ajax({
+                            url: '/search.json',
+                            dataType: "json",
+                            success: function( json ) {
+                                var str='<ul class=\"search-result-list\">';                
+                                var keyword = $input.val().trim().toLowerCase();
+                                $resultContent.innerHTML = "";
+                                if ($input.val().trim().length <= 0) {
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                }
+                                var results = getMatchData(keyword, json);
+                                if(results.length === 0){
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                } 
+                                for(var i =0; i<results.length; i++){
+                                    str += "<li><a href='"+ results[i].url +"' class='search-result-title'>"+ results[i].title +"</a></li>";
+                                }
+                                str += "</ul>";
+                                $resultContent.empty();
+                                $resultContent.append(str);
+                                $('#switch-area').hide();
+                            }
+                        });
+                    });
+                })();
+            </script>
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a  href="/archives/">所有文章</a></li>
+                        
+                            <li><a  href="/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/">玩转开发工具</a></li>
+                        
+                            <li><a  href="/categories/digital">玩转数码</a></li>
+                        
+                            <li><a  href="/categories/algorithm">算法学习</a></li>
+                        
+                            <li><a  href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl github"  target="_blank" href="https://github.com/wasd-debug" title="github">github</a>
+                            
+                                <a class="fl weibo"  target="_blank" href="https://www.weibo.com/7456794217/profile?topnav=1&wvr=6&is_all=1" title="weibo">weibo</a>
+                            
+                                <a class="fl rss"  target="_blank" href="/atom.xml" title="rss">rss</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        
+                    </div>
+                </section>
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="https://blog.csdn.net/weixin_46698891">csdn</a>
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="https://segmentfault.com/blog/maocg_web">segmentfault</a>
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="https://www.jianshu.com/u/1640e500283a">简书</a>
+                    
+                    </div>
+                </section>
+                
+                
+            </div>
+        </div>
+    </header>
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Jian Shengnan</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/1.png" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Jian Shengnan</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/">玩转开发工具</a></li>
+                
+                    <li><a href="/categories/digital">玩转数码</a></li>
+                
+                    <li><a href="/categories/algorithm">算法学习</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="github" target="_blank" href="https://github.com/wasd-debug" title="github">github</a>
+                    
+                        <a class="weibo" target="_blank" href="https://www.weibo.com/7456794217/profile?topnav=1&wvr=6&is_all=1" title="weibo">weibo</a>
+                    
+                        <a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+                    
+                </div>
+            </nav>
+        </header>
+    </div>
+</nav>
+      <div class="body-wrap">
+  
+    <article id="post-《白光》" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2020/07/03/%E3%80%8A%E7%99%BD%E5%85%89%E3%80%8B/" class="article-date">
+      <time datetime="2020-07-03T08:26:23.248Z" itemprop="datePublished">2020-07-03</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2020/07/03/%E3%80%8A%E7%99%BD%E5%85%89%E3%80%8B/">《白光》</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="《白光》"><a href="#《白光》" class="headerlink" title="《白光》"></a>《白光》</h1><ol>
+<li>隽了秀才，上省去乡试，一径联捷上去，……绅士们既然千方百计的来攀亲，人们又都像看见神明似的敬畏，深悔先前的轻薄，发昏，……赶走了租住在自己破宅门里的杂姓——那是不劳说赶，自己就搬了，——屋宇全新了，门口是旗杆和匾额，……要清高可以做官，否则不如谋外放。……他平日安排停当的前程，这时候又像受潮的糖塔一般，刹时倒塌，只剩下一堆碎片了。他不自觉的旋转了觉得涣散了身躯，惘惘的走向归家的路。</li>
+<li>第二天的日中，有人在离西门十五里的万流湖看见一个浮尸，当即传扬开去，终于传到地保的耳朵里了，便叫乡下人捞将上来。那是一个男尸，五十多岁，“身上面白无须”，浑身也都没有什么衣裤。或者说这就是陈士成。但邻居懒得去看，也无尸亲认领，于是经县委员相检之后，便由地保抬埋了。至于死因，那当然是没有问题的，剥取死尸的衣服本来是常有的事，够不上疑心到谋害去。而且仵作（旧时官府中检验命案死尸的人）也证明是生前的落水，因为他确凿曾在水底里挣命，所以十个指甲都满嵌着河底泥。</li>
+</ol>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-《阿Q正传》" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2020/07/03/%E3%80%8A%E9%98%BFQ%E6%AD%A3%E4%BC%A0%E3%80%8B/" class="article-date">
+      <time datetime="2020-07-03T08:26:23.246Z" itemprop="datePublished">2020-07-03</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2020/07/03/%E3%80%8A%E9%98%BFQ%E6%AD%A3%E4%BC%A0%E3%80%8B/">《阿Q正传》</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="《阿Q正传》"><a href="#《阿Q正传》" class="headerlink" title="《阿Q正传》"></a>《阿Q正传》</h1><ul>
+<li><p><strong>阿Q又很自尊，所有未庄的居民，全都不在他眼神里，甚而至于对于两位“文童”也有以为不值一笑的神情。夫文童者，将来恐怕要变秀才者也；赵太爷钱太爷大受居民的尊敬，除有钱以外，就因为都是文童的爹爹，而阿Q在精神上独不表格外的崇奉，他想：我的儿子会阔得多啦！加以进了几回城，阿Q自然更加自负，然而他又很鄙薄城里人，譬如用三尺长三寸宽的木板做成的凳子，未庄人叫长凳，他也叫长凳，城里人却叫条凳，他想：这是错的，可笑！油煎大头鱼，未庄都加上半寸长的葱叶，城里人却加上切细的葱丝，他想：这也是错的，可笑！然而未庄人真是不见世面的可笑的乡下人呵，他们没有见过城里的煎鱼！</strong></p>
+</li>
+<li><p><strong>闲人还不完，只撩他，于是终而至于打。阿Q在形式上打败了，被人揪住黄辫子，再壁上碰了四五个响头，闲人这才心满意足的得胜的走了，阿Q站了一刻心里想：”总算被儿子打了，现在的世界真不像样……”于是也心满意足的得胜的走了。</strong></p>
+</li>
+<li><p><strong>阿Q想在心里的，后来每每说出口来，所以，凡是和阿Q玩笑的人们，几乎全知道他有这一种精神上的胜利法。</strong></p>
+</li>
+<li><p><strong>但他立刻转败为胜了。他擎起右手，用力的在自己脸上连打了两个嘴巴，热刺刺的有些痛；打完之后，便心平气和起来，似乎打的是自己被打的是别一个自己，不久也就仿佛是自己打了别个一般——虽然还有些热刺刺，——心满意足的得胜的躺下了。他睡着了</strong>。</p>
+</li>
+<li><p><strong>有人说，有些胜利者，愿意敌手如虎，如鹰，他才感得胜利的欢喜，假使如羊，如小鸡，他便反觉得胜利的无聊。又有些胜利者，当克服一切之后，看见死的死了，降的降了，”臣诚惶诚恐死罪死罪”，他于是没有了敌人，没有了对手，没有了朋友，只有自己在上，一个，孤零零，凄凉，寂寞，便反而感到了胜利的悲哀。然而我们的阿Q却没有这样乏，他是永远得意的：这或者也是中国精神文明冠于全球的一个证据了。</strong></p>
+</li>
+<li><p><strong>但他突然觉到了：这岂不是去杀头吗？他一急，两眼发黑，耳朵里喤的一声，似乎发昏了。然而他又没有全发昏，有时虽然着急，有时却泰然，他意思之间，似乎觉得人生天地间，大约本来有时也未免要杀头的。</strong></p>
+</li>
+<li></li>
+<li><ul>
+<li><strong>车子不住的前行，阿Q在喝彩声中，轮转眼睛去看吴妈，似乎伊一向没有见他，却只是出神的看着兵们背上的洋炮。</strong></li>
+<li><strong>阿Q于是再看那些喝彩的人们。</strong></li>
+<li><strong>这刹那中，他的思想又仿佛旋风似的在脑里一回旋了。四年前，他曾在山脚下遇见一只饿狼，永是不近不远的跟定他，要吃他的肉。他那时吓得几乎要死，幸而手里有一柄砍柴刀，这才仗这壮了胆，支持到未庄；可是永远记得那狼眼睛，又凶又怯，闪闪的像两颗鬼火，似乎远远的来穿透了他的皮肉。而这回他又看见了从来没有看见过的更可怕的眼睛了，又钝又锋利，不但已经咀嚼了他的话，并且还要咀嚼他皮肉以外的东西，永远不近不远的跟他走。</strong></li>
+<li><strong>这些眼睛们似乎连成一气，已经在那里咬他的灵魂。</strong></li>
+<li><strong>”救命……”</strong></li>
+<li><strong>然而阿Q没有说，他早就两眼发黑，耳朵里嗡的一声，觉得全身仿佛微尘似的迸散了。</strong></li>
+</ul>
+</li>
+<li><p><strong>至于舆论，在未庄是无异议，自然都说阿Q坏，被枪毙是他的坏的证据；不坏又何至于被枪毙呢？而城里的舆论却不佳，他们多半不满足，以为枪毙并无杀头这般好看，而且那是怎样的一个可笑的死囚呵，游了那么久的街，竟没有唱一句戏：他们白跟一趟了。</strong></p>
+</li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-国风·周南·螽斯" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%91%A8%E5%8D%97%C2%B7%E8%9E%BD%E6%96%AF/" class="article-date">
+      <time datetime="2020-07-03T08:26:12.956Z" itemprop="datePublished">2020-07-03</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%91%A8%E5%8D%97%C2%B7%E8%9E%BD%E6%96%AF/">国风·周南·螽斯</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="国风·周南·螽斯"><a href="#国风·周南·螽斯" class="headerlink" title="国风·周南·螽斯"></a>国风·周南·螽斯</h1><h2 id="原文"><a href="#原文" class="headerlink" title="原文"></a>原文</h2><p>国风·周南·螽斯</p>
+<p>【周】无名氏</p>
+<p>螽斯<a href="螽斯(zhong一声)：或名斯螽，一种昆虫，常称“蝈蝈”。">^1</a>羽，诜诜<a href="诜诜（shen一声）：众多貌。">^2</a>兮。宜尔子孙，振振<a href="振振（zhen一声）：茂盛的样子。">^3</a>兮。</p>
+<p>螽斯羽，薨薨<a href="薨薨（hong一声）：很多虫飞的声音。或曰形容螽斯的齐鸣。">^4</a>兮。宜尔子孙，绳绳<a href="绳绳（min三声）：绵延不绝的样子。">^5</a>兮。</p>
+<p>螽斯羽，揖揖<a href="揖揖（ji二声）：会聚的样子。为“集”的假借。">^6</a>兮。宜尔子孙，蛰蛰<a href="蛰蛰：多，聚集。">^7</a>兮。</p>
+<h2 id="译文"><a href="#译文" class="headerlink" title="译文"></a>译文</h2><p>蝈蝈张翅膀，群集低飞翔啊。你的子孙多又多，家族正兴旺啊。</p>
+<p>蝈蝈张翅膀，群飞嗡嗡响啊。你的子孙多又多，世代绵延长啊。</p>
+<p>蝈蝈长翅膀，群集挤满堂啊。你的子孙多又多，和睦好欢畅啊。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-国风·周南·桃夭" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%91%A8%E5%8D%97%C2%B7%E6%A1%83%E5%A4%AD/" class="article-date">
+      <time datetime="2020-07-03T08:26:12.954Z" itemprop="datePublished">2020-07-03</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%91%A8%E5%8D%97%C2%B7%E6%A1%83%E5%A4%AD/">国风·周南·桃夭</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="国风·周南·桃夭"><a href="#国风·周南·桃夭" class="headerlink" title="国风·周南·桃夭"></a>国风·周南·桃夭</h1><h2 id="原文"><a href="#原文" class="headerlink" title="原文"></a>原文</h2><p>国风·周南·桃夭</p>
+<p>桃之夭夭<a href="夭夭：花朵怒放，美丽而繁华的样子。">^1</a>，灼灼<a href="灼灼：花朵色彩鲜艳如火，明亮鲜艳的样子。">^2</a>其华<a href="华：同花。">^3</a>。之子<a href="之子：这位姑娘。">^4</a>于归<a href="于归：姑娘出嫁。古代把丈夫家看作女子的归宿。故称归。于：去，往。">^5</a>，宜<a href="宜：和顺、亲善。">^6</a>其室家。</p>
+<p>桃之夭夭，有蕡<a href="蕡：（fen二声）草木结实很多的样子。此处指桃肥厚的样子。">^7</a>其实。之子于归，宜其家室。</p>
+<p>桃之夭夭，其叶蓁蓁<a href="蓁：（zhen一声）草木繁密的样子，这里形容桃叶茂盛。">^8</a>。之子于归，宜其家人。</p>
+<h2 id="译文"><a href="#译文" class="headerlink" title="译文"></a>译文</h2><p>桃花怒放千万朵，色彩鲜艳红似火。这位姑娘要出嫁，喜气洋洋归夫家。</p>
+<p>桃花怒放千万朵，果实累累大有多。这位姑娘要出嫁，早生贵子后嗣旺。</p>
+<p>桃花怒放千万朵，绿叶繁茂永不落。这位姑娘要出嫁，齐心携手家和睦。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-国风·周南·汝坟" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%91%A8%E5%8D%97%C2%B7%E6%B1%9D%E5%9D%9F/" class="article-date">
+      <time datetime="2020-07-03T08:26:12.951Z" itemprop="datePublished">2020-07-03</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%91%A8%E5%8D%97%C2%B7%E6%B1%9D%E5%9D%9F/">国风·周南·汝坟</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="国风·周南·汝坟"><a href="#国风·周南·汝坟" class="headerlink" title="国风·周南·汝坟"></a>国风·周南·汝坟</h1><h2 id="原文"><a href="#原文" class="headerlink" title="原文"></a>原文</h2><p>国风·周南·汝坟</p>
+<p>遵<a href="遵：循、沿。">^1</a>彼汝<a href="汝：汝河。">^2</a>坟<a href="坟：水涯，大堤。">^3</a>，伐其条枚<a href="条枚：山楸树。">^4</a>；未见君子<a href="君子：此指在外服役或为官的丈夫。">^5</a>，惄<a href="惄：（ni四声）饥，一说忧愁。">^6</a>如调<a href="调：（zhou一声）：早晨">^7</a>饥。</p>
+<p>遵彼汝坟，伐其条肄<a href="肄：树砍后再生小枝。">^8</a>；既见君子，不我遐弃。</p>
+<p>鲂鱼赪<a href="赪：（cheng一声）浅红色。">^9</a>尾，王室如燬[^10]；虽则如燬，父母孔<a href="孔：甚。">^11</a>迩！</p>
+<h2 id="译文"><a href="#译文" class="headerlink" title="译文"></a>译文</h2><p>沿着汝河大堤走，采伐山楸那枝条。还没见到我夫君，犹如忍饥在清早。</p>
+<p>沿着汝河大堤走，采伐山楸那余枝。终于见到我夫君，请莫再将我远弃。</p>
+<p>鳊鱼尾巴色赤红，王室事务急如火。虽然有事急如火，父母穷困谁养活。</p>
+<p>[^10]燬：如火焚一样。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-国风·周南·免罝" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%91%A8%E5%8D%97%C2%B7%E5%85%8D%E7%BD%9D/" class="article-date">
+      <time datetime="2020-07-03T08:26:12.948Z" itemprop="datePublished">2020-07-03</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%91%A8%E5%8D%97%C2%B7%E5%85%8D%E7%BD%9D/">国风·周南·免罝</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="国风·周南·免罝"><a href="#国风·周南·免罝" class="headerlink" title="国风·周南·免罝"></a>国风·周南·免罝</h1><h2 id="原文"><a href="#原文" class="headerlink" title="原文"></a>原文</h2><p>国风·周南·免罝</p>
+<p>肃肃<a href="肃肃：（suo一声）整饬貌，密密。">^1</a>免罝<a href="罝：（ju一声）捕兽网。">^2</a>，椓<a href="椓：（zhuo二声）：打击。">^3</a>之丁丁<a href="丁丁：（zheng一声）击打声。布网捕兽，必先在地上打桩。">^4</a>。赳赳<a href="赳赳：威武雄健的样子。">^5</a>武夫，公侯干城<a href="干城：比喻捍卫者。">^6</a>。</p>
+<p>肃肃免罝，施于中逵<a href="中逵：即四通八达的路岔口。">^7</a>。赳赳武夫，公侯好仇<a href="仇：（qiu二声）通“逑”。">^8</a>。</p>
+<p>肃肃免罝，施于中林<a href="中林：林中。林：牧外谓之野，野外谓之林。">^9</a>。赳赳武夫，公侯腹心<a href="腹心：比喻可信赖而不可缺少的人。">^10</a>。</p>
+<h2 id="译文"><a href="#译文" class="headerlink" title="译文"></a>译文</h2><p>兔网结的紧又密，布网打桩声声碎。武士气概雄赳赳，是那公候好护卫。</p>
+<p>兔网结的紧又密，布网就在岔路口。武士气概雄赳赳，是那公候好帮手。</p>
+<p>兔网结的紧又密，布网就在林深处。武士气概雄赳赳，是那公候好心腹。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-国风·周南·麟之趾" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%91%A8%E5%8D%97%C2%B7%E9%BA%9F%E4%B9%8B%E8%B6%BE/" class="article-date">
+      <time datetime="2020-07-03T08:26:12.946Z" itemprop="datePublished">2020-07-03</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%91%A8%E5%8D%97%C2%B7%E9%BA%9F%E4%B9%8B%E8%B6%BE/">国风·周南·麟之趾</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="国风·周南·麟之趾"><a href="#国风·周南·麟之趾" class="headerlink" title="国风·周南·麟之趾"></a>国风·周南·麟之趾</h1><h2 id="原文"><a href="#原文" class="headerlink" title="原文"></a>原文</h2><p>国风·周南·麟之趾</p>
+<p>麟之趾，振振<a href="振振（zhen一声）：诚实仁厚的样子。">^1</a>公子<a href="公子：与公姓，公族都是指贵族子弟">^2</a>，于嗟<a href="于（xu一声）：叹词。于嗟：叹美">^3</a>麟兮。</p>
+<p>麟之定<a href="定：额头">^4</a>，振振公姓，于嗟麟兮。</p>
+<p>麟之角，振振公族，于嗟麟兮！</p>
+<h2 id="译文"><a href="#译文" class="headerlink" title="译文"></a>译文</h2><p>麒麟脚蹄不踢人，仁厚有为公子们。你们个个像麒麟。</p>
+<p>麒麟额头不撞人，仁厚有为公姓们。你们个个像麒麟。</p>
+<p>麒麟尖角不伤人，仁厚有为公族们。你们个个像麒麟。</p>
+<h2 id="评析"><a href="#评析" class="headerlink" title="评析"></a>评析</h2><p>以麒麟比人，祝贺人家多子多孙，且子孙品德高尚。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-国风·周南·卷耳" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%91%A8%E5%8D%97%C2%B7%E5%8D%B7%E8%80%B3/" class="article-date">
+      <time datetime="2020-07-03T08:26:12.945Z" itemprop="datePublished">2020-07-03</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%91%A8%E5%8D%97%C2%B7%E5%8D%B7%E8%80%B3/">国风·周南·卷耳</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="国风·周南·卷耳"><a href="#国风·周南·卷耳" class="headerlink" title="国风·周南·卷耳"></a>国风·周南·卷耳</h1><h2 id="原文"><a href="#原文" class="headerlink" title="原文"></a>原文</h2><p>国风·周南·卷耳</p>
+<p>【周】无名氏</p>
+<p>采采<a href="采采：采了又采。">^1</a>卷耳<a href="卷耳：苍耳，石竹科一年生草本植物。">^2</a>，不盈顷筐<a href="顷筐：斜口筐子，后高前低。">^3</a>。嗟我怀人，寘<a href="寘（zhi四声）：放，搁置。">^4</a>彼周行<a href="周行（hang）：环绕的道路，特指大道。">^5</a>。</p>
+<p>陟彼崔嵬<a href="崔巍（wei二声）：山高不平。">^6</a>，我<a href="我：想象中丈夫的自称。">^7</a>马虺隤<a href="虺隤(hui一声，tui二声)：疲极而病。">^8</a>。我姑<a href="姑：姑且。">^9</a>真彼金罍<a href="金罍（lei二声）：青铜做的罍。罍：器名，青铜制，用以盛酒水。">^10</a>，维<a href="维：发语词。">^11</a>以不永怀<a href="永怀：永久思念。">^12</a>。</p>
+<p>陟彼高冈，我马玄黄<a href="玄黄：黑色毛与黄色毛相掺杂的颜色。">^13</a>。我姑真彼兕觥<a href="兕觥（si四声，gong一声）：一说野牛角制的酒杯，一说【觥】是青铜做的牛形酒器。">^14</a>，维以不永伤<a href="永伤：长久思念。">^15</a>。</p>
+<p>陟彼砠<a href="砠（ju一声）：有土的石山，或谓山中的险阻之地。">^16</a>矣，我马瘏<a href="瘏（tu二声）：因劳致病，马疲病不能前行。">^17</a>矣。我仆痡<a href="痡（pu一声）：因劳致病，人过劳不能走路。">^18</a>矣，云何<a href="云何：奈何。云：语助词。">^19</a>吁<a href="吁（xu一声）：忧伤而叹。">^20</a>矣。</p>
+<h2 id="译文"><a href="#译文" class="headerlink" title="译文"></a>译文</h2><p>采了又采卷耳，半天不满一小筐。我啊想念心上人啊，筐儿弃在大路旁。</p>
+<p>攀那高高的土石山，马儿足疲神颓丧。且先斟满金壶酒，慰我离思与忧伤。</p>
+<p>登上那高高的山脊梁，马儿的腿软已迷茫。且先斟满大杯酒，免我心中长悲伤。</p>
+<p>艰难攀登乱石岗，马儿累坏倒在一旁，仆人精疲力又竭，无奈愁思聚心上。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-国风·周南·樛木" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%91%A8%E5%8D%97%C2%B7%E6%A8%9B%E6%9C%A8/" class="article-date">
+      <time datetime="2020-07-03T08:26:12.943Z" itemprop="datePublished">2020-07-03</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%91%A8%E5%8D%97%C2%B7%E6%A8%9B%E6%9C%A8/">国风·周南·樛木</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="国风·周南·樛木"><a href="#国风·周南·樛木" class="headerlink" title="国风·周南·樛木"></a>国风·周南·樛木</h1><h2 id="原文"><a href="#原文" class="headerlink" title="原文"></a>原文</h2><p>国风·周南·樛木</p>
+<p>【周】无名氏</p>
+<p>南有樛<a href="樛（jiu一声）：下曲而高的树。">^1</a>木，葛藟<a href="葛藟（ge三声，lei三声）：多年生草本植物。">^2</a>累<a href="累：攀援，缠绕。此处又作蕌。">^3</a>之。乐只<a href="只：语气助词。">^4</a>君子<a href="君子：结婚的新郎。">^5</a>，福履<a href="福履：幸福。">^6</a>绥<a href="绥：与妥通，下降的意思。">^7</a>之。</p>
+<p>南有樛木，葛藟荒<a href="荒：覆盖。">^8</a>之。乐只君子，福履将<a href="将：扶助。">^9</a>之。</p>
+<p>南有樛木，葛藟萦<a href="萦：回旋缠绕。">^10</a>之。乐只君子，福履成<a href="成：就；到来。">^11</a>之。</p>
+<h2 id="译文"><a href="#译文" class="headerlink" title="译文"></a>译文</h2><p>南方地区有很多生长茂密的树木，这些树木中有下垂的树枝，葛藟爬上这跟树枝，并在这根树枝上生长蔓延。一位快乐的君子，他能够用善心或善行去安抚人或使人安定。</p>
+<p>南方地区有很多生长茂密的树木，这些树木中有下垂的树枝，葛藟爬上这根树枝，并把这根树枝覆盖了。一位快乐的君子，能够用善心或善行去扶助他人。</p>
+<p>南方地区有很多生长茂盛的树木，这些树木中有下垂的树枝，葛藟爬上这根树枝，并在这根树枝上缠绕。一位快乐的君子，能够用善心去成就他人。</p>
+<h2 id="评析"><a href="#评析" class="headerlink" title="评析"></a>评析</h2><p>这是先秦时代华夏族民歌，是祝福新婚男子的赞歌。先以葛藟缠绕树木，比喻女子嫁给丈夫。然后为新郎祝福，希望他能有幸福、美满的生活。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-国风·周南·汉广" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%91%A8%E5%8D%97%C2%B7%E6%B1%89%E5%B9%BF/" class="article-date">
+      <time datetime="2020-07-03T08:26:12.942Z" itemprop="datePublished">2020-07-03</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%91%A8%E5%8D%97%C2%B7%E6%B1%89%E5%B9%BF/">国风·周南·汉广</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="国风·周南·汉广"><a href="#国风·周南·汉广" class="headerlink" title="国风·周南·汉广"></a>国风·周南·汉广</h1><h2 id="原文"><a href="#原文" class="headerlink" title="原文"></a>原文</h2><p>国风·周南·汉广</p>
+<p>南有乔木<a href="乔木：高大的树木。">^1</a>，不可休<a href="休：：指高木无荫，不能休息。">^2</a>思<a href="思：语助词。">^3</a>；汉<a href="汉：汉水。长江支流之一。">^4</a>有游女<a href="游女：汉水之神，或谓游玩的女子。">^5</a>，不可求思。</p>
+<p>汉之广矣，不可游思；江<a href="江：江水，长江。">^6</a>之永<a href="永：水流长。">^7</a>矣，不可方<a href="方：筏。此处用作动词，意谓坐木筏渡江。">^8</a>思。</p>
+<p>翘翘<a href="翘翘：（qiao二声）比喻杂草丛生。">^9</a>错薪<a href="错薪：丛杂的柴草。">^10</a>，言刈其楚<a href="楚：灌木名。">^11</a>；之子于归<a href="归：嫁。">^12</a>，言秣<a href="秣：（mo四声）喂马。">^13</a>其马。</p>
+<p>汉之广矣，不可泳思；江之永矣，不可方思。</p>
+<p>翘翘错薪，言刈其蒌<a href="蒌：（lou二声）蒌蒿">^14</a>；之子于归，言秣其驹。</p>
+<p>汉之广矣，不可泳思；江之永矣，不可方思。</p>
+<h2 id="译文"><a href="#译文" class="headerlink" title="译文"></a>译文</h2><p>南有大树枝叶高，树下行人休憩少。汉江有个漫游女，想要追求只徒劳。</p>
+<p>浩浩汉江多宽广，不能泅渡空惆怅。滚滚汉江多漫长，不能摆渡空忧伤。</p>
+<p>杂树丛生长得高，砍柴就要砍荆条。那个女子如嫁我，快将辕马喂个饱。</p>
+<p>浩浩汉江多宽广，不能泅渡空惆怅。滚滚汉江多漫长，不能摆渡空忧伤。</p>
+<p>杂草丛生乱纵横，割下蒌蒿作柴薪。那个女子如嫁我，快饲马驹驾车迎。</p>
+<p>浩浩汉江多宽广，不能泅渡空惆怅。滚滚汉江多漫长，不能摆渡空忧伤。</p>
+<h2 id="评析"><a href="#评析" class="headerlink" title="评析"></a>评析</h2><p>主人公是一个年青樵夫，钟情一位美丽的姑娘，却始终难遂心愿，情丝缠绕，无以解脱，面对浩渺的江水，他唱出了这首动人的诗歌。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/3/">Next &amp;raquo;</a>
+    </nav>
+  
+
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2020 Jian Shengnan
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo &nbsp;&nbsp;</a><a href="https://github.com/maochunguang" target="_blank">Blog</a> by tommy
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >极客到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+    <span id="busuanzi_container_page_pv">
+        本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+</footer>
+
+    </div>
+    
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 5;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'xxxxx', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?xxxxxx";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+</body>
+</html>

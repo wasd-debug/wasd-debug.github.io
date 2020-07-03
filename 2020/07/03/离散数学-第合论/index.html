@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="baidu-site-verification" content="L6Lm9d5Crl"/>
+  
+  
+  
+  
+  <title>离散数学-第合论 | 凉介&#39;s personal blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="第合论集合与关系基本概念 &#x3D;&#x3D;集合&#x3D;&#x3D;：一些对象的整体就称为一个集合，这个整体的每个对象称为该集合的一个元素。用大写字母表示集合，小写字母表示元素。集合中的元素是无序的不重复的。  集合的表示方法：列举法，叙述法，枚举法，文氏图  &#x3D;&#x3D;子集&#x3D;&#x3D;：设AB是任何两个集合，假如A的每一个元素都是B的成员，则称A为B的子集，、逼格额A包含于B内，或者B包含A，记为A$\subseteq $B.如果集合A的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="离散数学-第合论">
+<meta property="og:url" content="http://yoursite.com/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E7%AC%AC%E5%90%88%E8%AE%BA/index.html">
+<meta property="og:site_name" content="凉介&#39;s personal blog">
+<meta property="og:description" content="第合论集合与关系基本概念 &#x3D;&#x3D;集合&#x3D;&#x3D;：一些对象的整体就称为一个集合，这个整体的每个对象称为该集合的一个元素。用大写字母表示集合，小写字母表示元素。集合中的元素是无序的不重复的。  集合的表示方法：列举法，叙述法，枚举法，文氏图  &#x3D;&#x3D;子集&#x3D;&#x3D;：设AB是任何两个集合，假如A的每一个元素都是B的成员，则称A为B的子集，、逼格额A包含于B内，或者B包含A，记为A$\subseteq $B.如果集合A的">
+<meta property="og:locale" content="zh">
+<meta property="og:image" content="https://i.loli.net/2020/06/21/JwFLhblQS7Zv2q5.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/21/2mlWJ65gzdrEatf.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/21/YHEik1CvJbDTy2q.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/21/dKhDyiEnfpXGxoB.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/22/1tEUk2bzKxnFYjp.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/20/5xw7tW2ui1NgZ3S.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/20/1RwENuQUrPZinxG.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/20/MKNbgPmIR9q1UnE.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/20/imFw6typDT4saVK.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/21/dygZuq7viBhN4G9.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/21/rfej3pmRo8aUHXl.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/21/efuEbz3TVC2Siw5.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/21/utXNdPnv3RODKAs.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/21/p7It3oPgjvdqc2y.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/21/eAJKXoZO3YM2clj.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/21/sjLYHuhM7Aad4Fi.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/21/HmBny7LsbtYuIDk.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/21/a4KFihy3pr6U1sW.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/21/BvJp8wqNQUta4LX.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/21/A2B7HkqJwZI8mu1.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/22/8FzgswpElLHPa7W.png">
+<meta property="article:published_time" content="2020-07-03T08:25:04.625Z">
+<meta property="article:modified_time" content="2020-06-27T03:47:54.808Z">
+<meta property="article:author" content="Jian Shengnan">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2020/06/21/JwFLhblQS7Zv2q5.png">
+  
+    <link rel="alternative" href="/atom.xml" title="凉介&#39;s personal blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/like.png">
+  
+  
+  
+<link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: true
+      }
+  </script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/1.png" class="js-avatar">
+            
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Jian Shengnan</a></h1>
+        </hgroup>
+        
+        
+            <form>
+                <input type="text" class="st-default-search-input search" id="local-search-input" placeholder="搜索一下" autocomplete="off">
+            </form>
+            <div id="local-search-result"></div>
+        
+        
+            <script type="text/javascript">
+                (function() {
+                    'use strict';
+                    function getMatchData(keyword, data) {
+                        var matchData = [];
+                        for(var i =0;i<data.length;i++){
+                            if(data[i].title.toLowerCase().indexOf(keyword)>=0) 
+                                matchData.push(data[i])
+                        }
+                        return matchData;
+                    }
+                    var $input = $('#local-search-input');
+                    var $resultContent = $('#local-search-result');
+                    $input.keyup(function(){
+                        $.ajax({
+                            url: '/search.json',
+                            dataType: "json",
+                            success: function( json ) {
+                                var str='<ul class=\"search-result-list\">';                
+                                var keyword = $input.val().trim().toLowerCase();
+                                $resultContent.innerHTML = "";
+                                if ($input.val().trim().length <= 0) {
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                }
+                                var results = getMatchData(keyword, json);
+                                if(results.length === 0){
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                } 
+                                for(var i =0; i<results.length; i++){
+                                    str += "<li><a href='"+ results[i].url +"' class='search-result-title'>"+ results[i].title +"</a></li>";
+                                }
+                                str += "</ul>";
+                                $resultContent.empty();
+                                $resultContent.append(str);
+                                $('#switch-area').hide();
+                            }
+                        });
+                    });
+                })();
+            </script>
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a  href="/archives/">所有文章</a></li>
+                        
+                            <li><a  href="/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/">玩转开发工具</a></li>
+                        
+                            <li><a  href="/categories/digital">玩转数码</a></li>
+                        
+                            <li><a  href="/categories/algorithm">算法学习</a></li>
+                        
+                            <li><a  href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl github"  target="_blank" href="https://github.com/wasd-debug" title="github">github</a>
+                            
+                                <a class="fl weibo"  target="_blank" href="https://www.weibo.com/7456794217/profile?topnav=1&wvr=6&is_all=1" title="weibo">weibo</a>
+                            
+                                <a class="fl rss"  target="_blank" href="/atom.xml" title="rss">rss</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        
+                    </div>
+                </section>
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="https://blog.csdn.net/weixin_46698891">csdn</a>
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="https://segmentfault.com/blog/maocg_web">segmentfault</a>
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="https://www.jianshu.com/u/1640e500283a">简书</a>
+                    
+                    </div>
+                </section>
+                
+                
+            </div>
+        </div>
+    </header>
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Jian Shengnan</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/1.png" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Jian Shengnan</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/">玩转开发工具</a></li>
+                
+                    <li><a href="/categories/digital">玩转数码</a></li>
+                
+                    <li><a href="/categories/algorithm">算法学习</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="github" target="_blank" href="https://github.com/wasd-debug" title="github">github</a>
+                    
+                        <a class="weibo" target="_blank" href="https://www.weibo.com/7456794217/profile?topnav=1&wvr=6&is_all=1" title="weibo">weibo</a>
+                    
+                        <a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+                    
+                </div>
+            </nav>
+        </header>
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-离散数学-第合论" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E7%AC%AC%E5%90%88%E8%AE%BA/" class="article-date">
+      <time datetime="2020-07-03T08:25:04.625Z" itemprop="datePublished">2020-07-03</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      离散数学-第合论
+    </h1>
+  
+
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="第合论"><a href="#第合论" class="headerlink" title="第合论"></a>第合论</h2><h3 id="集合与关系"><a href="#集合与关系" class="headerlink" title="集合与关系"></a>集合与关系</h3><h4 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h4><ol>
+<li><p>==集合==：一些对象的整体就称为一个集合，这个整体的每个对象称为该集合的一个元素。用大写字母表示集合，小写字母表示元素。集合中的元素是无序的不重复的。</p>
+</li>
+<li><p>集合的表示方法：列举法，叙述法，枚举法，文氏图</p>
+</li>
+<li><p>==子集==：设AB是任何两个集合，假如A的每一个元素都是B的成员，则称A为B的子集，、逼格额A包含于B内，或者B包含A，记为A$\subseteq $B.如果集合A的每一个元素都属于B。但集合B中至少有一个元素不属于A，则称A为B的真子集，即A$\subset$B，且A不等于B，记为A$\neq$B。</p>
+</li>
+<li><p>==基数==：集合中元素的个数</p>
+</li>
+<li><p>子集个数：$2^{n}$</p>
+</li>
+<li><p>==平凡子集==：集合本身和空集。</p>
+</li>
+<li><p>==集合相等==：两个集合A和B相等，当且仅当它们具有相同的元素，记为A=B，即a属于集合A当且仅当a属于集合B。集合相等的充要条件是两个集合互为子集。</p>
+</li>
+<li><p>==空集==：不包含任何元素的集合，记为$\emptyset$</p>
+<ul>
+<li>空集是任何集合的子集</li>
+</ul>
+</li>
+<li><p>==全集==：在一定范围内，如果所有的集合均为某一集合的子集，则称该集合为全集。</p>
+</li>
+<li><p>==补集==：集合A的补集记为~A，是那些不属于集合A的元素构成的集合。通常是是存在一个全集的情况下讨论</p>
+</li>
+<li><p>==幂集==：集合A的幂集，记为P（A），是A所有子集所构成的集合。</p>
+</li>
+<li><p>==序偶==：由两个元素x，y按照一定的次序组成的二元组称为有序偶对（序偶），记作&lt;x,y&gt;，其中x为第一个元素，y是第二个元素。序偶常常表达两个客体之间的关系。</p>
+</li>
+<li><p>==n重有序组==（n元组）：由你个元素按照一定的次序组成的n元组称为n重有序组，记作&lt;a1,a2,….,an&gt;。</p>
+</li>
+<li><p>==笛卡尔积==：设AB是两个集合，若序偶的第一个成员是A的元素，第二个成员是B的元素，所有这样的序偶的集合叫做A和B的笛卡尔积或者直积，记作A$\times$B</p>
+</li>
+<li><p>==关系==：AB为非空集合称A$\times$B的任意子集R为从A到B的一个二元关系，简称关系，A为R的前域，B为R的后域。A=B，称R是A上的一个二元关系。若&lt;x,y&gt;$\in$R，记为xRy，读作x对y有关系R。由A到B的关系共有$2^{|A|\times|B|}$个</p>
+</li>
+<li><p>特殊关系：==全域关系==：A$\times$B，空关系，==恒等关系==：设Ix是X上的二元关系且满足Ix = {&lt;x,x&gt;|x$\in$X}，则称Ix是X上的恒等关系。</p>
+</li>
+<li><p>==定义域和值域==：设R是从A到B的二元关系，C={x|x$\in$A,$\exist$y$\in$B,&lt;x,y&gt;$\in$R}第一位置出现的所有元素为定义域，记为C=domR.第二位置出现的所有元素为值域，记为D=ranR。域fldR=domR$\cup $ranR</p>
+</li>
+<li><p>==闭包==：设R是X上的二元关系，如果另一个关系R‘满足：</p>
+<ol>
+<li><p>R’是自反（对称，传递）</p>
+</li>
+<li><p>R$\subseteq $R’</p>
+</li>
+<li><p>对于A上的、forall自反的（对称的，传递的）关系R‘’,若R$\subseteq $R’‘,则R‘$\subseteq $R’‘</p>
+<p>则称R’是R的自反（对称，传递）闭包。</p>
+<p>换句话说，R的自反闭包是包含R的最小的自反的关系。通常用r(R),s(r),t(R)表示R的自反，对称，传递闭包</p>
+</li>
+</ol>
+</li>
+<li><p>==集合的划分和覆盖==：设A是一个集合，A1，……Am是A的任何m个非空子集，如果它们满足：</p>
+<ul>
+<li>它们的并集=A则称集合{A1，…，Am}为A的一个==覆盖==</li>
+<li>对一切的i$\neq$j,都有$A_{i}\cap A_{j}=\emptyset $则称集合{A1，…，Am}为集合A的一个==划分==，A1，…Am叫做这个划分的==块==</li>
+<li>若{A1,A2,…,Ar}、并为大哥{B1，…，Bs}是同一集合A的两种划分，则其中所有Ai$\cap $Bj$\neq \emptyset $组成的集合称为原来两种划分的==交叉划分==。</li>
+<li>给定X的、forall两个划分，若对于每个$A_{}i均有B_{k}$,使$A_{i}\subseteq B_{k}$,z则{A1,…,Ar}称为是{b1,b2,…,Bs}的==加细==</li>
+</ul>
+</li>
+<li><p>==等价关系==：设R是定义在集合A上的关系，如果R是自反的，对称的，传递的，则称关系R为A上的等价关系。</p>
+</li>
+<li><p>==等价类==：设R是集合A上的等价关系，对任意x$\in$A，称集合[x]$_{R}$:</p>
+<p>$[x]_{R}={y|(y\in A)\land (&lt;x,y&gt;\in R)}$</p>
+<p>为x关于R的等价类，或者叫作由x生产的一个R的等价类。其中x称为[x]$_{R}$的生成元。</p>
+</li>
+<li><p>==商集==：设R是集合A上的等价关系，由R确定的一切等价类的集合，称为集合A上的关于R的商集，记为A/R。</p>
+</li>
+<li><p>等价和划分之间的关系：设R是集合A上的等价关系，则此关系R可唯一的确定一个划分，此划分正好是集合A上关于R的商集。</p>
+<p><img src="https://i.loli.net/2020/06/21/JwFLhblQS7Zv2q5.png" alt=""></p>
+<p><img src="https://i.loli.net/2020/06/21/2mlWJ65gzdrEatf.png" alt=""></p>
+</li>
+<li><p>==相容关系==：设R是定义在集合A上的关系，如果R是自反的、对称的，则称此关系R为A上的相容关系。</p>
+</li>
+<li><p>设r是集合A上的相容关系，如C$\subseteq $A，如果对于C中任何两个元素a1和a2都有a1Ra2，称C是由相容关系R产生的==相容类==。</p>
+</li>
+<li><p>设R是集合A上的相容关系，不能真包含在任何其他相容类中的相容类，称作==最大相容类==，记作Cr</p>
+<p><img src="https://i.loli.net/2020/06/21/YHEik1CvJbDTy2q.png" alt=""></p>
+</li>
+<li><p>==偏序关系==：R是A上的二元关系，如果R满足：自反，反对称，传递。则称R是A上的偏序关系，记作$\leq$</p>
+</li>
+<li><p>==偏序集==：集合A连同A上的偏序关系R一起成为一个偏序集，记为&lt;A,R&gt;</p>
+</li>
+<li><p>==可比==：设&lt;A,$\leq$&gt;是偏序集，x,y$\in$A，若有x$\leq y\lor y\leq x$则称x、并为大哥y是可比的</p>
+</li>
+<li><p>若xy可比，且$x\leq y和x\ne y$，但不存在z$\in$A，使得$x\leq z\land z\leq y$，则称==y盖住x==。</p>
+</li>
+<li><p>哈斯图的画法：<img src="https://i.loli.net/2020/06/21/dKhDyiEnfpXGxoB.png" alt=""></p>
+</li>
+<li><p>设&lt;A,$\leq$&gt;是偏序集，$B \subseteq A$,若B中的每两个元素都有关系，则称B为==链==，若B中的每两个元素都无关，则称B为==反链==。</p>
+</li>
+<li><p>==全序关系==：设&lt;A,$\leq$&gt;为偏序集，若A是一个链，则称$\leq$为A上的全序关系，此时称&lt;A,$\leq$&gt;为全序集。也就是集合A中任意的两个元素都有关系。</p>
+</li>
+<li><p>==良序关系==：设&lt;A,$\leq$&gt;是一偏序集，若A的任何一个非空子集都有最小元素，则称“$\leq$”为良序关系，&lt;A,$\leq$&gt;是良序集</p>
+</li>
+<li><p>良序集是全序集。全序集未必是良序集。有限的全序集是良序集</p>
+</li>
+<li><p>==函数==：设X和Y是任意两个集合，而f是X到Y的一个二元关系，如果对于每一个x$\in$X，有唯一的y$\in$Y,使得&lt;x,y&gt;$\in$f,则称f是从X到Y的一个函数关系（映射）,记为f:X$\rightarrow$Y。若&lt;x,y&gt;$\in$f,通常y记为f(x)，称x为==自由变元==，称y为x在函数f下的==象==</p>
+</li>
+<li><p>定义域就是前面有的，值域就是后边有的。说的这么复杂，靠。</p>
+</li>
+<li><p>从A到B的一切函数构成的集合记为$B^{A}$</p>
+</li>
+<li><p>函数和关系的差别：函数是一种特殊的关系，它与一般关系比较有如下差别：</p>
+<ul>
+<li>$A\times B$的任何一个、素白色特权，都是A到B的二元关系，因此，从A到B的不同关系有$2^{|A|\times|B|}$个；但是从A到B的不同的函数却仅有$|B|^{|A|}$个</li>
+<li>函数的定义域是X，而不能是X的某个真子集</li>
+<li>每个函数中的序偶的第一个元素一定是互补相同的</li>
+</ul>
+</li>
+<li><p>特殊函数：</p>
+<p>设f是从A到B的函数，若f满足：</p>
+<ul>
+<li>ranf=B，则称f为从A到B的==满射==。</li>
+<li>若对任意x1,x2$\in$A，且x1不等于x2，则f(x1)$\neq$f(x2)，则称f为从A到B的==单射==</li>
+<li>若f既是从A到B的满射，又是单射，则称f为从A到B的==双射==。</li>
+<li>设f是A到B的双射，则称B$\rightarrow$A的双射f$^{c}$为f的==逆函数==，记作$f^{-1}$</li>
+<li>设函数f：X$\rightarrow$Y,g:W$\rightarrow$Z,若f(X)$\subseteq $W,则$g\circ f={&lt;x,z&gt;|x\in X\land z\in Z\land (\exist y)(y\in Y \land y=f(x) \land z=g(y))}$称g在f的左边可复合。当函数$g\circ f$作用于X中的任意一个元素x时，可记为$g\circ f(x)=g(f(x))$.</li>
+<li>==常函数==：如果、exist是某个y0$\in$Y,对于每个x$\in$X都有f(x)=y0,即f(x)={y0}</li>
+<li>如果Ix=&lt;x,x&gt;,则称函数为==恒等函数==</li>
+</ul>
+</li>
+<li><p>定理：</p>
+<ul>
+<li>另X和Y为有限集，若|X|=|Y|，则f:X$\rightarrow$Y是单射的，当且仅当它是一个满射。</li>
+<li>设f和g分别是A到B和从B到C的函数，则：</li>
+<li>如果f，g是满射，则复合函数$g\circ f$也是从A到C的满射</li>
+<li>如果f，g是单射，则$g\circ f$也是从A到C单射</li>
+<li>如果f，g是双射，则$g\circ f$也是从A到C的双射</li>
+<li><img src="https://i.loli.net/2020/06/22/1tEUk2bzKxnFYjp.png" alt=""></li>
+<li></li>
+</ul>
+</li>
+</ol>
+<h4 id="集合的运算"><a href="#集合的运算" class="headerlink" title="集合的运算"></a>集合的运算</h4><ul>
+<li>集合的并：设任意集合A和B，由所有属于集合A或者属于集合B的元素组成的集合S，称为集合A和B的并集记为$A \bigcup B$</li>
+<li>集合的交：设任意集合A和B，由集合A和B的所有共同元素组成的集合称为A和B的交集，记为$A \bigcap B$</li>
+<li>绝对补（补运算）：设全集是E，对集合A，E-A是集合A的绝对补。记为~A或者$\overline{A}$</li>
+<li>集合的补（差集）：设任意集合A和B，所有属于集合A而不属于集合B的一切元素组成的集合S，称为集合B对于A的补集或者相对补，记为A-B</li>
+<li>集合的对称差：设任意集合A和B，A和B的对称差集为集合S，其元素属于A或者属于B，但不能既属于A又属于B。记为A$\bigoplus$B</li>
+</ul>
+<h4 id="集合的运算性质及定律"><a href="#集合的运算性质及定律" class="headerlink" title="集合的运算性质及定律"></a>集合的运算性质及定律</h4><p>$$<br>幂等律：\<br>A \cup A=A\<br>A \cap A=A\<br>交换律：\<br>A \cup B=B \cup A\<br>A \cap B =B \cap A\<br>结合律：\<br>A \cup (B \cup C)=(A \cup B)\cup C\<br>A \cap (B \cap C)=(A \cap B)\cap C\<br>同一律：\<br>A \cup \emptyset =A\<br>A \cap E（全集）=A\<br>零律：\<br>A \cup E=E\<br>A \cap \emptyset =\emptyset \<br>分配律：<br>A \cup (B \cap C)=(A \cup B)\cap (A \cup C)\<br>A \cap (B \cup C)=(A \cap B)\cup (A \cap C)\<br>吸收律：\<br>A \cup (A \cap B)=A\<br>A \cap  (A \cup B)=A\<br>矛盾律，排中律：\<br>\overline{A}\cap A=\emptyset\<br>\overline{A}\cup A=E\<br>双重否定率：\<br>\overline{\overline{A}}=A\<br>德摩根律：\<br>\overline{A \cup B}=\overline{A}\cap \overline{B}\<br>\overline{A \cap B}=\overline{A}\cap \overline{B}<br>$$</p>
+<p><img src="https://i.loli.net/2020/06/20/5xw7tW2ui1NgZ3S.png" alt=""></p>
+<p><img src="https://i.loli.net/2020/06/20/1RwENuQUrPZinxG.png" alt=""></p>
+<h4 id="笛卡尔积的性质"><a href="#笛卡尔积的性质" class="headerlink" title="笛卡尔积的性质"></a>笛卡尔积的性质</h4><ul>
+<li><p>A$\times\emptyset =\emptyset $且$\emptyset \times A=\emptyset $</p>
+</li>
+<li><p>不适合交换律</p>
+</li>
+<li><p>不适合结合律</p>
+</li>
+<li><p>对并和交运算满足分配律</p>
+<p><img src="https://i.loli.net/2020/06/20/MKNbgPmIR9q1UnE.png" alt=""></p>
+</li>
+<li><p>设A,B,C,D是非空集合，则有$A \subseteq C \bigwedge B \subseteq D\leftrightarrow A\times B \subseteq C\times D$</p>
+</li>
+<li><p>若C非空，则$A \subseteq B\leftrightarrow A\times C \subseteq B\times C \leftrightarrow C\times A \subseteq C\times B$</p>
+</li>
+</ul>
+<h4 id="关系的表示"><a href="#关系的表示" class="headerlink" title="关系的表示"></a>关系的表示</h4><ul>
+<li><p>集合表示法：枚举法和叙述法</p>
+</li>
+<li><p>关系图法：</p>
+<p>如R是定义在A＝&lt;a1,a2,a3,…,an&gt;上的关系，则对应于关系R有如下规定：</p>
+<ul>
+<li><p>设a1,a2,…,an为图中节点，用“。”表示。</p>
+</li>
+<li><p>如&lt;$a_{i},a_{j}$&gt;$\in$R,则从$a_{i}$到$a_{j}$可用一有向边$a_{i}\rightarrow a_{j}$相连。</p>
+</li>
+<li><p>如&lt;ai,ai&gt;$\in$R,则从ai到ai用一带箭头的小圆环表示。</p>
+</li>
+</ul>
+</li>
+<li><p>关系矩阵法：  设A＝&lt;a1,a2,a3,…,an&gt;，B＝&lt;b1,b2,b3,…,bm&gt;，R是从A到B的一个二元关系，则对应于关系R之关系矩阵MR＝（rij)n×m。</p>
+<p><img src="https://i.loli.net/2020/06/20/imFw6typDT4saVK.png" alt=""></p>
+<ul>
+<li><p>布尔矩阵的并运算，记为A$\or$B=C=c(ij)</p>
+<p>如果aij=1或bij=1,则cij=1</p>
+</li>
+<li><p>交运算：记为A$\land$B=C=cij</p>
+<p>如果aij=1且bij=1,则cij=1</p>
+</li>
+<li><p>积运算：A是m<em>p矩阵，B是p\</em>n 矩阵.</p>
+</li>
+<li><p>cij=1(存在k，aik=1 and bkj=1)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="关系的基本运算"><a href="#关系的基本运算" class="headerlink" title="关系的基本运算"></a>关系的基本运算</h4><ul>
+<li>设R,S都是集合A到B的两个关系，则：</li>
+</ul>
+<p>$$<br>R \cup S={&lt;x,y&gt;|(xRy)\vee(xSy) }\<br>R \cap S={&lt;x,y&gt;|(xRy)\land (sSy)}\<br>R -S={&lt;x,y&gt;|(xRy)\land (xSy)}\<br>根据定义，由于A\times B是相对于R的全集，所以\<br>\overline{R}=A\times B-R,且\overline{R}\cup R=A\times B,\overline{R}\cup R=\emptyset<br>$$</p>
+<ul>
+<li>关系的复合：设R是一个从集合X到集合Y的二元关系，S是从集合Y到集合Z的二元关系，则RS的复合关系R$\circ$S是从X到Z的关系，并且：$R\circ S={&lt;x,y&gt;|(x \in X)\land (z \in Z)\land (\exist y)((y \in Y)\land (xRy)\land (ySz))}$运算称为复合运算。</li>
+</ul>
+<p><img src="https://i.loli.net/2020/06/21/dygZuq7viBhN4G9.png" alt=""></p>
+<ul>
+<li>关系的幂：设R是集合A上的二元关系，则可定义$R^{n}$如下：<ul>
+<li>$R^{0}=I_{A}={&lt;a,a&gt;|a \in A}$</li>
+<li>$R=R$</li>
+<li>$R^{n+1}=R^{n}\circ R=R\circ R^{n}$</li>
+</ul>
+</li>
+<li>逆关系：设R是一个从集合X到集合Y的二元关系，则从Y到X的关系$R^{c}={&lt;b,a&gt;|&lt;a,b&gt;\in R}$称为R的逆关系，运算“c”称为逆运算</li>
+<li>$(R\circ S)\circ T=R\circ(S\circ T)$</li>
+<li>$(R\circ S)^{c}=S^{c}\circ R^{c}$</li>
+<li><img src="https://i.loli.net/2020/06/21/rfej3pmRo8aUHXl.png" alt=""></li>
+</ul>
+<h4 id="关系的性质"><a href="#关系的性质" class="headerlink" title="关系的性质"></a>关系的性质</h4><ol>
+<li><p>设R是集合X上的二元关系：</p>
+<ul>
+<li><p>对任意的x$\in$X,</p>
+<ul>
+<li><p>都满足&lt;x,x&gt;$\in$R,则R是自反的。</p>
+</li>
+<li><p>都满足&lt;x,x&gt;$\not\in R$是反自反的。</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<pre><code>  对任意的x,y$\in$X
+
++ 满足&lt;x,y&gt;$\in$R,则有&lt;y,x&gt;$\in$R,则R是对称的。
+
++ 满足$&lt;x,y&gt;\in R\land&lt;y,x&gt;\in R\rightarrow x=y$则R是反对称的。
+
+
+
+  对任意的x,y,z$\in$X
+
++ 满足&lt;x,y&gt;$\in$R$\land$&lt;y,z&gt;$\in$R$\rightarrow$&lt;x,z&gt;$\in$R，则R是传递的</code></pre><ol start="2">
+<li><p>用关系图来描述关系的性质</p>
+<ul>
+<li>在关系图中，每个节点都有环，则此关系是自反的。</li>
+<li>在关系图中，每个节点是无环的，则此关系是反自反的。</li>
+<li>在关系图中，任何一个节点之间，要么有方向相反的两条边，要么没有任何边，则此关系是对称的</li>
+<li>在关系图中，任何一对节点之间，至多有一条边、exist是。则此关系是反对称的</li>
+<li>在关系图中，任何三个节点，x，y，z之间，若从x到y有一条边、exist是，从y到z有一条边存在，则从x到z一定有一条边、exist是，则此关系是传递的</li>
+</ul>
+</li>
+<li><p>用关系矩阵来描述关系的性质</p>
+<ul>
+<li>在关系矩阵中，对角线上全是1，则此关系是自反的</li>
+<li>在关系矩阵中，对角线上全是0，则此关系是反自反的。</li>
+<li>若R之关系矩阵是对称矩阵，则此关系是对称的</li>
+<li>若关系矩阵是反对称矩阵（关于元素1的反对称），则此关系是反对称的</li>
+<li>在关系矩阵中，对任意i,j,k$\in${1,2,3,…,n}，满足如$r_{ij}=1\land r_{jk}=1$则$r_{ik}=1$,则此关系是传递的</li>
+</ul>
+</li>
+<li><p>关于关系性质的一些结论</p>
+<p><img src="https://i.loli.net/2020/06/21/efuEbz3TVC2Siw5.png" alt=""></p>
+</li>
+<li><p>关系性质的逻辑表示</p>
+<p><img src="https://i.loli.net/2020/06/21/utXNdPnv3RODKAs.png" alt=""></p>
+<p><img src="https://i.loli.net/2020/06/21/p7It3oPgjvdqc2y.png" alt=""></p>
+</li>
+<li><p>关系性质的证明方法</p>
+<p><img src="https://i.loli.net/2020/06/21/eAJKXoZO3YM2clj.png" alt=""></p>
+<p><img src="https://i.loli.net/2020/06/21/sjLYHuhM7Aad4Fi.png" alt=""></p>
+<p><img src="https://i.loli.net/2020/06/21/HmBny7LsbtYuIDk.png" alt=""></p>
+</li>
+</ol>
+<h4 id="闭包的计算方法"><a href="#闭包的计算方法" class="headerlink" title="闭包的计算方法"></a>闭包的计算方法</h4><p><img src="https://i.loli.net/2020/06/21/a4KFihy3pr6U1sW.png" alt=""></p>
+<p><img src="https://i.loli.net/2020/06/21/BvJp8wqNQUta4LX.png" alt=""></p>
+<p><img src="https://i.loli.net/2020/06/21/A2B7HkqJwZI8mu1.png" alt=""></p>
+<h4 id="特殊元素"><a href="#特殊元素" class="headerlink" title="特殊元素"></a>特殊元素</h4><ol>
+<li><p><u><strong>设&lt;A,$\leq$&gt;是偏序集，B是A的任何一个子集。</strong></u></p>
+<ul>
+<li><u><strong>若存在元素b$\in $B,使得对任意x$\in$B,都有x$\leq$b，则称b为B的最大元素。</strong></u></li>
+<li><u><strong>若有元素b$\in$B,使得对任意x$\in$B都有b$\leq$x,则称b为B的最小元素</strong></u></li>
+<li><u><strong>若存在元素b$\in$B,使得对任何x$\in$B满足$b\leq x\rightarrow x=b$,则称b为B的极大元素</strong></u></li>
+<li><u><strong>若存在元素b$\in$B,使得对任何x$\in$B,满足$x\leq b\rightarrow x=b$,则称b为B的极小元素</strong></u></li>
+<li><u><strong>若存在元素a$\in$A,使得对任何x$\in$B,都有x$\leq$B,都有$x\leq a$,则称a为B的上界</strong></u></li>
+<li><u><strong>若有是元素a$\in$A，使得对任何x$\in$B，都有a$\leq$x,则称a为B的下界</strong></u></li>
+<li><u><strong>若元素a’$\in$A是B的上界，元素a$\in$A是B的任何一个上界，若均有a’$\leq$a，则称a’为B的上确届。</strong></u></li>
+<li><u><strong>若元素a’$\in$A是B的下界，元素a$\in$A是B的任何一个下界，若均有a$\leq$a’，则称a’为B的下确界。</strong></u></li>
+</ul>
+</li>
+<li><p>特殊元素的一些结论：</p>
+<ol>
+<li><p>B的最大元、最小元、极大元和极小元如果存在是，一定在B中。</p>
+</li>
+<li><p>b是B的最大元$\leftrightarrow$B中所有的元素都比b小。</p>
+<p>b是B的最小元$\leftrightarrow$B中所有的元素都比b大</p>
+<p>b是B的极大元$\leftrightarrow$B中没有比b大的元素</p>
+<p>b是B的极小元$\leftrightarrow$B中没有比b小的元素</p>
+</li>
+<li><p>子集B的上下界和上下确界可在集合A中寻找</p>
+</li>
+<li><p>子集B的上下界不一定存在，如果存在可能多个</p>
+</li>
+<li><p>子集B的上下确界不一定存在，如果存在一定唯一</p>
+</li>
+<li><p>子集B有上下确界就一定有上下界，反之不成立</p>
+<p><img src="https://i.loli.net/2020/06/22/8FzgswpElLHPa7W.png" alt=""></p>
+</li>
+</ol>
+</li>
+</ol>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a  href="/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E7%AC%AC%E5%90%88%E8%AE%BA/">离散数学-第合论</a></p>
+        <p><span>文章作者:</span><a  href="/" title="访问 Jian Shengnan 的个人博客">Jian Shengnan</a></p>
+        <p><span>发布时间:</span>2020年07月03日 - 16时25分</p>
+        <p><span>最后更新:</span>2020年06月27日 - 11时47分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E7%AC%AC%E5%90%88%E8%AE%BA/" title="离散数学-第合论">http://yoursite.com/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E7%AC%AC%E5%90%88%E8%AE%BA/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E7%AC%AC%E5%90%88%E8%AE%BA/　　作者: Jian Shengnan" title=""></span>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+    <a  href="/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E6%95%B0%E7%90%86%E9%80%BB%E8%BE%91/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          离散数学-数理逻辑
+        
+      </div>
+    </a>
+  
+  
+    <a  href="/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E4%BB%A3%E6%95%B0%E7%B3%BB%E7%BB%9F/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">离散数学-代数系统</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#第合论"><span class="toc-number">1.</span> <span class="toc-text">第合论</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#集合与关系"><span class="toc-number">1.1.</span> <span class="toc-text">集合与关系</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#基本概念"><span class="toc-number">1.1.1.</span> <span class="toc-text">基本概念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#集合的运算"><span class="toc-number">1.1.2.</span> <span class="toc-text">集合的运算</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#集合的运算性质及定律"><span class="toc-number">1.1.3.</span> <span class="toc-text">集合的运算性质及定律</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#笛卡尔积的性质"><span class="toc-number">1.1.4.</span> <span class="toc-text">笛卡尔积的性质</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#关系的表示"><span class="toc-number">1.1.5.</span> <span class="toc-text">关系的表示</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#关系的基本运算"><span class="toc-number">1.1.6.</span> <span class="toc-text">关系的基本运算</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#关系的性质"><span class="toc-number">1.1.7.</span> <span class="toc-text">关系的性质</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#闭包的计算方法"><span class="toc-number">1.1.8.</span> <span class="toc-text">闭包的计算方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#特殊元素"><span class="toc-number">1.1.9.</span> <span class="toc-text">特殊元素</span></a></li></ol></li></ol></li></ol>
+</div>
+<style>
+    .left-col .switch-btn {
+        display: none;
+    }
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+            $(".switch-btn, .switch-area").fadeOut(300);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+            $(".switch-btn, .switch-area").fadeIn(500);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+        $(".switch-btn, .switch-area").show();
+    }
+</script>
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+        <section class="changyan" id="comments">
+  <!--<div id="uyan_frame"></div>-->
+  <div id="SOHUCS"></div>
+  <script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js"></script>
+  <script type="text/javascript">
+    window.changyan.api.config({
+      appid: 'xxxx',
+      conf: 'xxxxxxxxx'
+    });
+  </script>
+</section>
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a  href="/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E6%95%B0%E7%90%86%E9%80%BB%E8%BE%91/" title="上一篇: 离散数学-数理逻辑">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a  href="/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E4%BB%A3%E6%95%B0%E7%B3%BB%E7%BB%9F/" title="下一篇: 离散数学-代数系统">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E3%80%8A%E7%A5%9D%E7%A6%8F%E3%80%8B/">《祝福》</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E3%80%8A%E4%B8%AD%E5%9B%BD%E7%96%AB%E8%8B%97%E7%99%BE%E5%B9%B4%E7%BA%AA%E5%AE%9E%E3%80%8B%E8%AF%BB%E4%B9%A6%E6%8A%A5%E5%91%8A/">《中国疫苗百年纪实》读书报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E3%80%8A%E9%95%BF%E6%98%8E%E7%81%AF%E3%80%8B/">《长明灯》</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E3%80%8A%E5%9C%A8%E9%85%92%E6%A5%BC%E4%B8%8A%E3%80%8B/">《在酒楼上》</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E3%80%8A%E4%BC%A4%E9%80%9D%E3%80%8B/">《伤逝》</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E3%80%8A%E7%8B%82%E4%BA%BA%E6%97%A5%E8%AE%B0%E3%80%8B/">《狂人日记》</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E3%80%8A%E5%AD%A4%E7%8B%AC%E8%80%85%E3%80%8B/">《孤独者》</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E3%80%8A%E9%AB%98%E8%80%81%E5%A4%AB%E5%AD%90%E3%80%8B/">《高老夫子》</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E3%80%8A%E8%82%A5%E7%9A%82%E3%80%8B/">《肥皂》</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E3%80%8A%E7%AB%AF%E5%8D%88%E8%8A%82%E3%80%8B/">《端午节》</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E3%80%8A%E7%99%BD%E5%85%89%E3%80%8B/">《白光》</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E3%80%8A%E9%98%BFQ%E6%AD%A3%E4%BC%A0%E3%80%8B/">《阿Q正传》</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%91%A8%E5%8D%97%C2%B7%E8%9E%BD%E6%96%AF/">国风·周南·螽斯</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%91%A8%E5%8D%97%C2%B7%E6%A1%83%E5%A4%AD/">国风·周南·桃夭</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%91%A8%E5%8D%97%C2%B7%E6%B1%9D%E5%9D%9F/">国风·周南·汝坟</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%91%A8%E5%8D%97%C2%B7%E5%85%8D%E7%BD%9D/">国风·周南·免罝</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%91%A8%E5%8D%97%C2%B7%E9%BA%9F%E4%B9%8B%E8%B6%BE/">国风·周南·麟之趾</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%91%A8%E5%8D%97%C2%B7%E5%8D%B7%E8%80%B3/">国风·周南·卷耳</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%91%A8%E5%8D%97%C2%B7%E6%A8%9B%E6%9C%A8/">国风·周南·樛木</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%91%A8%E5%8D%97%C2%B7%E6%B1%89%E5%B9%BF/">国风·周南·汉广</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%91%A8%E5%8D%97%C2%B7%E8%91%9B%E8%A6%83/">国风·周南·葛覃</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%91%A8%E5%8D%97%C2%B7%E8%8A%A3%E8%8B%A2/">国风·周南·芣苢</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%8F%AC%E5%8D%97%C2%B7%E6%AE%B7%E5%85%B6%E9%9B%B7/">国风·召南·殷其雷</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%8F%AC%E5%8D%97%C2%B7%E9%87%8E%E6%9C%89%E6%AD%BB%E9%BA%95/">国风·召南·野有死麕</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%8F%AC%E5%8D%97%C2%B7%E5%B0%8F%E6%98%9F/">国风·召南·小星</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%8F%AC%E5%8D%97%C2%B7%E9%B9%8A%E5%B7%A2/">国风·召南·鹊巢</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%8F%AC%E5%8D%97%C2%B7%E6%B1%9F%E6%9C%89%E6%B1%9C/">国风·召南·江有汜</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%8F%AC%E5%8D%97%C2%B7%E4%BD%95%E5%BD%BC%E8%A5%9B%E7%9F%A3/">国风·召南·何彼襛矣</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%8F%AC%E5%8D%97%C2%B7%E8%A1%8C%E9%9C%B2/">国风·召南·行露</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%8F%AC%E5%8D%97%C2%B7%E7%BE%94%E7%BE%8A/">国风·召南·羔羊</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%8F%AC%E5%8D%97%C2%B7%E7%94%98%E6%A3%A0/">国风·召南·甘棠</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%8F%AC%E5%8D%97%C2%B7%E8%8D%89%E8%99%AB/">国风·召南·草虫</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%8F%AC%E5%8D%97%C2%B7%E9%87%87%E8%98%A9/">国风·召南·采蘩</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%8F%AC%E5%8D%97%C2%B7%E9%87%87%EE%86%9A/">国风·召南·采</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%8F%AC%E5%8D%97%C2%B7%E6%91%BD%E6%9C%89%E6%A2%85/">国风·召南·摽有梅</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E4%B8%AD%E5%9B%BD%E4%BA%BA%E9%A9%AF%E5%8C%96%E4%BA%86%E5%AE%B6%E7%8C%AA/">中国人驯化了家猪</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E6%97%A9%E6%9C%9F%E9%85%BF%E9%85%92%E5%B7%A5%E8%89%BA%E5%87%BA%E7%8E%B0/">早期酿酒工艺出现</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E6%97%A9%E6%9C%9F%E7%BC%96%E7%BB%87%E7%89%A9%E5%87%BA%E7%8E%B0/">早期编织物出现</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E7%8E%89%E8%9F%BE%E5%B2%A9%E5%87%BA%E7%8E%B0%E4%BA%BA%E5%B7%A5%E6%A0%BD%E5%9F%B9%E7%A8%BB/">玉蟾岩出现人工栽培稻</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E6%96%B0%E6%9C%88%E5%9C%B0%E5%B8%A6%E5%87%BA%E7%8E%B0%E5%8E%9F%E5%A7%8B%E5%86%9C%E4%B8%9A/">新月地带出现原始农业</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E9%99%B6%E7%AD%B9%E7%9A%84%E5%87%BA%E7%8E%B0/">陶筹的出现</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E4%BA%BA%E7%B1%BB%E9%A9%AF%E5%8C%96%E7%89%9B%E3%80%81%E7%BE%8A/">人类驯化牛、羊</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E4%BA%BA%E7%B1%BB%E6%8F%90%E5%8F%96%E9%87%91%E5%92%8C%E9%93%B6/">人类提取金和银</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E4%BA%BA%E7%B1%BB%E4%BD%BF%E7%94%A8%E5%BC%93%E7%AE%AD/">人类使用弓箭</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E4%BA%BA%E7%B1%BB%E5%88%A9%E7%94%A8%E5%B0%8F%E7%AB%B9%E7%AD%8F%E8%B7%A8%E6%B5%B7%E8%88%AA%E8%A1%8C/">人类利用小竹筏跨海航行</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E4%BA%BA%E7%B1%BB%E5%BC%80%E5%A7%8B%E9%A9%AF%E5%8C%96%E7%8B%97/">人类开始驯化狗</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E4%BA%BA%E7%B1%BB%E5%BC%80%E5%A7%8B%E7%83%A7%E5%88%B6%E9%99%B6%E5%99%A8/">人类开始烧制陶器</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E4%BA%BA%E7%B1%BB%E7%BB%98%E5%88%B6%E5%A3%81%E7%94%BB/">人类绘制壁画</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E4%BA%BA%E7%B1%BB%E5%8F%91%E7%8E%B0%E5%8D%95%E8%B4%A8%E9%93%9C/">人类发现单质铜</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E4%BA%BA%E7%B1%BB%E5%8F%91%E6%98%8E%E5%8E%9F%E5%A7%8B%E7%BB%87%E6%9C%BA/">人类发明原始织机</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E4%BA%BA%E7%B1%BB%E5%8F%91%E6%98%8E%E4%BD%BF%E7%94%A8%E7%8A%81/">人类发明使用犁</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E6%B2%B3%E5%A7%86%E6%B8%A1%E5%87%BA%E7%8E%B0%E8%BE%83%E5%8F%91%E8%BE%BE%E7%9A%84%E5%8F%B2%E5%89%8D%E7%A8%BB%E4%BD%9C%E5%86%9C%E4%B8%9A/">河姆渡出现较发达的史前稻作农业</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E6%B2%B3%E5%8C%97%E7%A3%81%E5%B1%B1%E5%9C%B0%E5%8C%BA%E4%BD%BF%E7%94%A8%E7%BA%BA%E8%BD%AE/">河北磁山地区使用纺轮</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%93%A5%E8%B4%9D%E5%85%8B%E5%8A%9B%E7%9F%B3%E9%98%B5%E5%BB%BA%E6%88%90/">哥贝克力石阵建成</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/">文件操作</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/">图书管理系统实验报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E5%AE%9E%E9%AA%8C%EF%BC%9A%E8%AE%A1%E7%AE%97%E7%9C%9F%E5%80%BC/">离散数学实验：计算真值</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E5%AE%9E%E9%AA%8C%EF%BC%9A%E5%85%B3%E7%B3%BB%E6%80%A7%E8%B4%A8%E5%88%A4%E6%96%AD/">离散数学实验：关系性质判断</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E5%AE%9E%E9%AA%8C%EF%BC%9A%E5%85%B3%E7%B3%BB%E9%97%AD%E5%8C%85%E7%9A%84%E8%AE%A1%E7%AE%97(C%E8%AF%AD%E8%A8%80)/">离散数学实验：关系闭包的计算(C语言)</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/Vscode%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%A4%A7%E5%85%A8/">Vscode快捷键大全</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93/">电子技术基础复习总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E5%9B%BE%E8%AE%BA/">离散数学-图论</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E6%95%B0%E7%90%86%E9%80%BB%E8%BE%91/">离散数学-数理逻辑</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E7%AC%AC%E5%90%88%E8%AE%BA/">离散数学-第合论</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E4%BB%A3%E6%95%B0%E7%B3%BB%E7%BB%9F/">离散数学-代数系统</a></li></ul>
+    
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+    <script>
+        $(".post-list").addClass("toc-article");
+        // $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#toc, .switch-btn, .switch-area").toggle();
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+                $(".switch-btn, .switch-area").fadeToggle(300);
+            }
+        })
+    </script>
+
+
+
+
+    <script>
+        
+    </script>
+
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2020 Jian Shengnan
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo &nbsp;&nbsp;</a><a href="https://github.com/maochunguang" target="_blank">Blog</a> by tommy
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >极客到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+    <span id="busuanzi_container_page_pv">
+        本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+</footer>
+
+    </div>
+    
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 5;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'xxxxx', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?xxxxxx";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+</body>
+</html>
