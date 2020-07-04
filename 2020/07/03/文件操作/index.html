@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="/css/style.css">
 
     <script id="hexo-configurations">
-    let CONFIG = {"hostname":"yoursite.com","root":"/","localsearch":{"enable":true,"trigger":"auto","unescape":false,"preload":false},"themeInfo":{"name":"ILS","version":"1.1.2","author":"XPoet","repository":"https://github.com/XPoet/hexo-theme-ils"}};
+    let CONFIG = {"hostname":"yoursite.com","root":"/","localsearch":{"enable":true,"trigger":"auto","unescape":false,"preload":true},"themeInfo":{"name":"ILS","version":"1.1.2","author":"XPoet","repository":"https://github.com/XPoet/hexo-theme-ils"},"path":"search.xml"};
   </script>
 <meta name="generator" content="Hexo 4.2.1"></head>
 
@@ -36,7 +36,7 @@
                     <a class=""
                        href="/"
                     >
-                        首页
+                        HOME
                     </a>
                 </li>
             
@@ -44,7 +44,7 @@
                     <a class=""
                        href="/archives"
                     >
-                        归档
+                        ARCHIVES
                     </a>
                 </li>
             
@@ -52,7 +52,7 @@
                     <a class=""
                        href="/about"
                     >
-                        关于
+                        ABOUT
                     </a>
                 </li>
             
@@ -60,7 +60,7 @@
                     <a class=""
                        href="/links"
                     >
-                        友链
+                        LINKS
                     </a>
                 </li>
             
@@ -76,22 +76,22 @@
             
                 <li class="drawer-menu-item">
                     <a class=""
-                       href="/">首页</a>
+                       href="/">HOME</a>
                 </li>
             
                 <li class="drawer-menu-item">
                     <a class=""
-                       href="/archives">归档</a>
+                       href="/archives">ARCHIVES</a>
                 </li>
             
                 <li class="drawer-menu-item">
                     <a class=""
-                       href="/about">关于</a>
+                       href="/about">ABOUT</a>
                 </li>
             
                 <li class="drawer-menu-item">
                     <a class=""
-                       href="/links">友链</a>
+                       href="/links">LINKS</a>
                 </li>
             
         </ul>
@@ -154,6 +154,10 @@
             </ul>
         </span>
     
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa fa-eye"></i> <span id="busuanzi_value_page_pv"></span>
+        </span>
     
 </div>
         </div>
@@ -275,7 +279,7 @@
                        rel="prev"
                        href="/2020/07/03/%E6%96%B0%E6%9C%88%E5%9C%B0%E5%B8%A6%E5%87%BA%E7%8E%B0%E5%8E%9F%E5%A7%8B%E5%86%9C%E4%B8%9A/"
                     >
-                        <i class="fa fa-chevron-left"></i> <span class="post-nav-title-item">科技史—新月地带出现原始农业</span><span class="post-nav-item">上一篇</span>
+                        <i class="fa fa-chevron-left"></i> <span class="post-nav-title-item">科技史—新月地带出现原始农业</span><span class="post-nav-item">Prev posts</span>
                     </a>
                 </div>
             
@@ -283,9 +287,9 @@
                 <div class="article-next">
                     <a class="next btn"
                        rel="next"
-                       href="/2020/07/03/%E6%97%A9%E6%9C%9F%E7%BC%96%E7%BB%87%E7%89%A9%E5%87%BA%E7%8E%B0/"
+                       href="/2020/07/03/%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/"
                     >
-                        <span class="post-nav-title-item">科技史—早期编织物的出现</span><span class="post-nav-item">下一篇</span> <i class="fa fa-chevron-right"></i>
+                        <span class="post-nav-title-item">图书管理系统</span><span class="post-nav-item">Next posts</span> <i class="fa fa-chevron-right"></i>
                     </a>
                 </div>
             
@@ -319,21 +323,23 @@
     </div>
 </div>
 
-    <div class="article-toc-container fade-in-down-animation">
-        <div class="article-toc">
-            <div class="post-toc-wrap">
-    <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#C-文件基础操作总结"><span class="nav-number">1.</span> <span class="nav-text">C++文件基础操作总结</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#背景"><span class="nav-number">1.1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#流对象"><span class="nav-number">1.2.</span> <span class="nav-text">流对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#打开文件夹"><span class="nav-number">1.3.</span> <span class="nav-text">打开文件夹</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#检查文件是否打开成功——is-open"><span class="nav-number">1.4.</span> <span class="nav-text">检查文件是否打开成功——is_open()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关闭文件"><span class="nav-number">1.5.</span> <span class="nav-text">关闭文件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文本文件"><span class="nav-number">2.</span> <span class="nav-text">文本文件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#写入数据"><span class="nav-number">2.1.</span> <span class="nav-text">写入数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#读数据"><span class="nav-number">2.2.</span> <span class="nav-text">读数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获得和设置流指针"><span class="nav-number">2.3.</span> <span class="nav-text">获得和设置流指针</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二进制文件"><span class="nav-number">3.</span> <span class="nav-text">二进制文件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#二进制读写的其他函数"><span class="nav-number">3.1.</span> <span class="nav-text">二进制读写的其他函数</span></a></li></ol></li></ol>
-    </div>
-</div>
-        </div>
-    </div>
-
 
                 
 
             </div>
 
+            
+                <div class="main-content-right">
+                    
+    <div class="sidebar sidebar-post fade-in-down-animation">
+        <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#C-文件基础操作总结"><span class="nav-number">1.</span> <span class="nav-text">C++文件基础操作总结</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#背景"><span class="nav-number">1.1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#流对象"><span class="nav-number">1.2.</span> <span class="nav-text">流对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#打开文件夹"><span class="nav-number">1.3.</span> <span class="nav-text">打开文件夹</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#检查文件是否打开成功——is-open"><span class="nav-number">1.4.</span> <span class="nav-text">检查文件是否打开成功——is_open()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关闭文件"><span class="nav-number">1.5.</span> <span class="nav-text">关闭文件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文本文件"><span class="nav-number">2.</span> <span class="nav-text">文本文件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#写入数据"><span class="nav-number">2.1.</span> <span class="nav-text">写入数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#读数据"><span class="nav-number">2.2.</span> <span class="nav-text">读数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获得和设置流指针"><span class="nav-number">2.3.</span> <span class="nav-text">获得和设置流指针</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二进制文件"><span class="nav-number">3.</span> <span class="nav-text">二进制文件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#二进制读写的其他函数"><span class="nav-number">3.1.</span> <span class="nav-text">二进制读写的其他函数</span></a></li></ol></li></ol>
+    </div>
+</div>
+    </div>
+
+                </div>
             
 
         </main>
@@ -377,9 +383,23 @@
             &copy; 2020 <a href="/">Jian Shengnan</a>
         </div>
         <div class="theme-info info-item">
-            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动 | 主题 <a
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a> | Theme <a
                     href="https://github.com/XPoet/hexo-theme-ils" target="_blank">ILS v1.1.2</a>
         </div>
+        
+            <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv" style="display: none">
+                        UV<span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" style="display: none">
+                        PV<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
         
     </div>
 </footer>
@@ -396,7 +416,7 @@
                 <input autocomplete="off"
                        autocorrect="off"
                        autocapitalize="off"
-                       placeholder="搜索..."
+                       placeholder="Search..."
                        spellcheck="false"
                        type="search"
                        class="search-input"

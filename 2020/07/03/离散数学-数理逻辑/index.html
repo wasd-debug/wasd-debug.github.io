@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="/css/style.css">
 
     <script id="hexo-configurations">
-    let CONFIG = {"hostname":"yoursite.com","root":"/","localsearch":{"enable":true,"trigger":"auto","unescape":false,"preload":false},"themeInfo":{"name":"ILS","version":"1.1.2","author":"XPoet","repository":"https://github.com/XPoet/hexo-theme-ils"}};
+    let CONFIG = {"hostname":"yoursite.com","root":"/","localsearch":{"enable":true,"trigger":"auto","unescape":false,"preload":true},"themeInfo":{"name":"ILS","version":"1.1.2","author":"XPoet","repository":"https://github.com/XPoet/hexo-theme-ils"},"path":"search.xml"};
   </script>
 <meta name="generator" content="Hexo 4.2.1"></head>
 
@@ -36,7 +36,7 @@
                     <a class=""
                        href="/"
                     >
-                        首页
+                        HOME
                     </a>
                 </li>
             
@@ -44,7 +44,7 @@
                     <a class=""
                        href="/archives"
                     >
-                        归档
+                        ARCHIVES
                     </a>
                 </li>
             
@@ -52,7 +52,7 @@
                     <a class=""
                        href="/about"
                     >
-                        关于
+                        ABOUT
                     </a>
                 </li>
             
@@ -60,7 +60,7 @@
                     <a class=""
                        href="/links"
                     >
-                        友链
+                        LINKS
                     </a>
                 </li>
             
@@ -76,22 +76,22 @@
             
                 <li class="drawer-menu-item">
                     <a class=""
-                       href="/">首页</a>
+                       href="/">HOME</a>
                 </li>
             
                 <li class="drawer-menu-item">
                     <a class=""
-                       href="/archives">归档</a>
+                       href="/archives">ARCHIVES</a>
                 </li>
             
                 <li class="drawer-menu-item">
                     <a class=""
-                       href="/about">关于</a>
+                       href="/about">ABOUT</a>
                 </li>
             
                 <li class="drawer-menu-item">
                     <a class=""
-                       href="/links">友链</a>
+                       href="/links">LINKS</a>
                 </li>
             
         </ul>
@@ -150,6 +150,10 @@
             </ul>
         </span>
     
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa fa-eye"></i> <span id="busuanzi_value_page_pv"></span>
+        </span>
     
 </div>
         </div>
@@ -473,9 +477,9 @@
                 <div class="article-prev">
                     <a class="prev btn"
                        rel="prev"
-                       href="/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E5%9B%BE%E8%AE%BA/"
+                       href="/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E5%AE%9E%E9%AA%8C%EF%BC%9A%E5%85%B3%E7%B3%BB%E6%80%A7%E8%B4%A8%E5%88%A4%E6%96%AD/"
                     >
-                        <i class="fa fa-chevron-left"></i> <span class="post-nav-title-item">图论知识总结</span><span class="post-nav-item">上一篇</span>
+                        <i class="fa fa-chevron-left"></i> <span class="post-nav-title-item">离散数学实验：关系性质判断</span><span class="post-nav-item">Prev posts</span>
                     </a>
                 </div>
             
@@ -485,7 +489,7 @@
                        rel="next"
                        href="/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E7%AC%AC%E5%90%88%E8%AE%BA/"
                     >
-                        <span class="post-nav-title-item">第合论知识总结</span><span class="post-nav-item">下一篇</span> <i class="fa fa-chevron-right"></i>
+                        <span class="post-nav-title-item">第合论知识总结</span><span class="post-nav-item">Next posts</span> <i class="fa fa-chevron-right"></i>
                     </a>
                 </div>
             
@@ -519,21 +523,23 @@
     </div>
 </div>
 
-    <div class="article-toc-container fade-in-down-animation">
-        <div class="article-toc">
-            <div class="post-toc-wrap">
-    <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#离散数学"><span class="nav-number">1.</span> <span class="nav-text">离散数学</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数理逻辑"><span class="nav-number">1.1.</span> <span class="nav-text">数理逻辑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#命题逻辑"><span class="nav-number">1.1.1.</span> <span class="nav-text">命题逻辑</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基本概念"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#联结词"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">联结词</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#命题符号化"><span class="nav-number">1.1.1.3.</span> <span class="nav-text">命题符号化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基本等价公式"><span class="nav-number">1.1.1.4.</span> <span class="nav-text">基本等价公式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#判断命题公式逻辑等价的方法"><span class="nav-number">1.1.1.5.</span> <span class="nav-text">判断命题公式逻辑等价的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#求合取范式和析取范式的方法"><span class="nav-number">1.1.1.6.</span> <span class="nav-text">求合取范式和析取范式的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#求出主析取范式的方法"><span class="nav-number">1.1.1.7.</span> <span class="nav-text">求出主析取范式的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#求主合取范式的方法"><span class="nav-number">1.1.1.8.</span> <span class="nav-text">求主合取范式的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主范式间的转换"><span class="nav-number">1.1.1.9.</span> <span class="nav-text">主范式间的转换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#证明永真（假）的方法"><span class="nav-number">1.1.1.10.</span> <span class="nav-text">证明永真（假）的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#证明蕴含的方法"><span class="nav-number">1.1.1.11.</span> <span class="nav-text">证明蕴含的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常用的蕴含式"><span class="nav-number">1.1.1.12.</span> <span class="nav-text">常用的蕴含式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#推理的方法"><span class="nav-number">1.1.1.13.</span> <span class="nav-text">推理的方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#谓词逻辑"><span class="nav-number">1.1.2.</span> <span class="nav-text">谓词逻辑</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基本概念-1"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#谓词中的基本等价公式"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">谓词中的基本等价公式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常用的蕴含关系"><span class="nav-number">1.1.2.3.</span> <span class="nav-text">常用的蕴含关系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#化为前束范式的方法"><span class="nav-number">1.1.2.4.</span> <span class="nav-text">化为前束范式的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#推理规则"><span class="nav-number">1.1.2.5.</span> <span class="nav-text">推理规则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#谓词推理中注意的问题"><span class="nav-number">1.1.2.6.</span> <span class="nav-text">谓词推理中注意的问题</span></a></li></ol></li></ol></li></ol></li></ol>
-    </div>
-</div>
-        </div>
-    </div>
-
 
                 
 
             </div>
 
+            
+                <div class="main-content-right">
+                    
+    <div class="sidebar sidebar-post fade-in-down-animation">
+        <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#离散数学"><span class="nav-number">1.</span> <span class="nav-text">离散数学</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数理逻辑"><span class="nav-number">1.1.</span> <span class="nav-text">数理逻辑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#命题逻辑"><span class="nav-number">1.1.1.</span> <span class="nav-text">命题逻辑</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基本概念"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#联结词"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">联结词</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#命题符号化"><span class="nav-number">1.1.1.3.</span> <span class="nav-text">命题符号化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基本等价公式"><span class="nav-number">1.1.1.4.</span> <span class="nav-text">基本等价公式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#判断命题公式逻辑等价的方法"><span class="nav-number">1.1.1.5.</span> <span class="nav-text">判断命题公式逻辑等价的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#求合取范式和析取范式的方法"><span class="nav-number">1.1.1.6.</span> <span class="nav-text">求合取范式和析取范式的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#求出主析取范式的方法"><span class="nav-number">1.1.1.7.</span> <span class="nav-text">求出主析取范式的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#求主合取范式的方法"><span class="nav-number">1.1.1.8.</span> <span class="nav-text">求主合取范式的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主范式间的转换"><span class="nav-number">1.1.1.9.</span> <span class="nav-text">主范式间的转换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#证明永真（假）的方法"><span class="nav-number">1.1.1.10.</span> <span class="nav-text">证明永真（假）的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#证明蕴含的方法"><span class="nav-number">1.1.1.11.</span> <span class="nav-text">证明蕴含的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常用的蕴含式"><span class="nav-number">1.1.1.12.</span> <span class="nav-text">常用的蕴含式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#推理的方法"><span class="nav-number">1.1.1.13.</span> <span class="nav-text">推理的方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#谓词逻辑"><span class="nav-number">1.1.2.</span> <span class="nav-text">谓词逻辑</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基本概念-1"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#谓词中的基本等价公式"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">谓词中的基本等价公式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常用的蕴含关系"><span class="nav-number">1.1.2.3.</span> <span class="nav-text">常用的蕴含关系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#化为前束范式的方法"><span class="nav-number">1.1.2.4.</span> <span class="nav-text">化为前束范式的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#推理规则"><span class="nav-number">1.1.2.5.</span> <span class="nav-text">推理规则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#谓词推理中注意的问题"><span class="nav-number">1.1.2.6.</span> <span class="nav-text">谓词推理中注意的问题</span></a></li></ol></li></ol></li></ol></li></ol>
+    </div>
+</div>
+    </div>
+
+                </div>
             
 
         </main>
@@ -577,9 +583,23 @@
             &copy; 2020 <a href="/">Jian Shengnan</a>
         </div>
         <div class="theme-info info-item">
-            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动 | 主题 <a
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a> | Theme <a
                     href="https://github.com/XPoet/hexo-theme-ils" target="_blank">ILS v1.1.2</a>
         </div>
+        
+            <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv" style="display: none">
+                        UV<span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" style="display: none">
+                        PV<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
         
     </div>
 </footer>
@@ -596,7 +616,7 @@
                 <input autocomplete="off"
                        autocorrect="off"
                        autocapitalize="off"
-                       placeholder="搜索..."
+                       placeholder="Search..."
                        spellcheck="false"
                        type="search"
                        class="search-input"
