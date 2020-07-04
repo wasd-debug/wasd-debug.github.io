@@ -1,14 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 <head>
-  <meta charset="utf-8">
-  <meta name="baidu-site-verification" content="L6Lm9d5Crl"/>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
   
-  
-  
-  
-  <title>数理逻辑知识总结 | 凉介&#39;s personal blog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="/lib/animate-css/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Muse","version":"8.0.0-rc.4","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}}};
+  </script>
+
   <meta name="description" content="离散数学数理逻辑命题逻辑基本概念 &#x3D;&#x3D;命题&#x3D;&#x3D;：具有确切真值的陈述句称为命题。  &#x3D;&#x3D;真值&#x3D;&#x3D;：一个命题总有一个值，一般来讲，命题是正确的则真值为真，命题为错误的真值为假，这称为命题的真值。     真值只有真假两种，分别用“T”（1）和“F”（0）表示。  &#x3D;&#x3D;原子（简单）命题&#x3D;&#x3D;：不能再分解为更简单命题的命题。  &#x3D;&#x3D;复合命题&#x3D;&#x3D;：可以分解的命题  &#x3D;&#x3D;命题变量&#x3D;&#x3D;：一个表示确定命题的命题标识">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数理逻辑知识总结">
@@ -39,301 +52,229 @@
 <meta property="article:tag" content="学习">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://i.loli.net/2020/06/19/mixId3CSAGO6nhz.png">
-  
-    <link rel="alternative" href="/atom.xml" title="凉介&#39;s personal blog" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/img/like.png">
-  
-  
-  
-<link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
 
-  
-  
-<link rel="stylesheet" href="/css/style.css">
+<link rel="canonical" href="http://yoursite.com/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E6%95%B0%E7%90%86%E9%80%BB%E8%BE%91/">
 
-  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  
-  
-      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  
-  <!-- 加载特效 -->
-    <script src="/js/pace.js"></script>
-    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
-  <script>
-      var yiliaConfig = {
-          fancybox: true,
-          animate: true,
-          isHome: false,
-          isPost: true,
-          isArchive: false,
-          isTag: false,
-          isCategory: false,
-          open_in_new: true
-      }
-  </script>
-<meta name="generator" content="Hexo 4.2.1"></head>
-<body>
-  <div id="container">
-    <div class="left-col">
-    <div class="overlay"></div>
-<div class="intrude-less">
-    <header id="header" class="inner">
-        
-<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
 
-        <a href="/" class="profilepic">
-            
-            <img lazy-src="/img/1.png" class="js-avatar">
-            
-        </a>
-        <hgroup>
-          <h1 class="header-author"><a href="/">Jian Shengnan</a></h1>
-        </hgroup>
-        
-        
-            <form>
-                <input type="text" class="st-default-search-input search" id="local-search-input" placeholder="搜索一下" autocomplete="off">
-            </form>
-            <div id="local-search-result"></div>
-        
-        
-            <script type="text/javascript">
-                (function() {
-                    'use strict';
-                    function getMatchData(keyword, data) {
-                        var matchData = [];
-                        for(var i =0;i<data.length;i++){
-                            if(data[i].title.toLowerCase().indexOf(keyword)>=0) 
-                                matchData.push(data[i])
-                        }
-                        return matchData;
-                    }
-                    var $input = $('#local-search-input');
-                    var $resultContent = $('#local-search-result');
-                    $input.keyup(function(){
-                        $.ajax({
-                            url: '/search.json',
-                            dataType: "json",
-                            success: function( json ) {
-                                var str='<ul class=\"search-result-list\">';                
-                                var keyword = $input.val().trim().toLowerCase();
-                                $resultContent.innerHTML = "";
-                                if ($input.val().trim().length <= 0) {
-                                    $resultContent.empty();
-                                    $('#switch-area').show();
-                                    return;
-                                }
-                                var results = getMatchData(keyword, json);
-                                if(results.length === 0){
-                                    $resultContent.empty();
-                                    $('#switch-area').show();
-                                    return;
-                                } 
-                                for(var i =0; i<results.length; i++){
-                                    str += "<li><a href='"+ results[i].url +"' class='search-result-title'>"+ results[i].title +"</a></li>";
-                                }
-                                str += "</ul>";
-                                $resultContent.empty();
-                                $resultContent.append(str);
-                                $('#switch-area').hide();
-                            }
-                        });
-                    });
-                })();
-            </script>
-        
-        
-            <div id="switch-btn" class="switch-btn">
-                <div class="icon">
-                    <div class="icon-ctn">
-                        <div class="icon-wrap icon-house" data-idx="0">
-                            <div class="birdhouse"></div>
-                            <div class="birdhouse_holes"></div>
-                        </div>
-                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
-                            <div class="ribbon"></div>
-                        </div>
-                        
-                        <div class="icon-wrap icon-link hide" data-idx="2">
-                            <div class="loopback_l"></div>
-                            <div class="loopback_r"></div>
-                        </div>
-                        
-                        
-                    </div>
-                </div>
-                <div class="tips-box hide">
-                    <div class="tips-arrow"></div>
-                    <ul class="tips-inner">
-                        <li>菜单</li>
-                        <li>标签</li>
-                        
-                        <li>友情链接</li>
-                        
-                        
-                    </ul>
-                </div>
-            </div>
-        
-        <div id="switch-area" class="switch-area">
-            <div class="switch-wrap">
-                <section class="switch-part switch-part1">
-                    <nav class="header-menu">
-                        <ul>
-                        
-                            <li><a  href="/archives/">所有文章</a></li>
-                        
-                            <li><a  href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a></li>
-                        
-                            <li><a  href="/categories/%E7%BC%96%E7%A8%8B">编程</a></li>
-                        
-                            <li><a  href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0">读书笔记</a></li>
-                        
-                            <li><a  href="/categories/%E5%85%A8%E5%8E%86%E5%8F%B2">全历史</a></li>
-                        
-                            <li><a  href="/categories/%E8%AF%97%E7%BB%8F">诗经</a></li>
-                        
-                            <li><a  href="/about/">关于我</a></li>
-                        
-                        </ul>
-                    </nav>
-                    <nav class="header-nav">
-                        <ul class="social">
-                            
-                                <a class="fl github"  target="_blank" href="https://github.com/wasd-debug" title="github">github</a>
-                            
-                                <a class="fl weibo"  target="_blank" href="https://www.weibo.com/7456794217/profile?topnav=1&wvr=6&is_all=1" title="weibo">weibo</a>
-                            
-                                <a class="fl rss"  target="_blank" href="/atom.xml" title="rss">rss</a>
-                            
-                        </ul>
-                    </nav>
-                </section>
-                
-                <section class="switch-part switch-part2">
-                    <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/C/" style="font-size: 10px;">C++</a> <a href="/tags/%E5%85%A8%E5%8E%86%E5%8F%B2/" style="font-size: 18.57px;">全历史</a> <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 15.71px;">学习</a> <a href="/tags/%E5%AE%9E%E9%AA%8C/" style="font-size: 12.86px;">实验</a> <a href="/tags/%E7%A7%91%E6%8A%80%E5%8F%B2/" style="font-size: 18.57px;">科技史</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 14.29px;">笔记</a> <a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 11.43px;">编程</a> <a href="/tags/%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7/" style="font-size: 10px;">编程工具</a> <a href="/tags/%E8%AF%97%E7%BB%8F/" style="font-size: 20px;">诗经</a> <a href="/tags/%E9%98%85%E8%AF%BB/" style="font-size: 17.14px;">阅读</a>
-                    </div>
-                </section>
-                
-                
-                <section class="switch-part switch-part3">
-                    <div id="js-friends">
-                    
-                      <a target="_blank"  class="main-nav-link switch-friends-link" href="https://blog.csdn.net/weixin_46698891">csdn</a>
-                    
-                      <a target="_blank"  class="main-nav-link switch-friends-link" href="https://segmentfault.com/blog/maocg_web">segmentfault</a>
-                    
-                      <a target="_blank"  class="main-nav-link switch-friends-link" href="https://www.jianshu.com/u/1640e500283a">简书</a>
-                    
-                    </div>
-                </section>
-                
-                
-            </div>
-        </div>
-    </header>
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh'
+  };
+</script>
+
+  <title>数理逻辑知识总结 | 凉介's personal blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <main class="main">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+        <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">凉介's personal blog</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
 </div>
 
-    </div>
-    <div class="mid-col">
-      <nav id="mobile-nav">
-      <div class="overlay">
-          <div class="slider-trigger"></div>
-          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Jian Shengnan</a></h1>
-      </div>
-    <div class="intrude-less">
-        <header id="header" class="inner">
-            <a href="/" class="profilepic">
-                
-                    <img lazy-src="/img/1.png" class="js-avatar">
-                
-            </a>
-            <hgroup>
-              <h1 class="header-author"><a href="/" title="回到主页">Jian Shengnan</a></h1>
-            </hgroup>
-            
-            <nav class="header-menu">
-                <ul>
-                
-                    <li><a href="/archives/">所有文章</a></li>
-                
-                    <li><a href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a></li>
-                
-                    <li><a href="/categories/%E7%BC%96%E7%A8%8B">编程</a></li>
-                
-                    <li><a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0">读书笔记</a></li>
-                
-                    <li><a href="/categories/%E5%85%A8%E5%8E%86%E5%8F%B2">全历史</a></li>
-                
-                    <li><a href="/categories/%E8%AF%97%E7%BB%8F">诗经</a></li>
-                
-                    <li><a href="/about/">关于我</a></li>
-                
-                <div class="clearfix"></div>
-                </ul>
-            </nav>
-            <nav class="header-nav">
-                <div class="social">
-                    
-                        <a class="github" target="_blank" href="https://github.com/wasd-debug" title="github">github</a>
-                    
-                        <a class="weibo" target="_blank" href="https://www.weibo.com/7456794217/profile?topnav=1&wvr=6&is_all=1" title="weibo">weibo</a>
-                    
-                        <a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
-                    
-                </div>
-            </nav>
-        </header>
-    </div>
-</nav>
-      <div class="body-wrap"><article id="post-离散数学-数理逻辑" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E6%95%B0%E7%90%86%E9%80%BB%E8%BE%91/" class="article-date">
-      <time datetime="2020-07-02T16:00:00.000Z" itemprop="datePublished">2020-07-03</time>
-</a>
 
+
+
+
+
+
+</div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#离散数学"><span class="nav-number">1.</span> <span class="nav-text">离散数学</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数理逻辑"><span class="nav-number">1.1.</span> <span class="nav-text">数理逻辑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#命题逻辑"><span class="nav-number">1.1.1.</span> <span class="nav-text">命题逻辑</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基本概念"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#联结词"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">联结词</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#命题符号化"><span class="nav-number">1.1.1.3.</span> <span class="nav-text">命题符号化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基本等价公式"><span class="nav-number">1.1.1.4.</span> <span class="nav-text">基本等价公式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#判断命题公式逻辑等价的方法"><span class="nav-number">1.1.1.5.</span> <span class="nav-text">判断命题公式逻辑等价的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#求合取范式和析取范式的方法"><span class="nav-number">1.1.1.6.</span> <span class="nav-text">求合取范式和析取范式的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#求出主析取范式的方法"><span class="nav-number">1.1.1.7.</span> <span class="nav-text">求出主析取范式的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#求主合取范式的方法"><span class="nav-number">1.1.1.8.</span> <span class="nav-text">求主合取范式的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主范式间的转换"><span class="nav-number">1.1.1.9.</span> <span class="nav-text">主范式间的转换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#证明永真（假）的方法"><span class="nav-number">1.1.1.10.</span> <span class="nav-text">证明永真（假）的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#证明蕴含的方法"><span class="nav-number">1.1.1.11.</span> <span class="nav-text">证明蕴含的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常用的蕴含式"><span class="nav-number">1.1.1.12.</span> <span class="nav-text">常用的蕴含式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#推理的方法"><span class="nav-number">1.1.1.13.</span> <span class="nav-text">推理的方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#谓词逻辑"><span class="nav-number">1.1.2.</span> <span class="nav-text">谓词逻辑</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基本概念-1"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#谓词中的基本等价公式"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">谓词中的基本等价公式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常用的蕴含关系"><span class="nav-number">1.1.2.3.</span> <span class="nav-text">常用的蕴含关系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#化为前束范式的方法"><span class="nav-number">1.1.2.4.</span> <span class="nav-text">化为前束范式的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#推理规则"><span class="nav-number">1.1.2.5.</span> <span class="nav-text">推理规则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#谓词推理中注意的问题"><span class="nav-number">1.1.2.6.</span> <span class="nav-text">谓词推理中注意的问题</span></a></li></ol></li></ol></li></ol></li></ol></div>
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Jian Shengnan</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">67</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </section>
     </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      数理逻辑知识总结
-    </h1>
-  
+  </aside>
+  <div id="sidebar-dimmer"></div>
 
 
       </header>
+
       
-      <div class="article-info article-info-post">
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div id="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+      <div class="main-inner">
         
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a>
-    </div>
 
-
-        
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag">笔记</a></li></ul>
-    </div>
-
-        <div class="clearfix"></div>
-      </div>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
+        <div class="content post posts-expand">
           
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E6%95%B0%E7%90%86%E9%80%BB%E8%BE%91/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Jian Shengnan">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="凉介's personal blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          数理逻辑知识总结
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-07-03 00:00:00 / Modified: 17:20:23" itemprop="dateCreated datePublished" datetime="2020-07-03T00:00:00+08:00">2020-07-03</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">学习</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
         <h1 id="离散数学"><a href="#离散数学" class="headerlink" title="离散数学"></a>离散数学</h1><h2 id="数理逻辑"><a href="#数理逻辑" class="headerlink" title="数理逻辑"></a>数理逻辑</h2><h3 id="命题逻辑"><a href="#命题逻辑" class="headerlink" title="命题逻辑"></a>命题逻辑</h3><h4 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h4><ol>
 <li><p>==命题==：具有确切真值的陈述句称为命题。</p>
 </li>
@@ -645,293 +586,133 @@
 </li>
 </ul>
 
-      
-    </div>
-    
-  </div>
-  
-    
-    <div class="copyright">
-        <p><span>本文标题:</span><a  href="/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E6%95%B0%E7%90%86%E9%80%BB%E8%BE%91/">数理逻辑知识总结</a></p>
-        <p><span>文章作者:</span><a  href="/" title="访问 Jian Shengnan 的个人博客">Jian Shengnan</a></p>
-        <p><span>发布时间:</span>2020年07月03日 - 00时00分</p>
-        <p><span>最后更新:</span>2020年07月03日 - 17时20分</p>
-        <p>
-            <span>原始链接:</span><a class="post-url" href="/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E6%95%B0%E7%90%86%E9%80%BB%E8%BE%91/" title="数理逻辑知识总结">http://yoursite.com/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E6%95%B0%E7%90%86%E9%80%BB%E8%BE%91/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E6%95%B0%E7%90%86%E9%80%BB%E8%BE%91/　　作者: Jian Shengnan" title=""></span>
-        </p>
-        <p>
-            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
-        </p>
     </div>
 
-
-
-<nav id="article-nav">
-  
-    <a  href="/2020/07/03/%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          电子技术基础复习总结
-        
-      </div>
-    </a>
-  
-  
-    <a  href="/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E5%9B%BE%E8%AE%BA/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">图论知识总结</div>
-      <strong class="article-nav-caption">></strong>
-    </a>
-  
-</nav>
-
-
-  
-</article>
-
-    <div id="toc" class="toc-article">
-    <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#离散数学"><span class="toc-number">1.</span> <span class="toc-text">离散数学</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#数理逻辑"><span class="toc-number">1.1.</span> <span class="toc-text">数理逻辑</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#命题逻辑"><span class="toc-number">1.1.1.</span> <span class="toc-text">命题逻辑</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#基本概念"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">基本概念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#联结词"><span class="toc-number">1.1.1.2.</span> <span class="toc-text">联结词</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#命题符号化"><span class="toc-number">1.1.1.3.</span> <span class="toc-text">命题符号化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#基本等价公式"><span class="toc-number">1.1.1.4.</span> <span class="toc-text">基本等价公式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#判断命题公式逻辑等价的方法"><span class="toc-number">1.1.1.5.</span> <span class="toc-text">判断命题公式逻辑等价的方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#求合取范式和析取范式的方法"><span class="toc-number">1.1.1.6.</span> <span class="toc-text">求合取范式和析取范式的方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#求出主析取范式的方法"><span class="toc-number">1.1.1.7.</span> <span class="toc-text">求出主析取范式的方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#求主合取范式的方法"><span class="toc-number">1.1.1.8.</span> <span class="toc-text">求主合取范式的方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#主范式间的转换"><span class="toc-number">1.1.1.9.</span> <span class="toc-text">主范式间的转换</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#证明永真（假）的方法"><span class="toc-number">1.1.1.10.</span> <span class="toc-text">证明永真（假）的方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#证明蕴含的方法"><span class="toc-number">1.1.1.11.</span> <span class="toc-text">证明蕴含的方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#常用的蕴含式"><span class="toc-number">1.1.1.12.</span> <span class="toc-text">常用的蕴含式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#推理的方法"><span class="toc-number">1.1.1.13.</span> <span class="toc-text">推理的方法</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#谓词逻辑"><span class="toc-number">1.1.2.</span> <span class="toc-text">谓词逻辑</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#基本概念-1"><span class="toc-number">1.1.2.1.</span> <span class="toc-text">基本概念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#谓词中的基本等价公式"><span class="toc-number">1.1.2.2.</span> <span class="toc-text">谓词中的基本等价公式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#常用的蕴含关系"><span class="toc-number">1.1.2.3.</span> <span class="toc-text">常用的蕴含关系</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#化为前束范式的方法"><span class="toc-number">1.1.2.4.</span> <span class="toc-text">化为前束范式的方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#推理规则"><span class="toc-number">1.1.2.5.</span> <span class="toc-text">推理规则</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#谓词推理中注意的问题"><span class="toc-number">1.1.2.6.</span> <span class="toc-text">谓词推理中注意的问题</span></a></li></ol></li></ol></li></ol></li></ol>
-</div>
-<style>
-    .left-col .switch-btn {
-        display: none;
-    }
-    .left-col .switch-area {
-        display: none;
-    }
-</style>
-<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
-
-<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
-
-<script>
-    var valueHide = "隐藏目录";
-    var valueShow = "显示目录";
-    if ($(".left-col").is(":hidden")) {
-        $("#tocButton").attr("value", valueShow);
-    }
-    $("#tocButton").click(function() {
-        if ($("#toc").is(":hidden")) {
-            $("#tocButton").attr("value", valueHide);
-            $("#toc").slideDown(320);
-            $(".switch-btn, .switch-area").fadeOut(300);
-        }
-        else {
-            $("#tocButton").attr("value", valueShow);
-            $("#toc").slideUp(350);
-            $(".switch-btn, .switch-area").fadeIn(500);
-        }
-    })
-    if ($(".toc").length < 1) {
-        $("#toc, #tocButton").hide();
-        $(".switch-btn, .switch-area").show();
-    }
-</script>
-
-
-
-
-<div class="bdsharebuttonbox">
-	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
-	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
-	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
-	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
-	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
-	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
-</div>
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
-
-
-
-
     
-        <section class="changyan" id="comments">
-  <!--<div id="uyan_frame"></div>-->
-  <div id="SOHUCS"></div>
-  <script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js"></script>
-  <script type="text/javascript">
-    window.changyan.api.config({
-      appid: 'xxxx',
-      conf: 'xxxxxxxxx'
-    });
-  </script>
-</section>
+    
     
 
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag"># 笔记</a>
+              <a href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag"># 学习</a>
+          </div>
+
+        
 
 
-    <div class="scroll" id="post-nav-button">
         
-            <a  href="/2020/07/03/%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93/" title="上一篇: 电子技术基础复习总结">
-                <i class="fa fa-angle-left"></i>
-            </a>
-        
-        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
-        
-            <a  href="/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E5%9B%BE%E8%AE%BA/" title="下一篇: 图论知识总结">
-                <i class="fa fa-angle-right"></i>
-            </a>
-        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E7%AC%AC%E5%90%88%E8%AE%BA/" rel="prev" title="第合论知识总结">
+      <i class="fa fa-chevron-left"></i> 第合论知识总结
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E5%9B%BE%E8%AE%BA/" rel="next" title="图论知识总结">
+      图论知识总结 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/07/04/%E5%9B%BD%E9%A3%8E%C2%B7%E9%82%B6%E9%A3%8E%C2%B7%E6%B3%8A%E8%88%9F/">国风·邶风·泊舟</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%8F%AC%E5%8D%97%C2%B7%E9%A9%BA%E8%99%9E/">国风·召南·驺虞</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E3%80%8A%E4%B8%AD%E5%9B%BD%E7%96%AB%E8%8B%97%E7%99%BE%E5%B9%B4%E7%BA%AA%E5%AE%9E%E3%80%8B%E8%AF%BB%E4%B9%A6%E6%8A%A5%E5%91%8A/">《中国疫苗百年纪实》读书报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/Vscode%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%A4%A7%E5%85%A8/">VScode快捷键</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E3%80%8A%E4%BC%A4%E9%80%9D%E3%80%8B/">《伤逝》摘抄</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E3%80%8A%E5%9C%A8%E9%85%92%E6%A5%BC%E4%B8%8A%E3%80%8B/">《在酒楼上》摘抄</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E3%80%8A%E5%AD%A4%E7%8B%AC%E8%80%85%E3%80%8B/">《孤独者摘抄》</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E3%80%8A%E7%99%BD%E5%85%89%E3%80%8B/">《白光》摘抄</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E3%80%8A%E7%AB%AF%E5%8D%88%E8%8A%82%E3%80%8B/">《端午节》摘抄</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E3%80%8A%E9%98%BFQ%E6%AD%A3%E4%BC%A0%E3%80%8B/">《阿Q正传》摘抄</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E3%80%8A%E9%95%BF%E6%98%8E%E7%81%AF%E3%80%8B/">《长明灯》摘抄</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E3%80%8A%E7%8B%82%E4%BA%BA%E6%97%A5%E8%AE%B0%E3%80%8B/">《狂人日记》摘抄</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E3%80%8A%E9%AB%98%E8%80%81%E5%A4%AB%E5%AD%90%E3%80%8B/">《高老夫子》摘抄</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E3%80%8A%E7%A5%9D%E7%A6%8F%E3%80%8B/">《祝福》摘抄</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E4%B8%AD%E5%9B%BD%E4%BA%BA%E9%A9%AF%E5%8C%96%E4%BA%86%E5%AE%B6%E7%8C%AA/">科技史—中国人驯化了家猪</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E4%BA%BA%E7%B1%BB%E4%BD%BF%E7%94%A8%E5%BC%93%E7%AE%AD/">科技史—人类使用弓箭</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E4%BA%BA%E7%B1%BB%E5%8F%91%E6%98%8E%E4%BD%BF%E7%94%A8%E7%8A%81/">科技史—人类发明使用犁</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E4%BA%BA%E7%B1%BB%E5%8F%91%E6%98%8E%E5%8E%9F%E5%A7%8B%E7%BB%87%E6%9C%BA/">科技史—人类发明原始织机</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E4%BA%BA%E7%B1%BB%E5%88%A9%E7%94%A8%E5%B0%8F%E7%AB%B9%E7%AD%8F%E8%B7%A8%E6%B5%B7%E8%88%AA%E8%A1%8C/">科技史—人类利用小筏跨海航行</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E4%BA%BA%E7%B1%BB%E5%8F%91%E7%8E%B0%E5%8D%95%E8%B4%A8%E9%93%9C/">科技史—人类发现单质铜</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E4%BA%BA%E7%B1%BB%E5%BC%80%E5%A7%8B%E7%83%A7%E5%88%B6%E9%99%B6%E5%99%A8/">科技史—人类开始烧制陶器</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E4%BA%BA%E7%B1%BB%E5%BC%80%E5%A7%8B%E9%A9%AF%E5%8C%96%E7%8B%97/">科技史—人类开始驯化狗</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E4%BA%BA%E7%B1%BB%E6%8F%90%E5%8F%96%E9%87%91%E5%92%8C%E9%93%B6/">科技史—人类提取金银</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E4%BA%BA%E7%B1%BB%E7%BB%98%E5%88%B6%E5%A3%81%E7%94%BB/">科技史—人类绘制壁画</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E4%BA%BA%E7%B1%BB%E9%A9%AF%E5%8C%96%E7%89%9B%E3%80%81%E7%BE%8A/">科技史—人类驯化牛羊</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%8F%AC%E5%8D%97%C2%B7%E4%BD%95%E5%BD%BC%E8%A5%9B%E7%9F%A3/">国风·召南·何彼襛矣</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%8F%AC%E5%8D%97%C2%B7%E5%B0%8F%E6%98%9F/">国风·召南·小星</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%8F%AC%E5%8D%97%C2%B7%E6%91%BD%E6%9C%89%E6%A2%85/">国风·召南·摽有梅</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E3%80%8A%E8%82%A5%E7%9A%82%E3%80%8B/">《肥皂》摘抄</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%93%A5%E8%B4%9D%E5%85%8B%E5%8A%9B%E7%9F%B3%E9%98%B5%E5%BB%BA%E6%88%90/">科技史—哥贝克力石阵建成</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%8F%AC%E5%8D%97%C2%B7%E6%AE%B7%E5%85%B6%E9%9B%B7/">国风·召南·殷其雷</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%8F%AC%E5%8D%97%C2%B7%E7%94%98%E6%A3%A0/">国风·召南·甘棠</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%8F%AC%E5%8D%97%C2%B7%E7%BE%94%E7%BE%8A/">国风·召南·羔羊</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%8F%AC%E5%8D%97%C2%B7%E8%8D%89%E8%99%AB/">国风·召南·草虫</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%8F%AC%E5%8D%97%C2%B7%E9%87%87%EE%86%9A/">国风·召南·采</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%8F%AC%E5%8D%97%C2%B7%E9%87%87%E8%98%A9/">国风·召南·采蘩</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%8F%AC%E5%8D%97%C2%B7%E6%B1%9F%E6%9C%89%E6%B1%9C/">国风·召南·江有汜</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%8F%AC%E5%8D%97%C2%B7%E8%A1%8C%E9%9C%B2/">国风·召南·行露</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%8F%AC%E5%8D%97%C2%B7%E9%87%8E%E6%9C%89%E6%AD%BB%E9%BA%95/">国风·召南·野有死麕</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%91%A8%E5%8D%97%C2%B7%E5%85%8D%E7%BD%9D/">国风·周南·免罝</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%91%A8%E5%8D%97%C2%B7%E5%8D%B7%E8%80%B3/">国风·周南·卷耳</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%91%A8%E5%8D%97%C2%B7%E6%A8%9B%E6%9C%A8/">国风·周南·樛木</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%8F%AC%E5%8D%97%C2%B7%E9%B9%8A%E5%B7%A2/">国风·周南·鹊巢</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%91%A8%E5%8D%97%C2%B7%E6%A1%83%E5%A4%AD/">国风·周南·桃夭</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%91%A8%E5%8D%97%C2%B7%E6%B1%9D%E5%9D%9F/">国风·周南·汝坟</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%91%A8%E5%8D%97%C2%B7%E8%91%9B%E8%A6%83/">国风·周南·葛覃</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%91%A8%E5%8D%97%C2%B7%E8%8A%A3%E8%8B%A2/">国风·周南·芣苢</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%91%A8%E5%8D%97%C2%B7%E6%B1%89%E5%B9%BF/">国风·周南·汉广</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%91%A8%E5%8D%97%C2%B7%E8%9E%BD%E6%96%AF/">国风·周南·螽斯</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/">C++文件基础操作总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%91%A8%E5%8D%97%C2%B7%E9%BA%9F%E4%B9%8B%E8%B6%BE/">国风·周南·麟之趾</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E6%96%B0%E6%9C%88%E5%9C%B0%E5%B8%A6%E5%87%BA%E7%8E%B0%E5%8E%9F%E5%A7%8B%E5%86%9C%E4%B8%9A/">科技史—新月地带出现原始农业</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E6%97%A9%E6%9C%9F%E9%85%BF%E9%85%92%E5%B7%A5%E8%89%BA%E5%87%BA%E7%8E%B0/">科技史—早期酿酒工艺的出现</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E6%97%A9%E6%9C%9F%E7%BC%96%E7%BB%87%E7%89%A9%E5%87%BA%E7%8E%B0/">科技史—早期编织物的出现</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E6%B2%B3%E5%A7%86%E6%B8%A1%E5%87%BA%E7%8E%B0%E8%BE%83%E5%8F%91%E8%BE%BE%E7%9A%84%E5%8F%B2%E5%89%8D%E7%A8%BB%E4%BD%9C%E5%86%9C%E4%B8%9A/">科技史—河姆渡出现较发达的史前稻作农业</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/">图书管理系统</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E6%B2%B3%E5%8C%97%E7%A3%81%E5%B1%B1%E5%9C%B0%E5%8C%BA%E4%BD%BF%E7%94%A8%E7%BA%BA%E8%BD%AE/">科技史—河北磁山地区使用纺轮</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E7%8E%89%E8%9F%BE%E5%B2%A9%E5%87%BA%E7%8E%B0%E4%BA%BA%E5%B7%A5%E6%A0%BD%E5%9F%B9%E7%A8%BB/">科技史—玉蟾岩出现人工栽培稻</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93/">电子技术基础复习总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E6%95%B0%E7%90%86%E9%80%BB%E8%BE%91/">数理逻辑知识总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E5%9B%BE%E8%AE%BA/">图论知识总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E5%AE%9E%E9%AA%8C%EF%BC%9A%E5%85%B3%E7%B3%BB%E6%80%A7%E8%B4%A8%E5%88%A4%E6%96%AD/">离散数学实验：关系性质判断</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E4%BB%A3%E6%95%B0%E7%B3%BB%E7%BB%9F/">代数系统知识总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E5%AE%9E%E9%AA%8C%EF%BC%9A%E5%85%B3%E7%B3%BB%E9%97%AD%E5%8C%85%E7%9A%84%E8%AE%A1%E7%AE%97(C%E8%AF%AD%E8%A8%80)/">离散数学实验：关系闭包的计算</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E7%AC%AC%E5%90%88%E8%AE%BA/">第合论知识总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E5%AE%9E%E9%AA%8C%EF%BC%9A%E8%AE%A1%E7%AE%97%E7%9C%9F%E5%80%BC/">离散数学实验：计算真值</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/03/%E9%99%B6%E7%AD%B9%E7%9A%84%E5%87%BA%E7%8E%B0/">科技史—陶筹的出现</a></li></ul>
+      </footer>
     
-<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
-
-    <script>
-        $(".post-list").addClass("toc-article");
-        // $(".post-list-item a").attr("target","_blank");
-        $("#post-nav-button > a:nth-child(2)").click(function() {
-            $(".fa-bars, .fa-times").toggle();
-            $(".post-list").toggle(300);
-            if ($(".toc").length > 0) {
-                $("#toc, #tocButton").toggle(200, function() {
-                    if ($(".switch-area").is(":visible")) {
-                        $("#toc, .switch-btn, .switch-area").toggle();
-                        $("#tocButton").attr("value", valueHide);
-                        }
-                    })
-            }
-            else {
-                $(".switch-btn, .switch-area").fadeToggle(300);
-            }
-        })
-    </script>
+  </article>
+  
+  
+  
 
 
 
-
-    <script>
-        
-    </script>
-
-</div>
-      <footer id="footer">
-    <div class="outer">
-        <div id="footer-info">
-            <div class="footer-left">
-                &copy; 2020 Jian Shengnan
-            </div>
-            <div class="footer-right">
-                <a href="http://hexo.io/" target="_blank">Hexo &nbsp;&nbsp;</a><a href="https://github.com/maochunguang" target="_blank">Blog</a> by tommy
-            </div>
         </div>
         
-            <div class="visit">
-                
-                    <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" >极客到访数: 
-                            <span id="busuanzi_value_site_uv"></span>
-                        </span>
-                    </span>
-                
-                
-                    <span>, </span>
-                
-                
-                    <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit">本页阅读量: 
-                            <span id="busuanzi_value_page_pv"></span>
-                        </span>
-                    </span>
-                
-            </div>
-        
-    </div>
-    <span id="busuanzi_container_page_pv">
-        本文总阅读量<span id="busuanzi_value_page_pv"></span>次
-    </span>
-</footer>
 
-    </div>
-    
-<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
-
-
-<script src="/js/main.js"></script>
-
-
-    <script>
-        $(document).ready(function() {
-            var backgroundnum = 5;
-            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
-            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
-            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
-        })
-    </script>
-
-
-<!-- Google Analytics -->
-<script type="text/javascript">
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'xxxxx', 'auto');
-ga('send', 'pageview');
-
-</script>
-<!-- End Google Analytics -->
-
-
-
-	<script>
-	var _hmt = _hmt || [];
-	(function() {
-	  var hm = document.createElement("script");
-	  hm.src = "//hm.baidu.com/hm.js?xxxxxx";
-	  var s = document.getElementsByTagName("script")[0]; 
-	  s.parentNode.insertBefore(hm, s);
-	})();
-	</script>
-
-
-
-<div class="scroll" id="scroll">
-    <a href="#"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
-</div>
 <script>
-    $(document).ready(function() {
-        if ($("#comments").length < 1) {
-            $("#scroll > a:nth-child(2)").hide();
-        };
-    })
-</script>
-
-<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
-</script>
-
-  <script language="javascript">
-    $(function() {
-        $("a[title]").each(function() {
-            var a = $(this);
-            var title = a.attr('title');
-            if (title == undefined || title == "") return;
-            a.data('title', title).removeAttr('title').hover(
-            function() {
-                var offset = a.offset();
-                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
-                    top: offset.top - a.outerHeight() - 15,
-                    left: offset.left + a.outerWidth()/2 + 1
-                }).fadeIn(function() {
-                    var pop = $(this);
-                    setTimeout(function() {
-                        pop.remove();
-                    }, pop.text().length * 800);
-                });
-            }, function() {
-                $("#anchortitlecontainer").remove();
-            });
-        });
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
     });
+  }
 </script>
 
+      </div>
+    </main>
 
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jian Shengnan</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
   </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
 </body>
 </html>
