@@ -42,14 +42,6 @@
             
                 <li class="menu-item">
                     <a class=""
-                       href="https://github.com/wasd-debug"
-                    >
-                        GITHUB
-                    </a>
-                </li>
-            
-                <li class="menu-item">
-                    <a class=""
                        href="https://blog.csdn.net/weixin_46698891"
                     >
                         CSDN
@@ -58,7 +50,7 @@
             
                 <li class="menu-item">
                     <a class=""
-                       href="/categories/"
+                       href="/categories"
                     >
                         学习
                     </a>
@@ -113,17 +105,12 @@
             
                 <li class="drawer-menu-item">
                     <a class=""
-                       href="https://github.com/wasd-debug">GITHUB</a>
-                </li>
-            
-                <li class="drawer-menu-item">
-                    <a class=""
                        href="https://blog.csdn.net/weixin_46698891">CSDN</a>
                 </li>
             
                 <li class="drawer-menu-item">
                     <a class=""
-                       href="/categories/">学习</a>
+                       href="/categories">学习</a>
                 </li>
             
                 <li class="drawer-menu-item">
@@ -211,14 +198,19 @@
         </div>
 
         <div class="article-content markdown-body">
-            <h1 id="离散数学实验：计算真值"><a href="#离散数学实验：计算真值" class="headerlink" title="离散数学实验：计算真值"></a>离散数学实验：计算真值</h1><h2 id="一、实验目的"><a href="#一、实验目的" class="headerlink" title="一、实验目的"></a>一、实验目的</h2><blockquote>
+            <h1 id="离散数学实验计算真值"><a class="markdownIt-Anchor" href="#离散数学实验计算真值"></a> 离散数学实验：计算真值</h1>
+<h2 id="一-实验目的"><a class="markdownIt-Anchor" href="#一-实验目的"></a> 一、实验目的</h2>
+<blockquote>
 <p><strong>熟悉五个常用联结词合取、析取、条件和双条件的概念，掌握真值表技术。</strong></p>
 </blockquote>
-<h2 id="二、实验内容"><a href="#二、实验内容" class="headerlink" title="二、实验内容"></a>二、实验内容</h2><blockquote>
+<h2 id="二-实验内容"><a class="markdownIt-Anchor" href="#二-实验内容"></a> 二、实验内容</h2>
+<blockquote>
 <p><strong>本实验要求从键盘输入两个命题P和Q的真值，求它们的合取、析取、条件和双条件的真值。用C语言或MATLAB实现。</strong></p>
 </blockquote>
-<h2 id="三、实验源程序"><a href="#三、实验源程序" class="headerlink" title="三、实验源程序"></a>三、实验源程序</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> P, Q;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"从键盘输入两个命题P和Q的真值\n"</span>);</span><br><span class="line">	scanf_s(<span class="string">"%d %d"</span>, &amp;P, &amp;Q);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"P合取Q为%d\n"</span>, (P &amp;&amp; Q));</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"P析取Q为%d\n"</span>, (P || Q));</span><br><span class="line">	<span class="keyword">int</span> judge1, judge2, judge3;</span><br><span class="line">	<span class="keyword">if</span> (P == <span class="number">1</span> &amp;&amp; Q == <span class="number">0</span>)</span><br><span class="line">		judge1 = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		judge1 = <span class="number">1</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"P-&gt;Q为%d\n"</span>, judge1);</span><br><span class="line">	<span class="keyword">if</span> (Q == <span class="number">1</span> &amp;&amp; P == <span class="number">0</span>)</span><br><span class="line">		judge2 = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		judge2 = <span class="number">1</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"Q-&gt;P为%d\n"</span>, judge2);</span><br><span class="line">	<span class="keyword">if</span> (Q == P)</span><br><span class="line">		judge3 = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		judge3 = <span class="number">0</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"P&lt;-&gt;Q为%d"</span>, judge3);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="四、实验分析"><a href="#四、实验分析" class="headerlink" title="四、实验分析"></a>四、实验分析</h2><p><strong>这是一个简单的实验，明白四个关系的具体含义，利用程序中的对应代码进行替换判断即可。</strong></p>
+<h2 id="三-实验源程序"><a class="markdownIt-Anchor" href="#三-实验源程序"></a> 三、实验源程序</h2>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> P, Q;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"从键盘输入两个命题P和Q的真值\n"</span>);</span><br><span class="line">	scanf_s(<span class="string">"%d %d"</span>, &amp;P, &amp;Q);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"P合取Q为%d\n"</span>, (P &amp;&amp; Q));</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"P析取Q为%d\n"</span>, (P || Q));</span><br><span class="line">	<span class="keyword">int</span> judge1, judge2, judge3;</span><br><span class="line">	<span class="keyword">if</span> (P == <span class="number">1</span> &amp;&amp; Q == <span class="number">0</span>)</span><br><span class="line">		judge1 = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		judge1 = <span class="number">1</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"P-&gt;Q为%d\n"</span>, judge1);</span><br><span class="line">	<span class="keyword">if</span> (Q == <span class="number">1</span> &amp;&amp; P == <span class="number">0</span>)</span><br><span class="line">		judge2 = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		judge2 = <span class="number">1</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"Q-&gt;P为%d\n"</span>, judge2);</span><br><span class="line">	<span class="keyword">if</span> (Q == P)</span><br><span class="line">		judge3 = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		judge3 = <span class="number">0</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"P&lt;-&gt;Q为%d"</span>, judge3);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="四-实验分析"><a class="markdownIt-Anchor" href="#四-实验分析"></a> 四、实验分析</h2>
+<p><strong>这是一个简单的实验，明白四个关系的具体含义，利用程序中的对应代码进行替换判断即可。</strong></p>
 
         </div>
 
@@ -229,7 +221,7 @@
                        rel="prev"
                        href="/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E5%AE%9E%E9%AA%8C%EF%BC%9A%E5%85%B3%E7%B3%BB%E9%97%AD%E5%8C%85%E7%9A%84%E8%AE%A1%E7%AE%97(C%E8%AF%AD%E8%A8%80)/"
                     >
-                        <i class="fa fa-chevron-left"></i> <span class="post-nav-title-item">离散数学实验：关系闭包的计算</span><span class="post-nav-item">上一篇</span>
+                        <i class="fa fa-chevron-left"></i> <span class="post-nav-title-item">离散数学实验：关系闭包的计算</span><span class="post-nav-item">Prev posts</span>
                     </a>
                 </div>
             
@@ -239,7 +231,7 @@
                        rel="next"
                        href="/2020/07/03/%E9%99%B6%E7%AD%B9%E7%9A%84%E5%87%BA%E7%8E%B0/"
                     >
-                        <span class="post-nav-title-item">科技史—陶筹的出现</span><span class="post-nav-item">下一篇</span> <i class="fa fa-chevron-right"></i>
+                        <span class="post-nav-title-item">科技史—陶筹的出现</span><span class="post-nav-item">Next posts</span> <i class="fa fa-chevron-right"></i>
                     </a>
                 </div>
             
@@ -277,7 +269,7 @@
         <div class="article-toc">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#离散数学实验：计算真值"><span class="nav-number">1.</span> <span class="nav-text">离散数学实验：计算真值</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、实验目的"><span class="nav-number">1.1.</span> <span class="nav-text">一、实验目的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、实验内容"><span class="nav-number">1.2.</span> <span class="nav-text">二、实验内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、实验源程序"><span class="nav-number">1.3.</span> <span class="nav-text">三、实验源程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、实验分析"><span class="nav-number">1.4.</span> <span class="nav-text">四、实验分析</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#离散数学实验计算真值"><span class="nav-number">1.</span> <span class="nav-text"> 离散数学实验：计算真值</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一-实验目的"><span class="nav-number">1.1.</span> <span class="nav-text"> 一、实验目的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二-实验内容"><span class="nav-number">1.2.</span> <span class="nav-text"> 二、实验内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三-实验源程序"><span class="nav-number">1.3.</span> <span class="nav-text"> 三、实验源程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四-实验分析"><span class="nav-number">1.4.</span> <span class="nav-text"> 四、实验分析</span></a></li></ol></li></ol>
     </div>
 </div>
         </div>
@@ -331,7 +323,7 @@
             &copy; 2020 <a href="/">Jian Shengnan</a>
         </div>
         <div class="theme-info info-item">
-            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动 | 主题 <a
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a> | Theme <a
                     href="https://github.com/XPoet/hexo-theme-ils" target="_blank">ILS v1.1.2</a>
         </div>
         
@@ -339,12 +331,12 @@
             <div class="website-count info-item">
                 
                     <span id="busuanzi_container_site_uv" style="display: none">
-                        访问人数<span id="busuanzi_value_site_uv"></span>
+                        UV<span id="busuanzi_value_site_uv"></span>
                     </span>
                 
                 
                     <span id="busuanzi_container_site_pv" style="display: none">
-                        总访问量<span id="busuanzi_value_site_pv"></span>
+                        PV<span id="busuanzi_value_site_pv"></span>
                     </span>
                 
             </div>
@@ -370,7 +362,7 @@
                 <input autocomplete="off"
                        autocorrect="off"
                        autocapitalize="off"
-                       placeholder="搜索..."
+                       placeholder="Search..."
                        spellcheck="false"
                        type="search"
                        class="search-input"
