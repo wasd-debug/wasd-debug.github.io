@@ -1866,17 +1866,17 @@ button {
   height: 100%;
   position: relative;
   box-sizing: border-box;
-  padding-left: 310px;
+  padding-right: 310px;
 }
 .page-template .page-middle .main-content .main-content-right {
   position: absolute;
-  left: 0;
+  right: 0;
   width: 280px;
   box-sizing: border-box;
 }
 .page-template .page-middle .main-content .main-content-left {
   position: relative;
-  float: right;
+  float: left;
   width: 100%;
   box-sizing: border-box;
 }
