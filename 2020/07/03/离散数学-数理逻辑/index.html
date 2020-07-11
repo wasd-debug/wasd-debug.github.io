@@ -181,233 +181,163 @@
         </div>
 
         <div class="article-content markdown-body">
-            <h1 id="离散数学"><a class="markdownIt-Anchor" href="#离散数学"></a> 离散数学</h1>
-<h2 id="数理逻辑"><a class="markdownIt-Anchor" href="#数理逻辑"></a> 数理逻辑</h2>
-<h3 id="命题逻辑"><a class="markdownIt-Anchor" href="#命题逻辑"></a> 命题逻辑</h3>
-<h4 id="基本概念"><a class="markdownIt-Anchor" href="#基本概念"></a> 基本概念</h4>
-<ol>
-<li>
-<p><mark>命题</mark>：具有确切真值的陈述句称为命题。</p>
+            <h1 id="离散数学"><a href="#离散数学" class="headerlink" title="离散数学"></a>离散数学</h1><h2 id="数理逻辑"><a href="#数理逻辑" class="headerlink" title="数理逻辑"></a>数理逻辑</h2><h3 id="命题逻辑"><a href="#命题逻辑" class="headerlink" title="命题逻辑"></a>命题逻辑</h3><h4 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h4><ol>
+<li><p>==命题==：具有确切真值的陈述句称为命题。</p>
 </li>
-<li>
-<p><mark>真值</mark>：一个命题总有一个值，一般来讲，命题是正确的则真值为真，命题为错误的真值为假，这称为命题的真值。     真值只有真假两种，分别用“T”（1）和“F”（0）表示。</p>
+<li><p>==真值==：一个命题总有一个值，一般来讲，命题是正确的则真值为真，命题为错误的真值为假，这称为命题的真值。     真值只有真假两种，分别用“T”（1）和“F”（0）表示。</p>
 </li>
-<li>
-<p><mark>原子（简单）命题</mark>：不能再分解为更简单命题的命题。</p>
+<li><p>==原子（简单）命题==：不能再分解为更简单命题的命题。</p>
 </li>
-<li>
-<p><mark>复合命题</mark>：可以分解的命题</p>
+<li><p>==复合命题==：可以分解的命题</p>
 </li>
-<li>
-<p><mark>命题变量</mark>：一个表示确定命题的命题标识符</p>
+<li><p>==命题变量==：一个表示确定命题的命题标识符</p>
 </li>
-<li>
-<p><mark>命题变元</mark>：表示任一命题的命题标识符。（命题变元不是命题）</p>
+<li><p>==命题变元==：表示任一命题的命题标识符。（命题变元不是命题）</p>
 </li>
-<li>
-<p><mark>原子变元</mark>：命题变元是原子命题</p>
+<li><p>==原子变元==：命题变元是原子命题</p>
 </li>
-<li>
-<p><mark>指派/解释</mark>：当命题变元P用一个特定的命题取代时，P才能确定真值，称为对P进行指派。若公式G在解释I下是真，则称I满足G，I是G的成真赋值。反之称I弄假于G。</p>
+<li><p>==指派/解释==：当命题变元P用一个特定的命题取代时，P才能确定真值，称为对P进行指派。若公式G在解释I下是真，则称I满足G，I是G的成真赋值。反之称I弄假于G。</p>
 </li>
-<li>
-<p><mark>命题公式</mark>：由命题变量、命题变元、联结词和括号等组成的复合命题形式，这些符号不能任意组合，必须按下列定义：</p>
+<li><p>==命题公式==：由命题变量、命题变元、联结词和括号等组成的复合命题形式，这些符号不能任意组合，必须按下列定义：</p>
 <ol>
 <li>命题变元本身是一个公式</li>
 <li>若P是公式，<strong>┐</strong>P也是公式</li>
-<li>如PQ是公式，则P<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∧</mo></mrow><annotation encoding="application/x-tex">\land</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.55556em;vertical-align:0em;"></span><span class="mord">∧</span></span></span></span>Q、P<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∨</mo></mrow><annotation encoding="application/x-tex">\lor</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.55556em;vertical-align:0em;"></span><span class="mord">∨</span></span></span></span>Q,P<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">→</span></span></span></span>Q,P<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>↔</mo></mrow><annotation encoding="application/x-tex">\leftrightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">↔</span></span></span></span>Q也是公式</li>
+<li>如PQ是公式，则P$\land$Q、P$\lor$Q,P$\rightarrow$Q,P$\leftrightarrow$Q也是公式</li>
 <li>仅由有限步骤使用规则1-3后产生的结果。</li>
 </ol>
 </li>
-<li>
-<p><mark>真值表</mark>：公式G在其所有可能的解释下所取真值的表。</p>
+<li><p>==真值表==：公式G在其所有可能的解释下所取真值的表。</p>
 </li>
-<li>
-<p><mark>等价公式</mark>：给定两个命题公式A和B，P1，P2，…Pn为所有于出现、并A和B中的原子变元，若给所有命题变元任一组真值指派，A和B的真值相同，则称A和B是等价的或者逻辑相等。充分必要条件是，G<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>↔</mo></mrow><annotation encoding="application/x-tex">\leftrightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">↔</span></span></span></span>H</p>
+<li><p>==等价公式==：给定两个命题公式A和B，P1，P2，…Pn为所有于出现、并A和B中的原子变元，若给所有命题变元任一组真值指派，A和B的真值相同，则称A和B是等价的或者逻辑相等。充分必要条件是，G$\leftrightarrow$H</p>
 </li>
-<li>
-<p>[基本等价公式](#### 基本等价公式)</p>
+<li><p>[基本等价公式](#### 基本等价公式)</p>
 </li>
-<li>
-<p><mark>子公式</mark>：如果X是合式公式A的一部分，且X本身也是一个合式公式，则称X为公式A的子公式。</p>
+<li><p>==子公式==：如果X是合式公式A的一部分，且X本身也是一个合式公式，则称X为公式A的子公式。</p>
 </li>
-<li>
-<p><mark>等价置换</mark>：设X是合式公式A的子公式，若X<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>↔</mo></mrow><annotation encoding="application/x-tex">\leftrightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">↔</span></span></span></span>Y,如果将A中的X用Y来置换，所得公式B和公式A等价。</p>
+<li><p>==等价置换==：设X是合式公式A的子公式，若X$\leftrightarrow$Y,如果将A中的X用Y来置换，所得公式B和公式A等价。</p>
 </li>
-<li>
-<p><mark>合取范式</mark>：一个命题公式称为合取范式，当且仅当它具有形式：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>A</mi><mn>1</mn></msub><mo>∧</mo><msub><mi>A</mi><mn>2</mn></msub><mo>∧</mo><mo>⋯</mo><mo>∧</mo><msub><mi>A</mi><mi>n</mi></msub><mo stretchy="false">(</mo><mi>n</mi><mo>≥</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">A_{1}\land A_{2}\land \cdots \land A_{n}(n\geq 1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∧</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∧</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.55556em;vertical-align:0em;"></span><span class="minner">⋯</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∧</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≥</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">)</span></span></span></span>其中A都是由命题变元或其否定所组成的析取式。</p>
+<li><p>==合取范式==：一个命题公式称为合取范式，当且仅当它具有形式：$A_{1}\land A_{2}\land \cdots \land A_{n}(n\geq 1)$其中A都是由命题变元或其否定所组成的析取式。</p>
 </li>
-<li>
-<p><mark>析取范式</mark>：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>A</mi><mn>1</mn></msub><mo>∨</mo><msub><mi>A</mi><mn>2</mn></msub><mo>∨</mo><mo>⋯</mo><msub><mi>A</mi><mi>n</mi></msub><mo stretchy="false">(</mo><mi>n</mi><mo>≥</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">A_{1}\lor A_{2}\lor \cdots A_{n}(n\geq 1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∨</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∨</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="minner">⋯</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≥</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">)</span></span></span></span>其中A都是由命题变元、逼格额其否定所组成的合取式。</p>
+<li><p>==析取范式==：$A_{1}\lor A_{2}\lor \cdots A_{n}(n\geq 1)$其中A都是由命题变元、逼格额其否定所组成的合取式。</p>
 </li>
-<li>
-<p>命题公式的析取范式可以指出公式何时为真，而合取范式可以指出公式何时为假，从而代替真值表。</p>
+<li><p>命题公式的析取范式可以指出公式何时为真，而合取范式可以指出公式何时为假，从而代替真值表。</p>
 </li>
-<li>
-<p><mark>小项</mark>：n个命题变元的合取式，称为布尔合取或小项，但是每个变元、并为和他的否定不能同时、exist是，但两者必须出现且仅出现一次。</p>
+<li><p>==小项==：n个命题变元的合取式，称为布尔合取或小项，但是每个变元、并为和他的否定不能同时、exist是，但两者必须出现且仅出现一次。</p>
 <ol>
 <li>每个小项当其真值指派、并为大哥编码相同时，其真值为T，其余情况都是F</li>
 <li>两个不同小项的合取永假</li>
 <li>全体小项的析取式永真</li>
 </ol>
 </li>
-<li>
-<p><mark>主析取范式</mark>：对于给定的命题公式，如果有一个等价公式，它仅由小项的析取所组成，则该等价公式称作原式的主析取范式。在真值表中，是真值为1的指派所对应小项的析取。</p>
+<li><p>==主析取范式==：对于给定的命题公式，如果有一个等价公式，它仅由小项的析取所组成，则该等价公式称作原式的主析取范式。在真值表中，是真值为1的指派所对应小项的析取。</p>
 </li>
-<li>
-<p><mark>大项</mark>：n个命题变元的析取式，称作布尔析取、逼格额大项，其中每个变元和她的否定不能同时存在，但两者必须出现且仅出现一次。</p>
+<li><p>==大项==：n个命题变元的析取式，称作布尔析取、逼格额大项，其中每个变元和她的否定不能同时存在，但两者必须出现且仅出现一次。</p>
 <ol>
 <li>每个大项当其真值指派、并为大哥编码相同时，其真值是F，其余均为T</li>
 <li>任何两个不同大项的析取式永真</li>
 <li>全体大项的合取式永假</li>
 </ol>
 </li>
-<li>
-<p><mark>主合取范式</mark>：对于给定的命题公式，如果有一个等价公式，它仅由大项的合取组成，则该等价式称为原式的主合取范式。在真值表中，一个公式的真值为F的指派所对应的大项的合取，即为此公式的主合取范式。</p>
+<li><p>==主合取范式==：对于给定的命题公式，如果有一个等价公式，它仅由大项的合取组成，则该等价式称为原式的主合取范式。在真值表中，一个公式的真值为F的指派所对应的大项的合取，即为此公式的主合取范式。</p>
 </li>
-<li>
-<p>命题公式永真但且仅当它的主析取范式包含所有的小项，主合取范式为空。永假公式反之。</p>
+<li><p>命题公式永真但且仅当它的主析取范式包含所有的小项，主合取范式为空。永假公式反之。</p>
 </li>
-<li>
-<p>两个命题公式相等当且仅当它们的主析取范式、主合取范式相等。</p>
+<li><p>两个命题公式相等当且仅当它们的主析取范式、主合取范式相等。</p>
 </li>
-<li>
-<p><mark>永真公式（重言式）</mark>：所有解释之下都是真</p>
+<li><p>==永真公式（重言式）==：所有解释之下都是真</p>
 </li>
-<li>
-<p><mark>永假公式（矛盾式）</mark>：在所有的解释之下都是假</p>
+<li><p>==永假公式（矛盾式）==：在所有的解释之下都是假</p>
 </li>
-<li>
-<p><mark>可满足</mark>的，不是永假</p>
+<li><p>==可满足==的，不是永假</p>
 </li>
-<li>
-<p><mark>蕴含</mark>：当且仅当P→Q是一个重言式时，称P蕴含Q，记作P<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">→</span></span></span></span>Q。</p>
+<li><p>==蕴含==：当且仅当P→Q是一个重言式时，称P蕴含Q，记作P$\rightarrow$Q。</p>
 </li>
-<li>
-<p><mark>推理</mark>：设A和C是两个命题公式，当且仅当A<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">→</span></span></span></span>C为永真公式，成C是A的有效结论。C由A逻辑地推出。定义可以推广到n个前提的情况，C为一组前提的有效结论。</p>
+<li><p>==推理==：设A和C是两个命题公式，当且仅当A$\rightarrow$C为永真公式，成C是A的有效结论。C由A逻辑地推出。定义可以推广到n个前提的情况，C为一组前提的有效结论。</p>
 </li>
-<li>
-<p>其他联结词：</p>
-<p><img src="https://i.loli.net/2020/06/19/mixId3CSAGO6nhz.png" alt="" /></p>
-<p><img src="https://i.loli.net/2020/06/19/wrfLA1uDRqElPbn.png" alt="" /></p>
+<li><p>其他联结词：</p>
+<p><img src="https://i.loli.net/2020/06/19/mixId3CSAGO6nhz.png" alt=""></p>
+<p><img src="https://i.loli.net/2020/06/19/wrfLA1uDRqElPbn.png" alt=""></p>
 </li>
-<li>
-<p><mark>最小联结词组</mark>：设有一联结词集合A，A中的联结词的等价公式可表达任何命题公式，删除A中的任何一个联结词，至少有一个命题公式B不能表达。</p>
-<p><img src="https://i.loli.net/2020/06/19/6lb5drYQsO3ogCi.png" alt="" /></p>
+<li><p>==最小联结词组==：设有一联结词集合A，A中的联结词的等价公式可表达任何命题公式，删除A中的任何一个联结词，至少有一个命题公式B不能表达。</p>
+<p><img src="https://i.loli.net/2020/06/19/6lb5drYQsO3ogCi.png" alt="">                                             </p>
 </li>
 </ol>
-<h4 id="联结词"><a class="markdownIt-Anchor" href="#联结词"></a> 联结词</h4>
-<table>
+<h4 id="联结词"><a href="#联结词" class="headerlink" title="联结词"></a>联结词</h4><table>
 <thead>
 <tr>
-<th style="text-align:center">联结词</th>
-<th style="text-align:center">记号</th>
-<th style="text-align:center">记法</th>
-<th style="text-align:center">真值结果</th>
+<th align="center">联结词</th>
+<th align="center">记号</th>
+<th align="center">记法</th>
+<th align="center">真值结果</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center">否定</td>
-<td style="text-align:center"><strong>┐</strong></td>
-<td style="text-align:center"><strong>┐</strong>P</td>
-<td style="text-align:center"><strong>┐</strong>P为真当且仅当P为假</td>
+<tbody><tr>
+<td align="center">否定</td>
+<td align="center"><strong>┐</strong></td>
+<td align="center"><strong>┐</strong>P</td>
+<td align="center"><strong>┐</strong>P为真当且仅当P为假</td>
 </tr>
 <tr>
-<td style="text-align:center">合取</td>
-<td style="text-align:center">$\land $</td>
-<td style="text-align:center">P$\land $Q</td>
-<td style="text-align:center">P$\land $Q为真当且仅当PQ同时为真</td>
+<td align="center">合取</td>
+<td align="center">$\land $</td>
+<td align="center">P$\land $Q</td>
+<td align="center">P$\land $Q为真当且仅当PQ同时为真</td>
 </tr>
 <tr>
-<td style="text-align:center">析取</td>
-<td style="text-align:center">$\lor $</td>
-<td style="text-align:center">P$\lor $Q</td>
-<td style="text-align:center">当且仅当PQ中至少一个是真</td>
+<td align="center">析取</td>
+<td align="center">$\lor $</td>
+<td align="center">P$\lor $Q</td>
+<td align="center">当且仅当PQ中至少一个是真</td>
 </tr>
 <tr>
-<td style="text-align:center">条件</td>
-<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">→</span></span></span></span></td>
-<td style="text-align:center">P<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">→</span></span></span></span>Q</td>
-<td style="text-align:center">为假当且仅当P为真Q为假</td>
+<td align="center">条件</td>
+<td align="center">$\rightarrow$</td>
+<td align="center">P$\rightarrow$Q</td>
+<td align="center">为假当且仅当P为真Q为假</td>
 </tr>
 <tr>
-<td style="text-align:center"></td>
-<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>↔</mo></mrow><annotation encoding="application/x-tex">\leftrightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">↔</span></span></span></span></td>
-<td style="text-align:center">P<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>↔</mo></mrow><annotation encoding="application/x-tex">\leftrightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">↔</span></span></span></span>Q</td>
-<td style="text-align:center">当且仅当PQ同真假</td>
+<td align="center"></td>
+<td align="center">$\leftrightarrow$</td>
+<td align="center">P$\leftrightarrow$Q</td>
+<td align="center">当且仅当PQ同真假</td>
 </tr>
-</tbody>
-</table>
-<p><img src="https://i.loli.net/2020/06/19/mqZ31RbczL6Gs5K.png" alt="" /></p>
-<p>联结词的优先级：非，合取，析取，条件，双条件</p>
-<h4 id="命题符号化"><a class="markdownIt-Anchor" href="#命题符号化"></a> 命题符号化</h4>
-<ol>
+</tbody></table>
+<p><img src="https://i.loli.net/2020/06/19/mqZ31RbczL6Gs5K.png" alt=""></p>
+<p>联结词的优先级：非，合取，析取，条件，双条件                                                                                         </p>
+<h4 id="命题符号化"><a href="#命题符号化" class="headerlink" title="命题符号化"></a>命题符号化</h4><ol>
 <li>确定给定句子是否为命题</li>
 <li>列出原子命题</li>
 <li>句子中连词是否为命题联结词</li>
 <li>根据命题含义，正确表示原子和适当选择命题联结词</li>
 </ol>
-<h4 id="基本等价公式"><a class="markdownIt-Anchor" href="#基本等价公式"></a> 基本等价公式</h4>
-<p class='katex-block katex-error' title='ParseError: KaTeX parse error: Undefined control sequence: \and at position 111: …or H)\lor S\\
-G\̲a̲n̲d̲ ̲(H\land S)=(G\l…'>幂等律：G \land G=G\\
-G \lor G=G\\
-交换律：G\land H=H\lor G\\
-G\lor H=H\lor G\\
-结合律：G\lor(H\lor S)=(G\lor H)\lor S\\
-G\and (H\land S)=(G\land H)\land S\\
-同一律：G\lor 0=G\\
-G\land 1=G\\
-零律：G\lor 1=1\\
-G\land 0=0\\
-分配律：G\lor (H\land S)=(G\lor H)\land(G\lor S)\\
-G\land(H\lor S)=(G\land H)\lor(G\land S)\\
-吸收律：G\lor (G\land H)=G\\
-G\land(G\lor H)=G\\
-矛盾律：┐G\land G=0\\
-排中律：┐G\lor G=1\\
-双重否定律：┐(┐G)=G\\
-德摩根律：┐(G\lor H)=┐G\land ┐H\\
-┐(G\land H)=┐G\lor ┐H\\
-蕴含式：G\rightarrow H=┐G\lor H\\
-假言易位：G\rightarrow H=┐H\rightarrow ┐G\\
-等价式：G\leftrightarrow H=(G\rightarrow H)\land(H\rightarrow G)=(┐G\lor H)\land(┐H\lor G)\\
-归谬论：(G\rightarrow H)\land(G\rightarrow ┐H)=┐G
-</p>
-<h4 id="判断命题公式逻辑等价的方法"><a class="markdownIt-Anchor" href="#判断命题公式逻辑等价的方法"></a> 判断命题公式逻辑等价的方法</h4>
-<ol>
+<h4 id="基本等价公式"><a href="#基本等价公式" class="headerlink" title="基本等价公式"></a>基本等价公式</h4><p>$$<br>幂等律：G \land G=G\<br>G \lor G=G\<br>交换律：G\land H=H\lor G\<br>G\lor H=H\lor G\<br>结合律：G\lor(H\lor S)=(G\lor H)\lor S\<br>G\and (H\land S)=(G\land H)\land S\<br>同一律：G\lor 0=G\<br>G\land 1=G\<br>零律：G\lor 1=1\<br>G\land 0=0\<br>分配律：G\lor (H\land S)=(G\lor H)\land(G\lor S)\<br>G\land(H\lor S)=(G\land H)\lor(G\land S)\<br>吸收律：G\lor (G\land H)=G\<br>G\land(G\lor H)=G\<br>矛盾律：┐G\land G=0\<br>排中律：┐G\lor G=1\<br>双重否定律：┐(┐G)=G\<br>德摩根律：┐(G\lor H)=┐G\land ┐H\<br>┐(G\land H)=┐G\lor ┐H\<br>蕴含式：G\rightarrow H=┐G\lor H\<br>假言易位：G\rightarrow H=┐H\rightarrow ┐G\<br>等价式：G\leftrightarrow H=(G\rightarrow H)\land(H\rightarrow G)=(┐G\lor H)\land(┐H\lor G)\<br>归谬论：(G\rightarrow H)\land(G\rightarrow ┐H)=┐G<br>$$</p>
+<h4 id="判断命题公式逻辑等价的方法"><a href="#判断命题公式逻辑等价的方法" class="headerlink" title="判断命题公式逻辑等价的方法"></a>判断命题公式逻辑等价的方法</h4><ol>
 <li>真值表</li>
 <li>基本等价公式</li>
 <li>等值置换</li>
 <li>等值关系的传递性</li>
 </ol>
-<h4 id="求合取范式和析取范式的方法"><a class="markdownIt-Anchor" href="#求合取范式和析取范式的方法"></a> 求合取范式和析取范式的方法</h4>
-<ol>
+<h4 id="求合取范式和析取范式的方法"><a href="#求合取范式和析取范式的方法" class="headerlink" title="求合取范式和析取范式的方法"></a>求合取范式和析取范式的方法</h4><ol>
 <li>简化联结词：将公式中的联结词化归成合取，析取以及非。</li>
 <li>否定深入：利用德摩根律将“非”直接移到各个命题变元之前。</li>
 <li>归约：利用分配律、结合律归约成合取范式、逼格额析取范式</li>
 </ol>
-<h4 id="求出主析取范式的方法"><a class="markdownIt-Anchor" href="#求出主析取范式的方法"></a> 求出主析取范式的方法</h4>
-<ol>
-<li>
-<p>公式的真值表</p>
+<h4 id="求出主析取范式的方法"><a href="#求出主析取范式的方法" class="headerlink" title="求出主析取范式的方法"></a>求出主析取范式的方法</h4><ol>
+<li><p>公式的真值表</p>
 </li>
-<li>
-<p>基本等价公式</p>
+<li><p>基本等价公式</p>
 <ol>
 <li>化归为析取范式</li>
 <li>除去析取范式中所有永假的析取项</li>
 <li>将析取式中重复出现的析取项和相同的变元合并</li>
 <li>对析取项补入没有出现的命题变元，添加（P析取非P），然后，用分配律展开</li>
 </ol>
-<p><img src="https://i.loli.net/2020/06/19/6FROMrvcQk25Yqn.png" alt="" /></p>
+<p><img src="https://i.loli.net/2020/06/19/6FROMrvcQk25Yqn.png" alt=""></p>
 </li>
 </ol>
-<h4 id="求主合取范式的方法"><a class="markdownIt-Anchor" href="#求主合取范式的方法"></a> 求主合取范式的方法</h4>
-<ol>
+<h4 id="求主合取范式的方法"><a href="#求主合取范式的方法" class="headerlink" title="求主合取范式的方法"></a>求主合取范式的方法</h4><ol>
 <li>真值表</li>
-<li>基本等价公式
-<ol>
+<li>基本等价公式<ol>
 <li>划归为合取范式</li>
 <li>除去合取范式中永真的合取项</li>
 <li>合并相同的合取项和相同的变元</li>
@@ -415,199 +345,150 @@ G\land(G\lor H)=G\\
 </ol>
 </li>
 </ol>
-<h4 id="主范式间的转换"><a class="markdownIt-Anchor" href="#主范式间的转换"></a> 主范式间的转换</h4>
-<p><img src="https://i.loli.net/2020/06/19/jTeqGPKgpC5ILkD.png" alt="" /></p>
-<p><img src="https://i.loli.net/2020/06/19/fdyGlS79JLbIq8E.png" alt="" /></p>
-<h4 id="证明永真假的方法"><a class="markdownIt-Anchor" href="#证明永真假的方法"></a> 证明永真（假）的方法</h4>
-<ol>
+<h4 id="主范式间的转换"><a href="#主范式间的转换" class="headerlink" title="主范式间的转换"></a>主范式间的转换</h4><p><img src="https://i.loli.net/2020/06/19/jTeqGPKgpC5ILkD.png" alt=""></p>
+<p><img src="https://i.loli.net/2020/06/19/fdyGlS79JLbIq8E.png" alt=""></p>
+<h4 id="证明永真（假）的方法"><a href="#证明永真（假）的方法" class="headerlink" title="证明永真（假）的方法"></a>证明永真（假）的方法</h4><ol>
 <li>真值表</li>
 <li>证明和T（F）等价</li>
 </ol>
-<h4 id="证明蕴含的方法"><a class="markdownIt-Anchor" href="#证明蕴含的方法"></a> 证明蕴含的方法</h4>
-<ol>
+<h4 id="证明蕴含的方法"><a href="#证明蕴含的方法" class="headerlink" title="证明蕴含的方法"></a>证明蕴含的方法</h4><ol>
 <li>指定前件真值为T，若由此推出Q的真值也是T，得证</li>
 <li>指定后件Q的真值是F，若由此推出P的真值也是F，得证</li>
 </ol>
-<h4 id="常用的蕴含式"><a class="markdownIt-Anchor" href="#常用的蕴含式"></a> 常用的蕴含式</h4>
-<p><img src="https://i.loli.net/2020/06/19/Wrljb1IqGkwLf5Q.png" alt="" /></p>
-<p><img src="https://i.loli.net/2020/06/19/IWtqrju9eXMhCDP.png" alt="" /></p>
-<h4 id="推理的方法"><a class="markdownIt-Anchor" href="#推理的方法"></a> 推理的方法</h4>
-<ol>
-<li>
-<p>真值表法</p>
+<h4 id="常用的蕴含式"><a href="#常用的蕴含式" class="headerlink" title="常用的蕴含式"></a>常用的蕴含式</h4><p><img src="https://i.loli.net/2020/06/19/Wrljb1IqGkwLf5Q.png" alt=""></p>
+<p><img src="https://i.loli.net/2020/06/19/IWtqrju9eXMhCDP.png" alt=""></p>
+<h4 id="推理的方法"><a href="#推理的方法" class="headerlink" title="推理的方法"></a>推理的方法</h4><ol>
+<li><p>真值表法</p>
 <ol>
 <li>在所有行中，只要有一行的前提是真，结论是真，则得证</li>
 <li>在所有行中，只要有一行的结论是假，且前提也是假，则得证</li>
 </ol>
 </li>
-<li>
-<p>直接证法</p>
+<li><p>直接证法</p>
 <p>推理规则：</p>
 <ol>
 <li>规则P（前提引入规则）：前提在推到过程中随时引入。</li>
 <li>规则T（逻辑结果引入规则）：在推导过程中，如果有一个、多个公式蕴含着公式S，则公式S可以引入推导之中。</li>
-<li>规则CP（附加前提规则）：如果能从给定的前提集合T和公式P推导出S，则能从此T推导出P<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">→</span></span></span></span>S(使用场景是结论公式是蕴含式或者析取式)</li>
+<li>规则CP（附加前提规则）：如果能从给定的前提集合T和公式P推导出S，则能从此T推导出P$\rightarrow$S(使用场景是结论公式是蕴含式或者析取式)</li>
 </ol>
-<p><img src="https://i.loli.net/2020/06/19/HBjic4ZdtR65DKo.png" alt="" /></p>
+<p><img src="https://i.loli.net/2020/06/19/HBjic4ZdtR65DKo.png" alt=""></p>
 </li>
-<li>
-<p>间接证法</p>
-<p><img src="https://i.loli.net/2020/06/19/rANkJ5qsECfKucp.png" alt="" /></p>
-<p><img src="https://i.loli.net/2020/06/19/U4ywEjnlBuSF8tx.png" alt="" /></p>
+<li><p>间接证法</p>
+<p><img src="https://i.loli.net/2020/06/19/rANkJ5qsECfKucp.png" alt=""></p>
+<p><img src="https://i.loli.net/2020/06/19/U4ywEjnlBuSF8tx.png" alt=""></p>
 </li>
 </ol>
-<h3 id="谓词逻辑"><a class="markdownIt-Anchor" href="#谓词逻辑"></a> 谓词逻辑</h3>
-<h4 id="基本概念-2"><a class="markdownIt-Anchor" href="#基本概念-2"></a> 基本概念</h4>
-<ol>
-<li>在句子中可以独立存在的客体称为<mark>个体词</mark>，而用以刻画客体的属性或者客体之间关系的是<mark>谓词</mark>。</li>
-<li>表示具体或者特定的个体词称为<mark>个体常量</mark></li>
-<li>表示抽象或者泛指的个体词称为<mark>个体变量</mark></li>
-<li>个体词的取值范围叫做<mark>个体域</mark>或论域，常用D表示。而宇宙间所有个体域聚集在一起所构成的个体域称为<mark>全总个体域</mark></li>
-<li><mark>简单命题函数</mark>：由一个谓词、一些客体变元组成的表达式</li>
-<li><mark>复合命题函数</mark>：由一个或者n个简单命题函数以及逻辑连接词组合而成的表达式</li>
-<li><mark>命题函数</mark>：简单命题函数和复合命题函数的统称</li>
+<h3 id="谓词逻辑"><a href="#谓词逻辑" class="headerlink" title="谓词逻辑"></a>谓词逻辑</h3><h4 id="基本概念-1"><a href="#基本概念-1" class="headerlink" title="基本概念"></a>基本概念</h4><ol>
+<li>在句子中可以独立存在的客体称为==个体词==，而用以刻画客体的属性或者客体之间关系的是==谓词==。</li>
+<li>表示具体或者特定的个体词称为==个体常量==</li>
+<li>表示抽象或者泛指的个体词称为==个体变量==</li>
+<li>个体词的取值范围叫做==个体域==或论域，常用D表示。而宇宙间所有个体域聚集在一起所构成的个体域称为==全总个体域==</li>
+<li>==简单命题函数==：由一个谓词、一些客体变元组成的表达式</li>
+<li>==复合命题函数==：由一个或者n个简单命题函数以及逻辑连接词组合而成的表达式</li>
+<li>==命题函数==：简单命题函数和复合命题函数的统称</li>
 <li>命题函数不是命题，只有客体变元取特定的名称时才能成为一个命题。</li>
-<li>全称量词：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∀</mi></mrow><annotation encoding="application/x-tex">\forall</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord">∀</span></span></span></span>,存在量词：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∃</mi></mrow><annotation encoding="application/x-tex">\exist</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord">∃</span></span></span></span></li>
-<li>(<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∀</mi></mrow><annotation encoding="application/x-tex">\forall</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord">∀</span></span></span></span>x)F(x)或(<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∃</mi></mrow><annotation encoding="application/x-tex">\exist</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord">∃</span></span></span></span>x)F(x)中，x称为<mark>作用变量</mark>，F(x)称为量词的<mark>辖域</mark>。</li>
-<li>特性谓词加入命题函数中是遵循的原则：
-<ol>
+<li>全称量词：$\forall$,存在量词：$\exist$</li>
+<li>($\forall$x)F(x)或($\exist$x)F(x)中，x称为==作用变量==，F(x)称为量词的==辖域==。 </li>
+<li>特性谓词加入命题函数中是遵循的原则：<ol>
 <li>对于全程量词，刻画其对应个体域的特性谓词作为蕴含的前件加入</li>
 <li>对于存在量词，刻画其对应个体域的特性谓词作为合取式之合取项加入</li>
 </ol>
 </li>
-<li><mark>谓词公式</mark>：
-<ul>
+<li>==谓词公式==：<ul>
 <li>原子谓词公式是谓词公式</li>
 <li>若A是谓词公式，非A也是谓词公式</li>
 <li>若AB是谓词公式，则他们的合取，析取，条件，双条件都是谓词公式</li>
-<li>若A是谓词公式，X是A中出现的变元，则（<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∀</mi></mrow><annotation encoding="application/x-tex">\forall</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord">∀</span></span></span></span>x）A与(<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∃</mi></mrow><annotation encoding="application/x-tex">\exist</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord">∃</span></span></span></span>x)A也是谓词公式</li>
+<li>若A是谓词公式，X是A中出现的变元，则（$\forall$x）A与($\exist$x)A也是谓词公式</li>
 <li>有限次上述过程得到的</li>
 </ul>
 </li>
-<li><mark>函数符号</mark>：表示个体词之间的转换，如F(x):x的父亲</li>
-<li><mark>项</mark>：任意的常量符号或者任意的变量符号是项。若f(x1,x2,…xn)是n元函数符号，t1,t2…tn是项，则f（t1,…tn）是项</li>
-<li><mark>原子公式</mark>：若P(x1,…xn)是n元谓词，t1…tn是项，则称P(t1…tn)为原子公式</li>
-<li><mark>合式公式</mark>：
-<ul>
+<li>==函数符号==：表示个体词之间的转换，如F(x):x的父亲</li>
+<li>==项==：任意的常量符号或者任意的变量符号是项。若f(x1,x2,…xn)是n元函数符号，t1,t2…tn是项，则f（t1,…tn）是项</li>
+<li>==原子公式==：若P(x1,…xn)是n元谓词，t1…tn是项，则称P(t1…tn)为原子公式</li>
+<li>==合式公式==：<ul>
 <li>原子公式</li>
 <li>原子公式的非，析取，合取，条件，双条件</li>
 <li>原子公式前加量词</li>
 <li>以上三种的有限次组合</li>
 </ul>
 </li>
-<li><mark>作用变元</mark>：量词后所跟的x叫做量词的指导变元或作用变元</li>
-<li><mark>作用域</mark>：P（x）叫做相应量词的作用域或辖域</li>
-<li><mark>约束变元</mark>：在作用域中变元x的出现称为约束出现，此时的变元x称为约束变元</li>
-<li><mark>自由变元</mark>：若x的出现不是约束出现，则称它为自由出现，此时的变元称为自由变元。</li>
-<li><mark>闭式</mark>：无自由变元的公式</li>
-<li><mark>约束变元的改名</mark>：（约束变元的改名规则）
-<ul>
+<li>==作用变元==：量词后所跟的x叫做量词的指导变元或作用变元</li>
+<li>==作用域==：P（x）叫做相应量词的作用域或辖域</li>
+<li>==约束变元==：在作用域中变元x的出现称为约束出现，此时的变元x称为约束变元</li>
+<li>==自由变元==：若x的出现不是约束出现，则称它为自由出现，此时的变元称为自由变元。</li>
+<li>==闭式==：无自由变元的公式</li>
+<li>==约束变元的改名==：（约束变元的改名规则）<ul>
 <li>将量词中出现的变元以及该量词辖域中此变量之所有约束出现都用新的变元替换</li>
 <li>新的变元一定要有别与改名辖域中所有其它变量</li>
 </ul>
 </li>
-<li><mark>自由变元的代入</mark>（自由变元的代入规则）
-<ul>
+<li>==自由变元的代入==（自由变元的代入规则）<ul>
 <li>将公式中出现该自由变元的每一处都用新的变元替换</li>
 <li>新变元不允许在原公式中以任何约束形式出现</li>
 </ul>
 </li>
-<li><mark>赋值/解释</mark>：在谓词公式中客体变元由确定的客体取代，命题变元由确定的命题取代。</li>
-<li><mark>等价式</mark>：给定的两个谓词公式，设他们有共同的个体域E，若对A与B的任一组变元进行赋值，所得命题的真值相同，则称谓词公式A和B在E上是等价的。</li>
-<li><mark>前束范式</mark>：一个公式，如果量词全在公式开头，它们的作用域延伸到公式末尾，则该公式叫做前束范式。</li>
+<li>==赋值/解释==：在谓词公式中客体变元由确定的客体取代，命题变元由确定的命题取代。</li>
+<li>==等价式==：给定的两个谓词公式，设他们有共同的个体域E，若对A与B的任一组变元进行赋值，所得命题的真值相同，则称谓词公式A和B在E上是等价的。</li>
+<li>==前束范式==：一个公式，如果量词全在公式开头，它们的作用域延伸到公式末尾，则该公式叫做前束范式。</li>
 </ol>
-<h4 id="谓词中的基本等价公式"><a class="markdownIt-Anchor" href="#谓词中的基本等价公式"></a> 谓词中的基本等价公式</h4>
-<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">改</mi><mi mathvariant="normal">名</mi><mi mathvariant="normal">等</mi><mi mathvariant="normal">价</mi><mi mathvariant="normal">规</mi><mi mathvariant="normal">则</mi><mi mathvariant="normal">：</mi><mspace linebreak="newline"></mspace><mo stretchy="false">(</mo><mi mathvariant="normal">∃</mi><mi>x</mi><mo stretchy="false">)</mo><mi>G</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mo stretchy="false">(</mo><mi mathvariant="normal">∃</mi><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>G</mi><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mspace linebreak="newline"></mspace><mo stretchy="false">(</mo><mi mathvariant="normal">∀</mi><mi>x</mi><mo stretchy="false">)</mo><mi>G</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mo stretchy="false">(</mo><mi mathvariant="normal">∀</mi><mi>y</mi><mo stretchy="false">)</mo><mi>G</mi><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mspace linebreak="newline"></mspace><mo stretchy="false">(</mo><mi mathvariant="normal">∀</mi><mi>x</mi><mo stretchy="false">)</mo><mi>G</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>∨</mo><mo stretchy="false">(</mo><mi mathvariant="normal">∀</mi><mi>x</mi><mo stretchy="false">)</mo><mi>H</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mo stretchy="false">(</mo><mi mathvariant="normal">∀</mi><mi>x</mi><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi mathvariant="normal">∀</mi><mi>y</mi><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>∨</mo><mi>H</mi><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mspace linebreak="newline"></mspace><mo stretchy="false">(</mo><mi mathvariant="normal">∃</mi><mi>x</mi><mo stretchy="false">)</mo><mi>G</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>∧</mo><mo stretchy="false">(</mo><mi mathvariant="normal">∃</mi><mi>x</mi><mo stretchy="false">)</mo><mi>H</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mo stretchy="false">(</mo><mi mathvariant="normal">∃</mi><mi>x</mi><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi mathvariant="normal">∃</mi><mi>y</mi><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>∧</mo><mi>H</mi><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mspace linebreak="newline"></mspace><mi mathvariant="normal">量</mi><mi mathvariant="normal">词</mi><mi mathvariant="normal">转</mi><mi mathvariant="normal">换</mi><mi mathvariant="normal">律</mi><mi mathvariant="normal">：</mi><mspace linebreak="newline"></mspace><mo stretchy="false">┐</mo><mo stretchy="false">(</mo><mi mathvariant="normal">∃</mi><mi>x</mi><mo stretchy="false">)</mo><mi>G</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mo stretchy="false">(</mo><mi mathvariant="normal">∀</mi><mi>x</mi><mo stretchy="false">)</mo><mo stretchy="false">┐</mo><mi>G</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mspace linebreak="newline"></mspace><mo stretchy="false">┐</mo><mo stretchy="false">(</mo><mi mathvariant="normal">∀</mi><mi>x</mi><mo stretchy="false">)</mo><mi>G</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mo stretchy="false">(</mo><mi mathvariant="normal">∃</mi><mi>x</mi><mo stretchy="false">)</mo><mo stretchy="false">┐</mo><mi>G</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mspace linebreak="newline"></mspace><mi mathvariant="normal">量</mi><mi mathvariant="normal">词</mi><mi mathvariant="normal">分</mi><mi mathvariant="normal">配</mi><mi mathvariant="normal">律</mi><mi mathvariant="normal">：</mi><mspace linebreak="newline"></mspace><mo stretchy="false">(</mo><mi mathvariant="normal">∀</mi><mi>x</mi><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>∧</mo><mi>B</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mo>=</mo><mo stretchy="false">(</mo><mi mathvariant="normal">∀</mi><mi>x</mi><mo stretchy="false">)</mo><mi>A</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>∧</mo><mo stretchy="false">(</mo><mi mathvariant="normal">∀</mi><mi>x</mi><mo stretchy="false">)</mo><mi>B</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mspace linebreak="newline"></mspace><mo stretchy="false">(</mo><mi mathvariant="normal">∃</mi><mi>x</mi><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>∨</mo><mi>B</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mo>=</mo><mo stretchy="false">(</mo><mi mathvariant="normal">∃</mi><mi>x</mi><mo stretchy="false">)</mo><mi>A</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>∨</mo><mo stretchy="false">(</mo><mi mathvariant="normal">∃</mi><mi>x</mi><mo stretchy="false">)</mo><mi>B</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mspace linebreak="newline"></mspace><mi mathvariant="normal">量</mi><mi mathvariant="normal">词</mi><mi mathvariant="normal">作</mi><mi mathvariant="normal">用</mi><mi mathvariant="normal">域</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">扩</mi><mi mathvariant="normal">张</mi><mi mathvariant="normal">和</mi><mi mathvariant="normal">收</mi><mi mathvariant="normal">缩</mi><mi mathvariant="normal">：</mi><mspace linebreak="newline"></mspace><mo stretchy="false">(</mo><mi mathvariant="normal">∀</mi><mi>x</mi><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>∨</mo><mi>B</mi><mo stretchy="false">)</mo><mo>=</mo><mo stretchy="false">(</mo><mi mathvariant="normal">∀</mi><mi>x</mi><mo stretchy="false">)</mo><mi>A</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>∨</mo><mi>B</mi><mspace linebreak="newline"></mspace><mo stretchy="false">(</mo><mi mathvariant="normal">∀</mi><mi>x</mi><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>∧</mo><mi>B</mi><mo stretchy="false">)</mo><mo>=</mo><mo stretchy="false">(</mo><mi mathvariant="normal">∀</mi><mi>x</mi><mo stretchy="false">)</mo><mi>A</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>∧</mo><mi>B</mi><mspace linebreak="newline"></mspace><mo stretchy="false">(</mo><mi mathvariant="normal">∃</mi><mi>x</mi><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>∨</mo><mi>B</mi><mo stretchy="false">)</mo><mo>=</mo><mo stretchy="false">(</mo><mi mathvariant="normal">∃</mi><mi>x</mi><mo stretchy="false">)</mo><mi>A</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>∨</mo><mi>B</mi><mspace linebreak="newline"></mspace><mo stretchy="false">(</mo><mi mathvariant="normal">∃</mi><mi>x</mi><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>∧</mo><mi>B</mi><mo stretchy="false">)</mo><mo>=</mo><mo stretchy="false">(</mo><mi mathvariant="normal">∃</mi><mi>x</mi><mo stretchy="false">)</mo><mi>A</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>∧</mo><mi>B</mi><mspace linebreak="newline"></mspace><mo stretchy="false">(</mo><mi mathvariant="normal">∀</mi><mi>x</mi><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi mathvariant="normal">∀</mi><mi>y</mi><mo stretchy="false">)</mo><mi>A</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mo stretchy="false">(</mo><mi mathvariant="normal">∀</mi><mi>y</mi><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi mathvariant="normal">∀</mi><mi>x</mi><mo stretchy="false">)</mo><mi>A</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo><mspace linebreak="newline"></mspace><mo stretchy="false">(</mo><mi mathvariant="normal">∃</mi><mi>x</mi><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi mathvariant="normal">∃</mi><mi>y</mi><mo stretchy="false">)</mo><mi>A</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mo stretchy="false">(</mo><mi mathvariant="normal">∃</mi><mi>y</mi><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi mathvariant="normal">∃</mi><mi>x</mi><mo stretchy="false">)</mo><mi>A</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">改名等价规则：\\
-(\exist x)G(x)=(\exist y)=G(y)\\
-(\forall x)G(x)=(\forall y)G(y)\\
-(\forall x)G(x)\lor (\forall x)H(x)=(\forall x)(\forall y)(G(x)\lor H(y))\\
-(\exist x)G(x)\land (\exist x)H(x)=(\exist x)(\exist y)(G(x)\land H(y))\\
-量词转换律：\\
-┐(\exist x)G(x)=(\forall x)┐G(x)\\
-┐(\forall x)G(x)=(\exist x)┐G(x)\\
-量词分配律：\\
-(\forall x)(A(x)\land B(x))=(\forall x)A(x)\land (\forall x)B(x)\\
-(\exists x)(A(x)\lor B(x))=(\exists x)A(x)\lor (\exists x)B(x)\\
-量词作用域的扩张和收缩：\\
-(\forall x)(A(x)\lor B)=(\forall x)A(x)\lor B\\
-(\forall x)(A(x)\land B)=(\forall x)A(x)\land B\\
-(\exists x)(A(x)\lor B)=(\exists x)A(x)\lor B\\
-(\exists x)(A(x)\land B)=(\exists x)A(x)\land B\\
-(\forall x)(\forall y)A(x,y)=(\forall y)(\forall x)A(x,y)\\
-(\exist x)(\exist y)A(x,y)=(\exist y)(\exist x)A(x,y)
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mord cjk_fallback">改</span><span class="mord cjk_fallback">名</span><span class="mord cjk_fallback">等</span><span class="mord cjk_fallback">价</span><span class="mord cjk_fallback">规</span><span class="mord cjk_fallback">则</span><span class="mord cjk_fallback">：</span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">∃</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mord mathdefault">G</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">∃</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">G</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">∀</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mord mathdefault">G</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">∀</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mord mathdefault">G</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">∀</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mord mathdefault">G</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∨</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">∀</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">∀</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mopen">(</span><span class="mord">∀</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mopen">(</span><span class="mord mathdefault">G</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∨</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mclose">)</span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">∃</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mord mathdefault">G</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∧</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">∃</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">∃</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mopen">(</span><span class="mord">∃</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mopen">(</span><span class="mord mathdefault">G</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∧</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mclose">)</span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mord cjk_fallback">量</span><span class="mord cjk_fallback">词</span><span class="mord cjk_fallback">转</span><span class="mord cjk_fallback">换</span><span class="mord cjk_fallback">律</span><span class="mord cjk_fallback">：</span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mclose amsrm">┐</span><span class="mopen">(</span><span class="mord">∃</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mord mathdefault">G</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">∀</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mclose amsrm">┐</span><span class="mord mathdefault">G</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mclose amsrm">┐</span><span class="mopen">(</span><span class="mord">∀</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mord mathdefault">G</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">∃</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mclose amsrm">┐</span><span class="mord mathdefault">G</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mord cjk_fallback">量</span><span class="mord cjk_fallback">词</span><span class="mord cjk_fallback">分</span><span class="mord cjk_fallback">配</span><span class="mord cjk_fallback">律</span><span class="mord cjk_fallback">：</span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">∀</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mopen">(</span><span class="mord mathdefault">A</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∧</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">∀</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mord mathdefault">A</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∧</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">∀</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">∃</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mopen">(</span><span class="mord mathdefault">A</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∨</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">∃</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mord mathdefault">A</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∨</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">∃</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mord cjk_fallback">量</span><span class="mord cjk_fallback">词</span><span class="mord cjk_fallback">作</span><span class="mord cjk_fallback">用</span><span class="mord cjk_fallback">域</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">扩</span><span class="mord cjk_fallback">张</span><span class="mord cjk_fallback">和</span><span class="mord cjk_fallback">收</span><span class="mord cjk_fallback">缩</span><span class="mord cjk_fallback">：</span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">∀</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mopen">(</span><span class="mord mathdefault">A</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∨</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">∀</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mord mathdefault">A</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∨</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">∀</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mopen">(</span><span class="mord mathdefault">A</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∧</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">∀</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mord mathdefault">A</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∧</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">∃</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mopen">(</span><span class="mord mathdefault">A</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∨</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">∃</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mord mathdefault">A</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∨</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">∃</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mopen">(</span><span class="mord mathdefault">A</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∧</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">∃</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mord mathdefault">A</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∧</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">∀</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mopen">(</span><span class="mord">∀</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mord mathdefault">A</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">∀</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mopen">(</span><span class="mord">∀</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mord mathdefault">A</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">∃</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mopen">(</span><span class="mord">∃</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mord mathdefault">A</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">∃</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mopen">(</span><span class="mord">∃</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mord mathdefault">A</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span></span></span></span></p>
-<p><img src="https://i.loli.net/2020/06/20/ocm2BgxVZUStiPh.png" alt="" /></p>
-<p><img src="https://i.loli.net/2020/06/20/6ZDHmNkMB2RrWqz.png" alt="" /></p>
-<h4 id="常用的蕴含关系"><a class="markdownIt-Anchor" href="#常用的蕴含关系"></a> 常用的蕴含关系</h4>
-<p><img src="https://i.loli.net/2020/06/20/9jyO8vkitmKaSQ4.png" alt="" /></p>
-<h4 id="化为前束范式的方法"><a class="markdownIt-Anchor" href="#化为前束范式的方法"></a> 化为前束范式的方法</h4>
-<ol>
+<h4 id="谓词中的基本等价公式"><a href="#谓词中的基本等价公式" class="headerlink" title="谓词中的基本等价公式"></a>谓词中的基本等价公式</h4><p>$$<br>改名等价规则：\<br>(\exist x)G(x)=(\exist y)=G(y)\<br>(\forall x)G(x)=(\forall y)G(y)\<br>(\forall x)G(x)\lor (\forall x)H(x)=(\forall x)(\forall y)(G(x)\lor H(y))\<br>(\exist x)G(x)\land (\exist x)H(x)=(\exist x)(\exist y)(G(x)\land H(y))\<br>量词转换律：\<br>┐(\exist x)G(x)=(\forall x)┐G(x)\<br>┐(\forall x)G(x)=(\exist x)┐G(x)\<br>量词分配律：\<br>(\forall x)(A(x)\land B(x))=(\forall x)A(x)\land (\forall x)B(x)\<br>(\exists x)(A(x)\lor B(x))=(\exists x)A(x)\lor (\exists x)B(x)\<br>量词作用域的扩张和收缩：\<br>(\forall x)(A(x)\lor B)=(\forall x)A(x)\lor B\<br>(\forall x)(A(x)\land B)=(\forall x)A(x)\land B\<br>(\exists x)(A(x)\lor B)=(\exists x)A(x)\lor B\<br>(\exists x)(A(x)\land B)=(\exists x)A(x)\land B\<br>(\forall x)(\forall y)A(x,y)=(\forall y)(\forall x)A(x,y)\<br>(\exist x)(\exist y)A(x,y)=(\exist y)(\exist x)A(x,y)<br>$$</p>
+<p><img src="https://i.loli.net/2020/06/20/ocm2BgxVZUStiPh.png" alt=""></p>
+<p><img src="https://i.loli.net/2020/06/20/6ZDHmNkMB2RrWqz.png" alt=""></p>
+<h4 id="常用的蕴含关系"><a href="#常用的蕴含关系" class="headerlink" title="常用的蕴含关系"></a>常用的蕴含关系</h4><p><img src="https://i.loli.net/2020/06/20/9jyO8vkitmKaSQ4.png" alt=""></p>
+<h4 id="化为前束范式的方法"><a href="#化为前束范式的方法" class="headerlink" title="化为前束范式的方法"></a>化为前束范式的方法</h4><ol>
 <li>消去条件，双条件联结词</li>
 <li>┐内移</li>
 <li>变元换名</li>
 <li>量词提前</li>
 </ol>
 <p>例题：</p>
-<p><img src="https://i.loli.net/2020/06/20/cpAKX4PSzCukwg8.png" alt="" /></p>
-<h4 id="推理规则"><a class="markdownIt-Anchor" href="#推理规则"></a> 推理规则</h4>
-<p>全称特指规则（US）：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">∀</mi><mi>x</mi><mo stretchy="false">)</mo><mi>P</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>→</mo><mi>P</mi><mo stretchy="false">(</mo><mi>c</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(\forall x)P(x)\rightarrow P(c)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">∀</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathdefault">c</span><span class="mclose">)</span></span></span></span></p>
+<p><img src="https://i.loli.net/2020/06/20/cpAKX4PSzCukwg8.png" alt=""></p>
+<h4 id="推理规则"><a href="#推理规则" class="headerlink" title="推理规则"></a>推理规则</h4><p>全称特指规则（US）：$(\forall x)P(x)\rightarrow P(c)$</p>
 <ul>
 <li>x是P（x）中自由出现的个体变量</li>
 <li>c是任意的个体变量</li>
 </ul>
-<p>存在特指规则（ES）：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">∃</mi><mi>x</mi><mo stretchy="false">)</mo><mi>P</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>→</mo><mi>P</mi><mo stretchy="false">(</mo><mi>c</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(\exist x)P(x)\rightarrow P(c)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">∃</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathdefault">c</span><span class="mclose">)</span></span></span></span></p>
+<p>存在特指规则（ES）：$(\exist x)P(x)\rightarrow P(c)$</p>
 <ul>
 <li>x是P（x）中自由出现的个体变量</li>
 <li>在P（x）中变元x的每一次自由出现都用相同的个体变量c代入</li>
 <li>c是使P(x)为真的特定个体变量</li>
 <li>此c是在推导之前从未使用过的</li>
 </ul>
-<p>全称推广规则（UG）：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>→</mo><mo stretchy="false">(</mo><mi mathvariant="normal">∀</mi><mi>x</mi><mo stretchy="false">)</mo><mi>P</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">P(y)\rightarrow (\forall x)P(x)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">∀</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span></span></span></span></p>
+<p>全称推广规则（UG）：$P(y)\rightarrow (\forall x)P(x)$</p>
 <ul>
 <li>y是P(y)中自由出现的个体变量。且y取遍整个个体域时都有P（y）为真</li>
 <li>对P(y)中不满足假设前提（使P(y)为真）的自由变元y不能使用该规则</li>
 <li>添加的量词中的x和取代y的x不能在P(y)中以约束身份出现</li>
 <li>对于曾经由使用规则ES所得公式中原来的约束变元不能使用该规则</li>
 </ul>
-<p>存在推广规则（EG）：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>c</mi><mo stretchy="false">)</mo><mo>→</mo><mo stretchy="false">(</mo><mi mathvariant="normal">∃</mi><mi>x</mi><mo stretchy="false">)</mo><mi>P</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">P(c)\rightarrow(\exist x)P(x)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathdefault">c</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">∃</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span></span></span></span></p>
+<p>存在推广规则（EG）：$P(c)\rightarrow(\exist x)P(x)$</p>
 <ul>
-<li>c是使P©为真的特定个体变量</li>
-<li>取代c的x和添加的量词中的x不能在P©中以任何约束出现</li>
+<li>c是使P(c)为真的特定个体变量</li>
+<li>取代c的x和添加的量词中的x不能在P(c)中以任何约束出现</li>
 </ul>
-<h4 id="谓词推理中注意的问题"><a class="markdownIt-Anchor" href="#谓词推理中注意的问题"></a> 谓词推理中注意的问题</h4>
-<ul>
-<li>
-<p>在推导中，可引用命题演算中的P、T和CP规则。</p>
+<h4 id="谓词推理中注意的问题"><a href="#谓词推理中注意的问题" class="headerlink" title="谓词推理中注意的问题"></a>谓词推理中注意的问题</h4><ul>
+<li><p>在推导中，可引用命题演算中的P、T和CP规则。</p>
 </li>
-<li>
-<p>为了在推导中消去量词，可引用US和ES来消去量词。</p>
+<li><p>为了在推导中消去量词，可引用US和ES来消去量词。</p>
 </li>
-<li>
-<p>当结论可能被定量时，可引用UG和EG将其量词加入。</p>
+<li><p>当结论可能被定量时，可引用UG和EG将其量词加入。</p>
 </li>
-<li>
-<p>证明时可采用如命题演算中的直接证法和间接证法。</p>
+<li><p>证明时可采用如命题演算中的直接证法和间接证法。</p>
 </li>
-<li>
-<p>在推导中，对消去量词的公式或公式中没含量词的子公式，完全可引用命题演算中的基本等价和蕴涵公式。</p>
+<li><p>在推导中，对消去量词的公式或公式中没含量词的子公式，完全可引用命题演算中的基本等价和蕴涵公式。</p>
 </li>
-<li>
-<p>在推导中，对含有量词的公式可引用谓词中的基本等价和蕴涵公式。</p>
+<li><p>在推导中，对含有量词的公式可引用谓词中的基本等价和蕴涵公式。</p>
 </li>
-<li>
-<p>在推导中，如既要使用US又要使用ES消去公式中的词,只要有可能，总是先使用ES，再使用US。然后再用命题演算中的推理规则，最后使用UG或EG引入量词，得到所要的结论。</p>
+<li><p>在推导中，如既要使用US又要使用ES消去公式中的词,只要有可能，总是先使用ES，再使用US。然后再用命题演算中的推理规则，最后使用UG或EG引入量词，得到所要的结论。</p>
 </li>
-<li>
-<p>如一个变量是用ES消去量词，对该变量在添加量词时，则只能使用EG，而不能使用UG;如使用US消去量词，对该变量在添加量词时，则可使用EG和UG。</p>
+<li><p>如一个变量是用ES消去量词，对该变量在添加量词时，则只能使用EG，而不能使用UG;如使用US消去量词，对该变量在添加量词时，则可使用EG和UG。</p>
 </li>
-<li>
-<p>如有两个含有存在量词的公式，当用ES消去量词时，不能选用同样的一个常量符号来取代两个公式中的变元，而应用不同的常量符号来取代它们。</p>
+<li><p>如有两个含有存在量词的公式，当用ES消去量词时，不能选用同样的一个常量符号来取代两个公式中的变元，而应用不同的常量符号来取代它们。</p>
 </li>
-<li>
-<p>在用US和ES消去量词时，此量词必须位于整个公式的最前端。</p>
+<li><p>在用US和ES消去量词时，此量词必须位于整个公式的最前端。</p>
 </li>
-<li>
-<p>在添加的量词($\forall <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi><mo stretchy="false">)</mo><mi mathvariant="normal">、</mi><mo stretchy="false">(</mo></mrow><annotation encoding="application/x-tex">x)、(</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mord cjk_fallback">、</span><span class="mopen">(</span></span></span></span>\exists$x)时，所选用的x不能在公式P©中以任何约束出现。</p>
+<li><p>在添加的量词($\forall $x)、($\exists$x)时，所选用的x不能在公式P(c)中以任何约束出现。</p>
 </li>
 </ul>
 
@@ -618,9 +499,9 @@ G\land(G\lor H)=G\\
                 <div class="article-prev">
                     <a class="prev btn"
                        rel="prev"
-                       href="/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E4%BB%A3%E6%95%B0%E7%B3%BB%E7%BB%9F/"
+                       href="/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E5%9B%BE%E8%AE%BA/"
                     >
-                        <i class="fa fa-chevron-left"></i> <span class="post-nav-title-item">代数系统知识总结</span><span class="post-nav-item">Prev posts</span>
+                        <i class="fa fa-chevron-left"></i> <span class="post-nav-title-item">图论知识总结</span><span class="post-nav-item">Prev posts</span>
                     </a>
                 </div>
             
@@ -628,9 +509,9 @@ G\land(G\lor H)=G\\
                 <div class="article-next">
                     <a class="next btn"
                        rel="next"
-                       href="/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E5%9B%BE%E8%AE%BA/"
+                       href="/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E5%AE%9E%E9%AA%8C%EF%BC%9A%E5%85%B3%E7%B3%BB%E6%80%A7%E8%B4%A8%E5%88%A4%E6%96%AD/"
                     >
-                        <span class="post-nav-title-item">图论知识总结</span><span class="post-nav-item">Next posts</span> <i class="fa fa-chevron-right"></i>
+                        <span class="post-nav-title-item">离散数学实验：关系性质判断</span><span class="post-nav-item">Next posts</span> <i class="fa fa-chevron-right"></i>
                     </a>
                 </div>
             
@@ -668,7 +549,7 @@ G\land(G\lor H)=G\\
         <div class="article-toc">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#离散数学"><span class="nav-number">1.</span> <span class="nav-text"> 离散数学</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数理逻辑"><span class="nav-number">1.1.</span> <span class="nav-text"> 数理逻辑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#命题逻辑"><span class="nav-number">1.1.1.</span> <span class="nav-text"> 命题逻辑</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基本概念"><span class="nav-number">1.1.1.1.</span> <span class="nav-text"> 基本概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#联结词"><span class="nav-number">1.1.1.2.</span> <span class="nav-text"> 联结词</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#命题符号化"><span class="nav-number">1.1.1.3.</span> <span class="nav-text"> 命题符号化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基本等价公式"><span class="nav-number">1.1.1.4.</span> <span class="nav-text"> 基本等价公式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#判断命题公式逻辑等价的方法"><span class="nav-number">1.1.1.5.</span> <span class="nav-text"> 判断命题公式逻辑等价的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#求合取范式和析取范式的方法"><span class="nav-number">1.1.1.6.</span> <span class="nav-text"> 求合取范式和析取范式的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#求出主析取范式的方法"><span class="nav-number">1.1.1.7.</span> <span class="nav-text"> 求出主析取范式的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#求主合取范式的方法"><span class="nav-number">1.1.1.8.</span> <span class="nav-text"> 求主合取范式的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主范式间的转换"><span class="nav-number">1.1.1.9.</span> <span class="nav-text"> 主范式间的转换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#证明永真假的方法"><span class="nav-number">1.1.1.10.</span> <span class="nav-text"> 证明永真（假）的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#证明蕴含的方法"><span class="nav-number">1.1.1.11.</span> <span class="nav-text"> 证明蕴含的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常用的蕴含式"><span class="nav-number">1.1.1.12.</span> <span class="nav-text"> 常用的蕴含式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#推理的方法"><span class="nav-number">1.1.1.13.</span> <span class="nav-text"> 推理的方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#谓词逻辑"><span class="nav-number">1.1.2.</span> <span class="nav-text"> 谓词逻辑</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基本概念-2"><span class="nav-number">1.1.2.1.</span> <span class="nav-text"> 基本概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#谓词中的基本等价公式"><span class="nav-number">1.1.2.2.</span> <span class="nav-text"> 谓词中的基本等价公式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常用的蕴含关系"><span class="nav-number">1.1.2.3.</span> <span class="nav-text"> 常用的蕴含关系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#化为前束范式的方法"><span class="nav-number">1.1.2.4.</span> <span class="nav-text"> 化为前束范式的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#推理规则"><span class="nav-number">1.1.2.5.</span> <span class="nav-text"> 推理规则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#谓词推理中注意的问题"><span class="nav-number">1.1.2.6.</span> <span class="nav-text"> 谓词推理中注意的问题</span></a></li></ol></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#离散数学"><span class="nav-number">1.</span> <span class="nav-text">离散数学</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数理逻辑"><span class="nav-number">1.1.</span> <span class="nav-text">数理逻辑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#命题逻辑"><span class="nav-number">1.1.1.</span> <span class="nav-text">命题逻辑</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基本概念"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#联结词"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">联结词</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#命题符号化"><span class="nav-number">1.1.1.3.</span> <span class="nav-text">命题符号化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基本等价公式"><span class="nav-number">1.1.1.4.</span> <span class="nav-text">基本等价公式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#判断命题公式逻辑等价的方法"><span class="nav-number">1.1.1.5.</span> <span class="nav-text">判断命题公式逻辑等价的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#求合取范式和析取范式的方法"><span class="nav-number">1.1.1.6.</span> <span class="nav-text">求合取范式和析取范式的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#求出主析取范式的方法"><span class="nav-number">1.1.1.7.</span> <span class="nav-text">求出主析取范式的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#求主合取范式的方法"><span class="nav-number">1.1.1.8.</span> <span class="nav-text">求主合取范式的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主范式间的转换"><span class="nav-number">1.1.1.9.</span> <span class="nav-text">主范式间的转换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#证明永真（假）的方法"><span class="nav-number">1.1.1.10.</span> <span class="nav-text">证明永真（假）的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#证明蕴含的方法"><span class="nav-number">1.1.1.11.</span> <span class="nav-text">证明蕴含的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常用的蕴含式"><span class="nav-number">1.1.1.12.</span> <span class="nav-text">常用的蕴含式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#推理的方法"><span class="nav-number">1.1.1.13.</span> <span class="nav-text">推理的方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#谓词逻辑"><span class="nav-number">1.1.2.</span> <span class="nav-text">谓词逻辑</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基本概念-1"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#谓词中的基本等价公式"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">谓词中的基本等价公式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常用的蕴含关系"><span class="nav-number">1.1.2.3.</span> <span class="nav-text">常用的蕴含关系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#化为前束范式的方法"><span class="nav-number">1.1.2.4.</span> <span class="nav-text">化为前束范式的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#推理规则"><span class="nav-number">1.1.2.5.</span> <span class="nav-text">推理规则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#谓词推理中注意的问题"><span class="nav-number">1.1.2.6.</span> <span class="nav-text">谓词推理中注意的问题</span></a></li></ol></li></ol></li></ol></li></ol>
     </div>
 </div>
         </div>

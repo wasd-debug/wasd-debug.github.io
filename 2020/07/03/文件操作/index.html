@@ -185,42 +185,34 @@
         </div>
 
         <div class="article-content markdown-body">
-            <h1 id="c文件基础操作总结"><a class="markdownIt-Anchor" href="#c文件基础操作总结"></a> C++文件基础操作总结</h1>
-<h2 id="背景"><a class="markdownIt-Anchor" href="#背景"></a> 背景</h2>
-<p>最近正在完成C++的结课作业，设计图书管理系统，所以对文件的相关操作进行复习总结，特出此文。</p>
-<h2 id="流对象"><a class="markdownIt-Anchor" href="#流对象"></a> 流对象</h2>
-<p>C++通过三个类支持文件的输入输出</p>
+            <h1 id="C-文件基础操作总结"><a href="#C-文件基础操作总结" class="headerlink" title="C++文件基础操作总结"></a>C++文件基础操作总结</h1><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>最近正在完成C++的结课作业，设计图书管理系统，所以对文件的相关操作进行复习总结，特出此文。</p>
+<h2 id="流对象"><a href="#流对象" class="headerlink" title="流对象"></a>流对象</h2><p>C++通过三个类支持文件的输入输出</p>
 <ol>
-<li>
-<p>ofstream :写操作（输出）</p>
+<li><p>ofstream :写操作（输出）</p>
 </li>
-<li>
-<p>ifstream :读操作（输入）</p>
+<li><p>ifstream :读操作（输入）</p>
 </li>
-<li>
-<p>fstream :同时可以读写操作</p>
+<li><p>fstream :同时可以读写操作</p>
 </li>
 </ol>
-<h2 id="打开文件夹"><a class="markdownIt-Anchor" href="#打开文件夹"></a> 打开文件夹</h2>
-<p>将以上类的一个对象与文件联系起来，自此对对象的操作就是对文件的操作。</p>
+<h2 id="打开文件夹"><a href="#打开文件夹" class="headerlink" title="打开文件夹"></a>打开文件夹</h2><p>将以上类的一个对象与文件联系起来，自此对对象的操作就是对文件的操作。</p>
 <p>操作函数：open(const char* filename, openmode mode);</p>
 <blockquote>
-<p>参数：filename是文件的路径。  openmode包括一下图片中的模式<img src="C:%5CUsers%5CLENOVO%5CDesktop%5CClip_20200515_192533.png" alt="文件打开方式" /></p>
+<p>参数：filename是文件的路径。  openmode包括一下图片中的模式<img src="C:%5CUsers%5CLENOVO%5CDesktop%5CClip_20200515_192533.png" alt="文件打开方式"></p>
 </blockquote>
 <p>我们可以用或（|）将多种模式组合起来。</p>
 <p>比如：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;fstream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    fstream file;</span><br><span class="line">    file.<span class="built_in">open</span>(<span class="string">"text.txt"</span>, ios::in|ios::out);</span><br><span class="line">    <span class="comment">// fstream file("text.txt",ios::in|ios::out);也是允许的。</span></span><br><span class="line">    <span class="keyword">if</span>(file.is_open())</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"file opening is successful."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    file.<span class="built_in">close</span>();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="检查文件是否打开成功is_open"><a class="markdownIt-Anchor" href="#检查文件是否打开成功is_open"></a> 检查文件是否打开成功——is_open()</h2>
-<p>使用方法：流对象. <code>is_open()</code>，若成功返回（true）.</p>
-<h2 id="关闭文件"><a class="markdownIt-Anchor" href="#关闭文件"></a> 关闭文件</h2>
-<p>流对象.close()</p>
-<h1 id="文本文件"><a class="markdownIt-Anchor" href="#文本文件"></a> 文本文件</h1>
-<p>因为ofstream,ifstream,fstream是由ostream,istream,iostream继承而来，所以也可使用&lt;&lt;和&gt;&gt;来读写文件</p>
-<h2 id="写入数据"><a class="markdownIt-Anchor" href="#写入数据"></a> 写入数据</h2>
-<p>流对象&lt;&lt;&quot;………&quot;;</p>
+
+
+
+<h2 id="检查文件是否打开成功——is-open"><a href="#检查文件是否打开成功——is-open" class="headerlink" title="检查文件是否打开成功——is_open()"></a>检查文件是否打开成功——is_open()</h2><p>使用方法：流对象. <code>is_open()</code>，若成功返回（true）.</p>
+<h2 id="关闭文件"><a href="#关闭文件" class="headerlink" title="关闭文件"></a>关闭文件</h2><p>流对象.close()</p>
+<h1 id="文本文件"><a href="#文本文件" class="headerlink" title="文本文件"></a>文本文件</h1><p>因为ofstream,ifstream,fstream是由ostream,istream,iostream继承而来，所以也可使用&lt;&lt;和&gt;&gt;来读写文件</p>
+<h2 id="写入数据"><a href="#写入数据" class="headerlink" title="写入数据"></a>写入数据</h2><p>流对象&lt;&lt;”………”;</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;fstream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="function">fstream <span class="title">file</span><span class="params">(<span class="string">"text.txt"</span>,ios::in|ios::out)</span></span>;</span><br><span class="line">    <span class="keyword">if</span>(file.is_open())</span><br><span class="line">    &#123;</span><br><span class="line">        file&lt;&lt;<span class="string">"I love you!\n"</span>;</span><br><span class="line">        file.<span class="built_in">close</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="读数据"><a class="markdownIt-Anchor" href="#读数据"></a> 读数据</h2>
-<p>判断是否到文件尾：流对象.eof()</p>
+
+<h2 id="读数据"><a href="#读数据" class="headerlink" title="读数据"></a>读数据</h2><p>判断是否到文件尾：流对象.eof()</p>
 <p>读入信息：流对象.getline(char* buffer，int char_number,[char end_char]);</p>
 <blockquote>
 <p>buffer是用来存储文件信息的字符数组，char_number是读取字符的最大个数，最后是一个可选参数（可以这么理解，实际上是重载函数），代表遇到什么字符是停止读取</p>
@@ -229,12 +221,11 @@
 <p>在D:\vs2019\cpp\text路径下，我新建一个文本文档TextFile1.txt</p>
 <p>文件内容为我随意输入的东西</p>
 <blockquote>
-<p>biabscajbdcjskdv svs<br />
-bcjsc jhs</p>
+<p>biabscajbdcjskdv svs<br>       bcjsc jhs</p>
 </blockquote>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;fstream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> <span class="built_in">buffer</span>[<span class="number">256</span>];</span><br><span class="line">	<span class="function">ifstream <span class="title">examplefile</span><span class="params">(<span class="string">"D:\\vs2019cpp\\text\\TextFile1.txt"</span>)</span></span>;</span><br><span class="line">	<span class="keyword">if</span> (!examplefile.is_open())</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"Error opening file"</span>; <span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">while</span> (!examplefile.eof())</span><br><span class="line">	&#123;</span><br><span class="line">		examplefile.getline(<span class="built_in">buffer</span>, <span class="number">21</span>);</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="built_in">buffer</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="获得和设置流指针"><a class="markdownIt-Anchor" href="#获得和设置流指针"></a> 获得和设置流指针</h2>
-<p>ifstream 有一个指针，指向下一个被读取的元素(get pointer)</p>
+
+<h2 id="获得和设置流指针"><a href="#获得和设置流指针" class="headerlink" title="获得和设置流指针"></a>获得和设置流指针</h2><p>ifstream 有一个指针，指向下一个被读取的元素(get pointer)</p>
 <p>ofstream有一个指针，指向写入下一个元素的位置(put pointer)</p>
 <p>fstream通知继承了上面两种。</p>
 <p>通过以下成员函数读出或配置流指针：</p>
@@ -255,16 +246,14 @@ bcjsc jhs</p>
 <p>指定由一个具体的指针开始计算位移（offset）.</p>
 <p>direction 可以是：</p>
 <ul>
-<li>
-<p>ios::beg(begin)文件头</p>
+<li><p>ios::beg(begin)文件头</p>
 </li>
-<li>
-<p>ios::cur(current)当前位置</p>
+<li><p>ios::cur(current)当前位置</p>
 </li>
-<li>
-<p>ios::end.  文件尾</p>
+<li><p>ios::end.  文件尾</p>
 <p>如：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;fstream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">const</span> <span class="keyword">char</span>* filename = <span class="string">"D:\\vs2019cpp\\text\\TextFile1.txt"</span>;</span><br><span class="line">	<span class="keyword">long</span> m;</span><br><span class="line">	<span class="function">ifstream <span class="title">file</span><span class="params">(filename, ios::in | ios::binary)</span></span>;</span><br><span class="line">	file.seekg(<span class="number">0</span>, ios::<span class="built_in">end</span>);</span><br><span class="line">	m = file.tellg();</span><br><span class="line">	file.<span class="built_in">close</span>();</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"size of "</span> &lt;&lt; filename;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">" is "</span> &lt;&lt; m &lt;&lt; <span class="string">" bytes.\n"</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <blockquote>
 <p>size of D:\vs2019cpp\text\TextFile1.txt is 31 bytes.</p>
 </blockquote>
@@ -272,40 +261,36 @@ bcjsc jhs</p>
 </ul>
 <p>注意：对于文本文件建议总是以seekg和seekp的第一个原型。</p>
 <p>​           二进制文件任意使用</p>
-<h1 id="二进制文件"><a class="markdownIt-Anchor" href="#二进制文件"></a> 二进制文件</h1>
-<p><strong>在二进制文件中使用&lt;&lt;,&gt;&gt;,以及函数来操作输入和输出数据（比如getline）没有实际意义。</strong></p>
-<p>文件流包括两个为__顺序读写__数据特殊设计的成员函数：</p>
+<h1 id="二进制文件"><a href="#二进制文件" class="headerlink" title="二进制文件"></a>二进制文件</h1><p><strong>在二进制文件中使用&lt;&lt;,&gt;&gt;,以及函数来操作输入和输出数据（比如getline）没有实际意义。</strong></p>
+<p>文件流包括两个为<strong>顺序读写</strong>数据特殊设计的成员函数：</p>
 <p>原型：</p>
 <blockquote>
 <figure class="highlight plain"><figcaption><span>(unsigned char * buffer, streamsize size );（ofstream）```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#96;&#96;&#96;read ( char * buffer, streamsize size );(ifstream) </span><br></pre></td></tr></table></figure>
 </blockquote>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;fstream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">const</span> <span class="keyword">char</span> * filename = <span class="string">"TextFile1.txt"</span>;</span><br><span class="line">    <span class="keyword">char</span> * <span class="built_in">buffer</span>;</span><br><span class="line">    <span class="keyword">long</span> <span class="built_in">size</span>;</span><br><span class="line">    <span class="function">ifstream <span class="title">file</span><span class="params">(filename, ios::in|ios::binary|ios::ate)</span></span>;<span class="comment">//打开二进制文件，并将指针指向末尾</span></span><br><span class="line">    <span class="built_in">size</span> = file.tellg();<span class="comment">//通过tellg函数获得文件的大小</span></span><br><span class="line">    file.seekg(<span class="number">0</span>, ios::beg);<span class="comment">//将文件指针指向文件头</span></span><br><span class="line">    <span class="built_in">buffer</span> = <span class="keyword">new</span> <span class="keyword">char</span> [<span class="built_in">size</span>];<span class="comment">//申请size大小的空间进行存储文件信息</span></span><br><span class="line">    file.<span class="built_in">read</span>(<span class="built_in">buffer</span>, <span class="built_in">size</span>);<span class="comment">//开始读入文件信息</span></span><br><span class="line">    file.<span class="built_in">close</span>();<span class="comment">//关闭文件</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt;<span class="string">"the complete file is in a buffer"</span>;</span><br><span class="line">    <span class="keyword">delete</span>[] <span class="built_in">buffer</span>;<span class="comment">//释放申请的空间</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="二进制读写的其他函数"><a class="markdownIt-Anchor" href="#二进制读写的其他函数"></a> 二进制读写的其他函数</h2>
-<ol>
-<li>
-<p>put()</p>
+
+
+
+<h2 id="二进制读写的其他函数"><a href="#二进制读写的其他函数" class="headerlink" title="二进制读写的其他函数"></a>二进制读写的其他函数</h2><ol>
+<li><p>put()</p>
 <p>put()函数向流写入一个字符，其原型是ofstream &amp;put(char ch)。</p>
 <p>使用也比较简单，如file1.put(‘c’);就是向流写一个字符’c’。</p>
 </li>
-<li>
-<p>get()</p>
+<li><p>get()</p>
 </li>
 </ol>
 <p>get()函数比较灵活，有3种常用的重载形式：</p>
 <ul>
-<li>
-<p>一种就是和put()对应的形式：ifstream &amp;get(char &amp;ch);功能是从流中读取一个字符，结果保存在引用ch中，如果到文件尾，返回空字符。如file2.get(x);表示从文件中读取一个字符，并把读取的字符保存在x中。</p>
+<li><p>一种就是和put()对应的形式：ifstream &amp;get(char &amp;ch);功能是从流中读取一个字符，结果保存在引用ch中，如果到文件尾，返回空字符。如file2.get(x);表示从文件中读取一个字符，并把读取的字符保存在x中。</p>
 </li>
-<li>
-<p>另一种重载形式的原型是： int get();这种形式是从流中返回一个字符，如果到达文件尾，返回EOF，如x=file2.get();和上例功能是一样的。</p>
+<li><p>另一种重载形式的原型是： int get();这种形式是从流中返回一个字符，如果到达文件尾，返回EOF，如x=file2.get();和上例功能是一样的。</p>
 </li>
-<li>
-<p>还 有一种形式的原型是：ifstream &amp;get(char *buf,int num,char delim=‘n’)；</p>
+<li><p>还 有一种形式的原型是：ifstream &amp;get(char *buf,int num,char delim=’n’)；</p>
 <p>这种形式把字符读入由 buf 指向的数组，直到读入了 num 个字符或遇到了由 delim 指定的字符，如果没使用 delim 这个参数，将使用缺省值换行符’n’。例如：</p>
 </li>
 </ul>
 <p>如：</p>
-<p><code>file2.get(str1,127,'A');//从文件中读取字符到字符串str1，当遇到字符'A'或读取了127个字符时终止。</code></p>
+<p><code>file2.get(str1,127,&#39;A&#39;);//从文件中读取字符到字符串str1，当遇到字符&#39;A&#39;或读取了127个字符时终止。</code></p>
 
         </div>
 
@@ -314,9 +299,9 @@ bcjsc jhs</p>
                 <div class="article-prev">
                     <a class="prev btn"
                        rel="prev"
-                       href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%91%A8%E5%8D%97%C2%B7%E8%9E%BD%E6%96%AF/"
+                       href="/2020/07/03/%E5%9B%BD%E9%A3%8E%C2%B7%E5%91%A8%E5%8D%97%C2%B7%E8%91%9B%E8%A6%83/"
                     >
-                        <i class="fa fa-chevron-left"></i> <span class="post-nav-title-item">国风·周南·螽斯</span><span class="post-nav-item">Prev posts</span>
+                        <i class="fa fa-chevron-left"></i> <span class="post-nav-title-item">国风·周南·葛覃</span><span class="post-nav-item">Prev posts</span>
                     </a>
                 </div>
             
@@ -364,7 +349,7 @@ bcjsc jhs</p>
         <div class="article-toc">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#c文件基础操作总结"><span class="nav-number">1.</span> <span class="nav-text"> C++文件基础操作总结</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#背景"><span class="nav-number">1.1.</span> <span class="nav-text"> 背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#流对象"><span class="nav-number">1.2.</span> <span class="nav-text"> 流对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#打开文件夹"><span class="nav-number">1.3.</span> <span class="nav-text"> 打开文件夹</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#检查文件是否打开成功is_open"><span class="nav-number">1.4.</span> <span class="nav-text"> 检查文件是否打开成功——is_open()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关闭文件"><span class="nav-number">1.5.</span> <span class="nav-text"> 关闭文件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文本文件"><span class="nav-number">2.</span> <span class="nav-text"> 文本文件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#写入数据"><span class="nav-number">2.1.</span> <span class="nav-text"> 写入数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#读数据"><span class="nav-number">2.2.</span> <span class="nav-text"> 读数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获得和设置流指针"><span class="nav-number">2.3.</span> <span class="nav-text"> 获得和设置流指针</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二进制文件"><span class="nav-number">3.</span> <span class="nav-text"> 二进制文件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#二进制读写的其他函数"><span class="nav-number">3.1.</span> <span class="nav-text"> 二进制读写的其他函数</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#C-文件基础操作总结"><span class="nav-number">1.</span> <span class="nav-text">C++文件基础操作总结</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#背景"><span class="nav-number">1.1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#流对象"><span class="nav-number">1.2.</span> <span class="nav-text">流对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#打开文件夹"><span class="nav-number">1.3.</span> <span class="nav-text">打开文件夹</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#检查文件是否打开成功——is-open"><span class="nav-number">1.4.</span> <span class="nav-text">检查文件是否打开成功——is_open()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关闭文件"><span class="nav-number">1.5.</span> <span class="nav-text">关闭文件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文本文件"><span class="nav-number">2.</span> <span class="nav-text">文本文件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#写入数据"><span class="nav-number">2.1.</span> <span class="nav-text">写入数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#读数据"><span class="nav-number">2.2.</span> <span class="nav-text">读数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获得和设置流指针"><span class="nav-number">2.3.</span> <span class="nav-text">获得和设置流指针</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二进制文件"><span class="nav-number">3.</span> <span class="nav-text">二进制文件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#二进制读写的其他函数"><span class="nav-number">3.1.</span> <span class="nav-text">二进制读写的其他函数</span></a></li></ol></li></ol>
     </div>
 </div>
         </div>
