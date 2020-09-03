@@ -24,6 +24,7 @@ window.addEventListener('DOMContentLoaded', () => {
         });
 
 
+
         function activateNavByIndex(target) {
             if (target.classList.contains('active-current')) return;
             document.querySelectorAll('.post-toc .active').forEach(element => {
@@ -85,15 +86,8 @@ window.addEventListener('DOMContentLoaded', () => {
         createIntersectionObserver(document.documentElement.scrollHeight);
 
     } else {
-
-        if (postTocWrap) {
-            postTocWrap.innerHTML = '';
-            postTocWrap.style.display = 'none';
-        }
-
-        if (articleToc) {
-            articleToc.style.display = 'none';
-        }
+        postTocWrap.innerHTML = '';
+        articleToc.style.display = 'none';
     }
 
 

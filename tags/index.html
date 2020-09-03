@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="/css/style.css">
 
     <script id="hexo-configurations">
-    let CONFIG = {"hostname":"yoursite.com","root":"/","localsearch":{"enable":true,"trigger":"auto","unescape":false,"preload":true},"themeInfo":{"name":"ILS","version":"1.2.1","author":"XPoet","repository":"https://github.com/XPoet/hexo-theme-ils"},"path":"search.xml"};
+    let CONFIG = {"hostname":"yoursite.com","root":"/","localsearch":{"enable":true,"trigger":"auto","unescape":false,"preload":true},"themeInfo":{"name":"ILS","version":"1.1.2","author":"XPoet","repository":"https://github.com/XPoet/hexo-theme-ils"},"path":"search.xml"};
   </script>
 <meta name="generator" content="Hexo 4.2.1"></head>
 
@@ -23,8 +23,6 @@
 <div class="page-template">
     <div class="page-top">
         <header class="header-wrapper">
-
-    <div class="header-progress"></div>
 
     <div class="header-content">
 
@@ -138,18 +136,6 @@
 
             <div class="main-content-left">
                 
-                    
-    <div class="fade-in-down-animation">
-        <div class="tagcloud-container">
-            <div class="tagcloud-content">
-                <a href="/tags/C/" style="font-size: 17.33px;">C++</a> <a href="/tags/PTA/" style="font-size: 18.67px;">PTA</a> <a href="/tags/%E5%85%A8%E5%8E%86%E5%8F%B2%E7%A7%91%E6%8A%80%E5%8F%B2/" style="font-size: 25.33px;">全历史科技史</a> <a href="/tags/%E5%8F%A4%E6%96%87/" style="font-size: 16px;">古文</a> <a href="/tags/%E5%94%90%E8%AF%97/" style="font-size: 20px;">唐诗</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/" style="font-size: 22.67px;">学习资料</a> <a href="/tags/%E5%AE%8B%E8%AF%8D/" style="font-size: 21.33px;">宋词</a> <a href="/tags/%E5%AE%9E%E9%AA%8C/" style="font-size: 22.67px;">实验</a> <a href="/tags/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/" style="font-size: 24px;">离散数学</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 22.67px;">笔记</a> <a href="/tags/%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7/" style="font-size: 17.33px;">编程工具</a> <a href="/tags/%E8%AF%97%E7%BB%8F/" style="font-size: 28px;">诗经</a> <a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" style="font-size: 26.67px;">读书笔记</a>
-            </div>
-        </div>
-    </div>
-
-
-
-                
 
             </div>
 
@@ -181,9 +167,8 @@
             <div class="scroll-to-top">
                 <ul>
                     <li>
-                        <span class="scroll-percent">
-                            <i class="fa fa-caret-up"></i>
-                        </span>
+                        <!--<i class="fa fa-caret-up"></i>-->
+                        <span class="scroll-percent"></span>
                     </li>
                 </ul>
             </div>
@@ -194,30 +179,35 @@
         <footer class="footer">
     <div class="info-container">
         <div class="copyright-info info-item">
-            &copy; 2020 <i class="fa fa-heart-o"></i> <a href="/">Jian Shengnan</a>
+            &copy; 2020 <a href="/">Jian Shengnan</a>
         </div>
         <div class="theme-info info-item">
-            Powered by <a target="_blank" href="https://hexo.io">Hexo</a> | Theme <a
-                    href="https://github.com/XPoet/hexo-theme-ils" target="_blank">ILS v1.2.1</a>
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动 | 主题 <a
+                    href="https://github.com/XPoet/hexo-theme-ils" target="_blank">ILS v1.1.2</a>
         </div>
         
             <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
             <div class="website-count info-item">
                 
                     <span id="busuanzi_container_site_uv" style="display: none">
-                        Visitor Count <span id="busuanzi_value_site_uv"></span>
+                        访问人数<span id="busuanzi_value_site_uv"></span>
                     </span>
                 
                 
                     <span id="busuanzi_container_site_pv" style="display: none">
-                        Totalview <span id="busuanzi_value_site_pv"></span>
+                        总访问量<span id="busuanzi_value_site_pv"></span>
                     </span>
                 
             </div>
         
     </div>
+    <span id="busuanzi_container_site_pv">
+        本站总访问量<span id="busuanzi_value_site_pv"></span>次
+    </span>
+    <span id="busuanzi_container_page_pv">
+        本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+      </span>
 </footer>
-
     </div>
 </div>
 
@@ -231,7 +221,7 @@
                 <input autocomplete="off"
                        autocorrect="off"
                        autocapitalize="off"
-                       placeholder="Search..."
+                       placeholder="搜索..."
                        spellcheck="false"
                        type="search"
                        class="search-input"
@@ -248,7 +238,6 @@
         </div>
     </div>
 </div>
-
 
 
 <script src="/js/main.js"></script>

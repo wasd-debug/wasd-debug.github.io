@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    
+    <title>
+        代数系统知识总结 | 凉介&#39;s personal blog
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <link rel="shortcut icon" href="/images/like.png">
+    
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <script id="hexo-configurations">
+    let CONFIG = {"hostname":"yoursite.com","root":"/","localsearch":{"enable":true,"trigger":"auto","unescape":false,"preload":true},"themeInfo":{"name":"ILS","version":"1.1.2","author":"XPoet","repository":"https://github.com/XPoet/hexo-theme-ils"},"path":"search.xml"};
+  </script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<body>
+<div class="page-template">
+    <div class="page-top">
+        <header class="header-wrapper">
+
+    <div class="header-content">
+
+        <a class="logo-title" href="/">
+            凉介&#39;s personal blog
+        </a>
+
+        <ul class="menu-list">
+            
+                <li class="menu-item">
+                    <a class=""
+                       href="/"
+                    >
+                        首页
+                    </a>
+                </li>
+            
+                <li class="menu-item">
+                    <a class=""
+                       href="https://blog.csdn.net/weixin_46698891"
+                    >
+                        CSDN
+                    </a>
+                </li>
+            
+                <li class="menu-item">
+                    <a class=""
+                       href="/categories/%E5%AD%A6%E4%B9%A0"
+                    >
+                        学习
+                    </a>
+                </li>
+            
+                <li class="menu-item">
+                    <a class=""
+                       href="/categories/%E7%BC%96%E7%A8%8B"
+                    >
+                        编程
+                    </a>
+                </li>
+            
+                <li class="menu-item">
+                    <a class=""
+                       href="/categories/%E9%98%85%E8%AF%BB"
+                    >
+                        阅读
+                    </a>
+                </li>
+            
+                <li class="menu-item">
+                    <a class=""
+                       href="/categories/%E8%AF%97%E8%AF%8D"
+                    >
+                        诗词
+                    </a>
+                </li>
+            
+        </ul>
+
+        <div class="menu-bar">
+            <div class="menu-bar-middle"></div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item">
+                    <a class=""
+                       href="https://blog.csdn.net/weixin_46698891">CSDN</a>
+                </li>
+            
+                <li class="drawer-menu-item">
+                    <a class=""
+                       href="/categories/%E5%AD%A6%E4%B9%A0">学习</a>
+                </li>
+            
+                <li class="drawer-menu-item">
+                    <a class=""
+                       href="/categories/%E7%BC%96%E7%A8%8B">编程</a>
+                </li>
+            
+                <li class="drawer-menu-item">
+                    <a class=""
+                       href="/categories/%E9%98%85%E8%AF%BB">阅读</a>
+                </li>
+            
+                <li class="drawer-menu-item">
+                    <a class=""
+                       href="/categories/%E8%AF%97%E8%AF%8D">诗词</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+    </div>
+
+    <div class="page-middle ">
+
+        <main class="main-content normal-code-theme">
+
+            <div class="main-content-left">
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <h3><a class="title-hover-animation">代数系统知识总结</a></h3>
+        </div>
+
+        <div class="meta-info">
+            <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa fa-calendar-o"></i> 2020-07-03 00:00:00
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa fa-folder"></i>
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a>
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa fa-tags"></i>
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a>
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/">离散数学</a>
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa fa-eye"></i> <span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+        </div>
+
+        <div class="article-content markdown-body">
+            <h1 id="代数系统"><a href="#代数系统" class="headerlink" title="代数系统"></a>代数系统</h1><h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p>设X和Y是两个任意集合，而f是X到Y的一个二元关系，如果对于每一个x$\in$X,有唯一的y$\in$Y，使得&lt;x,y&gt;$\in$f，则称f是从X到Y的一个映射（函数），记作f:X$\rightarrow$Y,若&lt;x,y&gt;$\in$f，通常记y为f(x)，称x是自由变元，称y为x在映射下的象。</p>
+<p>运算：</p>
+<p>对于集合A，一个从A$^{n}\rightarrow$B的映射，称集合A上的一个n元运算。</p>
+<p>一个非空集合A连同若干个定义在该集合的运算f1,f2,…,fi所组成的系统，封闭，称为一个代数系统，记作&lt;A,f1,f2,…,fk&gt;</p>
+<p>设A是一个非空集合，$A^{n}$到B的一个映射f:A$^{n}\rightarrow$B,若B$\sub$A,则称映射f关于集合A是封闭的（或称A对f是封闭的）。</p>
+<p>几个代数系统：</p>
+<p><img src="https://i.loli.net/2020/06/23/nKE1XhNkajv76M5.png" alt=""></p>
+<p>运算及其性质</p>
+<p>定义：设“<em>”是定义在集合A上的二元运算，&lt;A,</em>&gt;是一个代数系统，对$\forall a,b,c\in A$若满足：</p>
+<ol>
+<li>a<em>b$\in$A,则称运算“\</em>”在集合上是封闭的。</li>
+<li>a*b=b*a则称运算“*”在集合A上是可交换的或称运算“*”在A上满足交换律</li>
+<li>(a<em>b)*c=a\</em>(b*c),则称运算在集合A上是可结合的，或称运算在A上满足结合律</li>
+</ol>
+<p>设“*”、“$\circ$”是集合A上的两个二元运算，对$\forall a,b,c\in A$，若满足：</p>
+<ol>
+<li>$a\circ (a<em>b)=a或a</em>(a\circ b)=a$，则称两运算在A上满足吸收律</li>
+<li>$a\circ(b<em>c)=(a\circ b)</em>(a\circ c)$,则称运算“$\circ$”对“*”在A上满足左分配律</li>
+<li>$(b<em>c)\circ a=(b\circ a)</em>(c\circ a)$，则称运算“$\circ$”对“<em>”在A上满足右分配律。如果既是左分配的又是右分配的，则称运算“0”对“\</em>”是可分配的。</li>
+</ol>
+<p>设“<em>”是集合A上的二元运算，若$\exist a\in A$，有：a\</em>a=a，则称a为A上的等幂元，若A中的一切元素都是等幂元，则称运算”*“在A上满足等幂律。</p>
+<p>设“*”是集合A上的二元运算，若$\exist e\in A$，使得对$\forall a\in A$，都有：</p>
+<ol>
+<li>a<em>e=a,则称e为运算“\</em>”关于A的右单位元素或右幺元，记为$e_{r}$</li>
+<li>e<em>a=a，则称e为运算“\</em>”关于A的左单位元素或左幺元又记为e1.</li>
+<li>a*e=e*a=a,则称e为运算“*”关于A的单位元素或幺元</li>
+</ol>
+<p>设&lt;S,<em>&gt;是一个代数系统，若&lt;S,\</em>&gt;存在左右幺元，则它们一定相等，且是幺元；若存在幺元，则幺元唯一。</p>
+<p>设“*”是集合A上的二元运算，如$\exist \theta\in A$，使得对$\forall a\in A$,都有:</p>
+<ol>
+<li>$a<em>\theta=\theta$，则称$\theta$为运算“</em>”关于A的右零元</li>
+<li>$\theta<em>a=\theta$,则称“$\theta$”为运算“</em>”关于A的左零元</li>
+<li>$a<em>\theta=\theta</em>a=\theta$,则称$\theta$为运算“*”关于A的零元</li>
+</ol>
+<p>设&lt;S,<em>&gt;是一个代数系统，若&lt;S,\</em>&gt;存在左右零元，则他们一定相等且是零元。零元唯一</p>
+<p>设“<em>”是集合A上的二元运算，e是&lt;A,\</em>&gt;的幺元，对$a\in A$,若$\exist b\in A$,使得：</p>
+<ol>
+<li>a<em>b=e，则称b为a关于运算“\</em>”右逆元，a也称为右可逆的，记为$a^{-1}_{r}=e$</li>
+<li>b<em>a=e,则称b为a关于运算“\</em>”左逆元，a也称为左可逆的</li>
+<li>a<em>b=b</em>a=e,称b为a关于运算“*”的逆元，a也称为可逆的</li>
+</ol>
+<p>设&lt;S,<em>&gt;是一个代数系统，若“*”满足结合律且e是&lt;S,\</em>&gt;的幺元，则对$\forall a\in S$，若存在左右逆元，则该左右逆元一定相等，且是该元的逆元。逆元若存在，则唯一</p>
+<p>设&lt;S,*&gt;是一个代数系统，且集合S中的元素个数大于1.如果该代数系统中存在幺元和零元，则幺元不等于零元</p>
+<p>设&lt;A,*&gt;是一个代数系统，则：</p>
+<p><img src="https://i.loli.net/2020/06/23/RWcBqEk45DMwCZS.png" alt=""></p>
+<p>半群：设&lt;S,<em>&gt;是一个代数系统，S为非空集合。若运算“\</em>”是封闭的，则称此代数系统是一个广群</p>
+<p>设&lt;S,<em>&gt;是一个代数系统，如运算“\</em>”封闭的，可结合的，则此二元代数系统是一个半群，若运算”*“又是可交换的，则称此代数系统可交换半群</p>
+<p>设&lt;S,*&gt;是一个半群，$B\subseteq$S且<em>在B上封闭，那么&lt;B,\</em>&gt;也是一个半群称为&lt;S,*&gt;的子半群</p>
+<p>设&lt;H,<em>&gt;是一个半群，如果H是一个有限集，则必有$a\in H$使得a\</em>a=a</p>
+<p>设&lt;S,*&gt;是一个半群，若该半群存在幺元e，则称此半群&lt;S,*&gt;是一个独异点（或含幺半群），进一步，若运算*又是可交换运算，则称此独异点为可交换的独异点（可交换的含幺半群）</p>
+<p>一个独异点&lt;S,*&gt;的运算表中的任何两行（列）都是不同的</p>
+<p>设&lt;S,*&gt;是一个独异点，对任意$a,b\in S$，且a，b均有逆元</p>
+<p>群：</p>
+<p>给定一个代数系统&lt;G,<em>&gt;，若运算\</em>满足：</p>
+<p>封闭，结合，存在幺元，对于任意一个集合中的元素都有逆元，则称&lt;G,*&gt;是一个群，简称G是一个群，称|G|为群G的阶</p>
+<p>进一步满足：</p>
+<p>运算*满足交换律，则称为交换群或阿贝尔群</p>
+<p>|G|有限，有限群</p>
+<p>|G|无限，无限群</p>
+<p>阶数大于1的群无零元</p>
+<p>设&lt;G,*&gt;是一个群，对于a,b,c$\in$G,如果a<em>b=a</em>c或者b*a=c*a，则必有b=c（消去律）</p>
+<p>群中除幺元外无其他幂等元</p>
+<p>子群：</p>
+<p>设&lt;G,*&gt;是一个群，H是G的一个非空子集，若H关于G的运算<em>构成群，则称&lt;H,\</em>&gt;是&lt;G,*&gt;的一个子群</p>
+<p>一般来说，对任意的群都有两个&lt;{e},<em>&gt;,&lt;G,\</em>&gt;我们称这两个子群为该群的平凡子群，而若有子群&lt;H,*&gt;，且H$\neq${e}和H$\sub$G,则称&lt;H,*&gt;为&lt;G,*&gt;的真子群</p>
+<p>设&lt;G,*&gt;是一个群，&lt;H,<em>&gt;是&lt;G,\</em>&gt;的子群，则群&lt;G,*&gt;的幺元必定也是子群的幺元</p>
+<p>设&lt;G,*&gt;是一个子群，H是G的一个有限非空子集，那么只要运算在H上封闭，&lt;H,*&gt;必定是&lt;G,*&gt;的子群</p>
+<p>设&lt;G,*&gt;是一个群，H是G的一个非空子集，如果对于H中的任何元素a和b有$a* b^{-1}\in H$,则&lt;H,<em>&gt;是&lt;G,\</em>&gt;的子群</p>
+<p>设&lt;G,*&gt;是一个群，H1，H2，。。。Hn是G的n和子群，则有H=H1$\cap$H2$\cap\cdots\cap H_{n}$是G的子群</p>
+<p>设&lt;G,<em>&gt;是一个群，则&lt;G,\</em>&gt;作成交换群的充分必要条件是：对$\forall a,b\in G$有(a*b)*(a*b)=(a*a)*(b*b)</p>
+<p>设&lt;G,*&gt;是一个群，若G中存在元素a，使得对$\forall x\in G$都有x=$a^{n}(n\in I)$，则称&lt;G,*&gt;是由a所生成的循环群，常记群G=(a)，而a成为该循环群的生成元，群G中的一切生成元构成的集合叫做该群G的生成集</p>
+<p>循环群一定是阿贝尔群</p>
+<p>设&lt;G,*&gt;=(a)是一个有限循环群，如果群G的阶为n，则a的周期/阶为n</p>
+<table>
+<thead>
+<tr>
+<th>代数系统</th>
+<th>半群</th>
+<th>独异点</th>
+<th>群</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>二元运算，封闭，V=&lt;S,*&gt;</td>
+<td>+可结合</td>
+<td>+可结合+单位元</td>
+<td>+可结合+单位元+互逆元素</td>
+</tr>
+</tbody></table>
+
+        </div>
+
+        <div class="article-nav">
+            
+                <div class="article-prev">
+                    <a class="prev btn"
+                       rel="prev"
+                       href="/2020/07/03/%E7%8E%89%E8%9F%BE%E5%B2%A9%E5%87%BA%E7%8E%B0%E4%BA%BA%E5%B7%A5%E6%A0%BD%E5%9F%B9%E7%A8%BB/"
+                    >
+                        <i class="fa fa-chevron-left"></i> <span class="post-nav-title-item">科技史—玉蟾岩出现人工栽培稻</span><span class="post-nav-item">上一篇</span>
+                    </a>
+                </div>
+            
+            
+                <div class="article-next">
+                    <a class="next btn"
+                       rel="next"
+                       href="/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E5%9B%BE%E8%AE%BA/"
+                    >
+                        <span class="post-nav-title-item">图论知识总结</span><span class="post-nav-item">下一篇</span> <i class="fa fa-chevron-right"></i>
+                    </a>
+                </div>
+            
+        </div>
+
+        <div class="comment-container">
+            <div class="comments-container">
+    
+        
+    <div class="valine-container">
+        <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+        <div id="vcomments"></div>
+        <script>
+            new Valine({
+                el: '#vcomments',
+                appId: 'BfM71eOSl6WB1pKRpyg8o79g-gzGzoHsz',
+                appKey: 'ubHiJBofL8P9kcTmiB0aV8RY',
+                meta: 'nick,mail,link'.split(','),
+                avatar: 'wavatar',
+                enableQQ: true,
+                placeholder: '欢迎留言评论！',
+                lang: 'zh'.toLowerCase()
+            })
+        </script>
+    </div>
+
+
+    
+</div>
+        </div>
+    </div>
+</div>
+
+    <div class="article-toc-container fade-in-down-animation">
+        <div class="article-toc">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#代数系统"><span class="nav-number">1.</span> <span class="nav-text">代数系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本概念"><span class="nav-number">1.1.</span> <span class="nav-text">基本概念</span></a></li></ol></li></ol>
+    </div>
+</div>
+        </div>
+    </div>
+
+
+                
+
+            </div>
+
+            
+
+        </main>
+
+        <div class="sidebar-tools">
+            <div class="tools-container">
+    <ul class="tools-list">
+        
+            <li class="search popup-trigger">
+                <i class="fa fa-search"></i>
+            </li>
+            
+<script src="/js/local-search.js"></script>
+
+        
+        <li class="mode-toggle">
+            <i class="fa fa-moon-o"></i>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+            <div class="scroll-to-top">
+                <ul>
+                    <li>
+                        <!--<i class="fa fa-caret-up"></i>-->
+                        <span class="scroll-percent"></span>
+                    </li>
+                </ul>
+            </div>
+        
+    </div>
+
+    <div class="page-bottom">
+        <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy; 2020 <a href="/">Jian Shengnan</a>
+        </div>
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动 | 主题 <a
+                    href="https://github.com/XPoet/hexo-theme-ils" target="_blank">ILS v1.1.2</a>
+        </div>
+        
+            <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv" style="display: none">
+                        访问人数<span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" style="display: none">
+                        总访问量<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+    </div>
+    <span id="busuanzi_container_site_pv">
+        本站总访问量<span id="busuanzi_value_site_pv"></span>次
+    </span>
+    <span id="busuanzi_container_page_pv">
+        本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+      </span>
+</footer>
+    </div>
+</div>
+
+    <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-icon">
+            <i class="fa fa-search"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="/js/main.js"></script>
+<script src="/js/header-shrink.js"></script>
+<script src="/js/toggle-mode.js"></script>
+
+
+
+    
+<script src="/js/scroll-to-top.js"></script>
+
+
+
+
+
+    
+        
+<script src="/js/code-copy.js"></script>
+
+    
+
+    
+        
+<script src="/lib/anime.min.js"></script>
+<script src="/js/toc.js"></script>
+
+    
+
+
+
+
+</body>
+</html>
