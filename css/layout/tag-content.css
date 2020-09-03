@@ -128,7 +128,6 @@
 }
 .tag-container:hover {
   transition: all 0.3s ease;
-  box-shadow: 0 0 8px var(--border-color);
 }
 @media (max-width: 760px) {
   .tag-container {
@@ -139,7 +138,6 @@
   }
   .tag-container:hover {
     transition: all 0.3s ease;
-    box-shadow: 0 0 8px var(--border-color);
   }
 }
 .tag-container .tag-name {

@@ -79,7 +79,6 @@ ils-tablet()
 }
 .links-container:hover {
   transition: all 0.3s ease;
-  box-shadow: 0 0 8px var(--border-color);
 }
 .links-container .links-content {
   margin-bottom: 30px;
