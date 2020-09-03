@@ -8,13 +8,13 @@
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <link rel="shortcut icon" href="/images/like.png">
+        <link rel="shortcut icon" href="/images/favicon.png">
     
     
 <link rel="stylesheet" href="/css/style.css">
 
     <script id="hexo-configurations">
-    let CONFIG = {"hostname":"yoursite.com","root":"/","localsearch":{"enable":true,"trigger":"auto","unescape":false,"preload":true},"themeInfo":{"name":"ILS","version":"1.1.2","author":"XPoet","repository":"https://github.com/XPoet/hexo-theme-ils"},"path":"search.xml"};
+    let CONFIG = {"hostname":"yoursite.com","root":"/","localsearch":{"enable":true,"trigger":"auto","unescape":false,"preload":false},"themeInfo":{"name":"ILS","version":"1.2.1","author":"XPoet","repository":"https://github.com/XPoet/hexo-theme-ils"},"path":"search.xml"};
   </script>
 <meta name="generator" content="Hexo 4.2.1"></head>
 
@@ -23,6 +23,8 @@
 <div class="page-template">
     <div class="page-top">
         <header class="header-wrapper">
+
+    <div class="header-progress"></div>
 
     <div class="header-content">
 
@@ -36,47 +38,15 @@
                     <a class=""
                        href="/"
                     >
-                        首页
+                        HOME
                     </a>
                 </li>
             
                 <li class="menu-item">
                     <a class=""
-                       href="https://blog.csdn.net/weixin_46698891"
+                       href="/archives"
                     >
-                        CSDN
-                    </a>
-                </li>
-            
-                <li class="menu-item">
-                    <a class=""
-                       href="/categories/%E5%AD%A6%E4%B9%A0"
-                    >
-                        学习
-                    </a>
-                </li>
-            
-                <li class="menu-item">
-                    <a class=""
-                       href="/categories/%E7%BC%96%E7%A8%8B"
-                    >
-                        编程
-                    </a>
-                </li>
-            
-                <li class="menu-item">
-                    <a class=""
-                       href="/categories/%E9%98%85%E8%AF%BB"
-                    >
-                        阅读
-                    </a>
-                </li>
-            
-                <li class="menu-item">
-                    <a class=""
-                       href="/categories/%E8%AF%97%E8%AF%8D"
-                    >
-                        诗词
+                        ARCHIVES
                     </a>
                 </li>
             
@@ -92,32 +62,12 @@
             
                 <li class="drawer-menu-item">
                     <a class=""
-                       href="/">首页</a>
+                       href="/">HOME</a>
                 </li>
             
                 <li class="drawer-menu-item">
                     <a class=""
-                       href="https://blog.csdn.net/weixin_46698891">CSDN</a>
-                </li>
-            
-                <li class="drawer-menu-item">
-                    <a class=""
-                       href="/categories/%E5%AD%A6%E4%B9%A0">学习</a>
-                </li>
-            
-                <li class="drawer-menu-item">
-                    <a class=""
-                       href="/categories/%E7%BC%96%E7%A8%8B">编程</a>
-                </li>
-            
-                <li class="drawer-menu-item">
-                    <a class=""
-                       href="/categories/%E9%98%85%E8%AF%BB">阅读</a>
-                </li>
-            
-                <li class="drawer-menu-item">
-                    <a class=""
-                       href="/categories/%E8%AF%97%E8%AF%8D">诗词</a>
+                       href="/archives">ARCHIVES</a>
                 </li>
             
         </ul>
@@ -173,22 +123,26 @@
         </span>
     
     
-        <span class="article-pv article-meta-item">
-            <i class="fa fa-eye"></i> <span id="busuanzi_value_page_pv"></span>
-        </span>
+    
     
 </div>
+
         </div>
 
         <div class="article-content markdown-body">
-            <h1 id="离散数学实验：计算真值"><a href="#离散数学实验：计算真值" class="headerlink" title="离散数学实验：计算真值"></a>离散数学实验：计算真值</h1><h2 id="一、实验目的"><a href="#一、实验目的" class="headerlink" title="一、实验目的"></a>一、实验目的</h2><blockquote>
+            <h1 id="离散数学实验计算真值"><a class="markdownIt-Anchor" href="#离散数学实验计算真值"></a> 离散数学实验：计算真值</h1>
+<h2 id="一-实验目的"><a class="markdownIt-Anchor" href="#一-实验目的"></a> 一、实验目的</h2>
+<blockquote>
 <p><strong>熟悉五个常用联结词合取、析取、条件和双条件的概念，掌握真值表技术。</strong></p>
 </blockquote>
-<h2 id="二、实验内容"><a href="#二、实验内容" class="headerlink" title="二、实验内容"></a>二、实验内容</h2><blockquote>
+<h2 id="二-实验内容"><a class="markdownIt-Anchor" href="#二-实验内容"></a> 二、实验内容</h2>
+<blockquote>
 <p><strong>本实验要求从键盘输入两个命题P和Q的真值，求它们的合取、析取、条件和双条件的真值。用C语言或MATLAB实现。</strong></p>
 </blockquote>
-<h2 id="三、实验源程序"><a href="#三、实验源程序" class="headerlink" title="三、实验源程序"></a>三、实验源程序</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> P, Q;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"从键盘输入两个命题P和Q的真值\n"</span>);</span><br><span class="line">	scanf_s(<span class="string">"%d %d"</span>, &amp;P, &amp;Q);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"P合取Q为%d\n"</span>, (P &amp;&amp; Q));</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"P析取Q为%d\n"</span>, (P || Q));</span><br><span class="line">	<span class="keyword">int</span> judge1, judge2, judge3;</span><br><span class="line">	<span class="keyword">if</span> (P == <span class="number">1</span> &amp;&amp; Q == <span class="number">0</span>)</span><br><span class="line">		judge1 = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		judge1 = <span class="number">1</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"P-&gt;Q为%d\n"</span>, judge1);</span><br><span class="line">	<span class="keyword">if</span> (Q == <span class="number">1</span> &amp;&amp; P == <span class="number">0</span>)</span><br><span class="line">		judge2 = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		judge2 = <span class="number">1</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"Q-&gt;P为%d\n"</span>, judge2);</span><br><span class="line">	<span class="keyword">if</span> (Q == P)</span><br><span class="line">		judge3 = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		judge3 = <span class="number">0</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"P&lt;-&gt;Q为%d"</span>, judge3);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="四、实验分析"><a href="#四、实验分析" class="headerlink" title="四、实验分析"></a>四、实验分析</h2><p><strong>这是一个简单的实验，明白四个关系的具体含义，利用程序中的对应代码进行替换判断即可。</strong></p>
+<h2 id="三-实验源程序"><a class="markdownIt-Anchor" href="#三-实验源程序"></a> 三、实验源程序</h2>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> P, Q;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"从键盘输入两个命题P和Q的真值\n"</span>);</span><br><span class="line">	scanf_s(<span class="string">"%d %d"</span>, &amp;P, &amp;Q);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"P合取Q为%d\n"</span>, (P &amp;&amp; Q));</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"P析取Q为%d\n"</span>, (P || Q));</span><br><span class="line">	<span class="keyword">int</span> judge1, judge2, judge3;</span><br><span class="line">	<span class="keyword">if</span> (P == <span class="number">1</span> &amp;&amp; Q == <span class="number">0</span>)</span><br><span class="line">		judge1 = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		judge1 = <span class="number">1</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"P-&gt;Q为%d\n"</span>, judge1);</span><br><span class="line">	<span class="keyword">if</span> (Q == <span class="number">1</span> &amp;&amp; P == <span class="number">0</span>)</span><br><span class="line">		judge2 = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		judge2 = <span class="number">1</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"Q-&gt;P为%d\n"</span>, judge2);</span><br><span class="line">	<span class="keyword">if</span> (Q == P)</span><br><span class="line">		judge3 = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		judge3 = <span class="number">0</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"P&lt;-&gt;Q为%d"</span>, judge3);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="四-实验分析"><a class="markdownIt-Anchor" href="#四-实验分析"></a> 四、实验分析</h2>
+<p><strong>这是一个简单的实验，明白四个关系的具体含义，利用程序中的对应代码进行替换判断即可。</strong></p>
 
         </div>
 
@@ -197,9 +151,9 @@
                 <div class="article-prev">
                     <a class="prev btn"
                        rel="prev"
-                       href="/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E5%AE%9E%E9%AA%8C%EF%BC%9A%E5%85%B3%E7%B3%BB%E9%97%AD%E5%8C%85%E7%9A%84%E8%AE%A1%E7%AE%97(C%E8%AF%AD%E8%A8%80)/"
+                       href="/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E4%BB%A3%E6%95%B0%E7%B3%BB%E7%BB%9F/"
                     >
-                        <i class="fa fa-chevron-left"></i> <span class="post-nav-title-item">离散数学实验：关系闭包的计算</span><span class="post-nav-item">上一篇</span>
+                        <i class="fa fa-chevron-left"></i> <span class="post-nav-title-item">代数系统知识总结</span><span class="post-nav-item">Prev posts</span>
                     </a>
                 </div>
             
@@ -207,9 +161,9 @@
                 <div class="article-next">
                     <a class="next btn"
                        rel="next"
-                       href="/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E7%AC%AC%E5%90%88%E8%AE%BA/"
+                       href="/2020/07/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E5%AE%9E%E9%AA%8C%EF%BC%9A%E5%85%B3%E7%B3%BB%E9%97%AD%E5%8C%85%E7%9A%84%E8%AE%A1%E7%AE%97(C%E8%AF%AD%E8%A8%80)/"
                     >
-                        <span class="post-nav-title-item">第合论知识总结</span><span class="post-nav-item">下一篇</span> <i class="fa fa-chevron-right"></i>
+                        <span class="post-nav-title-item">离散数学实验：关系闭包的计算</span><span class="post-nav-item">Next posts</span> <i class="fa fa-chevron-right"></i>
                     </a>
                 </div>
             
@@ -217,26 +171,6 @@
 
         <div class="comment-container">
             <div class="comments-container">
-    
-        
-    <div class="valine-container">
-        <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-        <div id="vcomments"></div>
-        <script>
-            new Valine({
-                el: '#vcomments',
-                appId: 'BfM71eOSl6WB1pKRpyg8o79g-gzGzoHsz',
-                appKey: 'ubHiJBofL8P9kcTmiB0aV8RY',
-                meta: 'nick,mail,link'.split(','),
-                avatar: 'wavatar',
-                enableQQ: true,
-                placeholder: '欢迎留言评论！',
-                lang: 'zh'.toLowerCase()
-            })
-        </script>
-    </div>
-
-
     
 </div>
         </div>
@@ -247,7 +181,7 @@
         <div class="article-toc">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#离散数学实验：计算真值"><span class="nav-number">1.</span> <span class="nav-text">离散数学实验：计算真值</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、实验目的"><span class="nav-number">1.1.</span> <span class="nav-text">一、实验目的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、实验内容"><span class="nav-number">1.2.</span> <span class="nav-text">二、实验内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、实验源程序"><span class="nav-number">1.3.</span> <span class="nav-text">三、实验源程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、实验分析"><span class="nav-number">1.4.</span> <span class="nav-text">四、实验分析</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#离散数学实验计算真值"><span class="nav-number">1.</span> <span class="nav-text"> 离散数学实验：计算真值</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一-实验目的"><span class="nav-number">1.1.</span> <span class="nav-text"> 一、实验目的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二-实验内容"><span class="nav-number">1.2.</span> <span class="nav-text"> 二、实验内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三-实验源程序"><span class="nav-number">1.3.</span> <span class="nav-text"> 三、实验源程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四-实验分析"><span class="nav-number">1.4.</span> <span class="nav-text"> 四、实验分析</span></a></li></ol></li></ol>
     </div>
 </div>
         </div>
@@ -286,8 +220,9 @@
             <div class="scroll-to-top">
                 <ul>
                     <li>
-                        <!--<i class="fa fa-caret-up"></i>-->
-                        <span class="scroll-percent"></span>
+                        <span class="scroll-percent">
+                            <i class="fa fa-caret-up"></i>
+                        </span>
                     </li>
                 </ul>
             </div>
@@ -298,35 +233,16 @@
         <footer class="footer">
     <div class="info-container">
         <div class="copyright-info info-item">
-            &copy; 2020 <a href="/">Jian Shengnan</a>
+            &copy; 2020 <i class="fa fa-heart-o"></i> <a href="/">Jian Shengnan</a>
         </div>
         <div class="theme-info info-item">
-            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动 | 主题 <a
-                    href="https://github.com/XPoet/hexo-theme-ils" target="_blank">ILS v1.1.2</a>
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a> | Theme <a
+                    href="https://github.com/XPoet/hexo-theme-ils" target="_blank">ILS v1.2.1</a>
         </div>
         
-            <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-            <div class="website-count info-item">
-                
-                    <span id="busuanzi_container_site_uv" style="display: none">
-                        访问人数<span id="busuanzi_value_site_uv"></span>
-                    </span>
-                
-                
-                    <span id="busuanzi_container_site_pv" style="display: none">
-                        总访问量<span id="busuanzi_value_site_pv"></span>
-                    </span>
-                
-            </div>
-        
     </div>
-    <span id="busuanzi_container_site_pv">
-        本站总访问量<span id="busuanzi_value_site_pv"></span>次
-    </span>
-    <span id="busuanzi_container_page_pv">
-        本文总阅读量<span id="busuanzi_value_page_pv"></span>次
-      </span>
 </footer>
+
     </div>
 </div>
 
@@ -340,7 +256,7 @@
                 <input autocomplete="off"
                        autocorrect="off"
                        autocapitalize="off"
-                       placeholder="搜索..."
+                       placeholder="Search..."
                        spellcheck="false"
                        type="search"
                        class="search-input"
@@ -357,6 +273,7 @@
         </div>
     </div>
 </div>
+
 
 
 <script src="/js/main.js"></script>
